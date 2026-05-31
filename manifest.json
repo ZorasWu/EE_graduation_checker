@@ -24,7 +24,7 @@
         "https://*.github.io/*"
       ],
       "js": [
-        "content-bridge.js"
+        "content-bridge-v2.js"
       ],
       "run_at": "document_start"
     }

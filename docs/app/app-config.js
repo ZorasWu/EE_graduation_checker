@@ -6,7 +6,7 @@ export const PORTAL_URLS = {
 
 // Set this after GitHub Pages is live, for example:
 // https://YOUR-ACCOUNT.github.io/YOUR-REPO/
-export const REPORT_SITE_URL = "https://zoraswu.github.io/EE_graduation_checker/";
+export const REPORT_SITE_URL = "";
 
 export const EXTENSION_STORAGE_PREFIX = "ncu-grad:";
 

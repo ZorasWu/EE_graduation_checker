@@ -35,17 +35,28 @@ async function captureGraduationSnapshot() {
     source: "live"
   });
   const token = crypto.randomUUID();
+  const payload = {
+    snapshot,
+    createdAt: new Date().toISOString()
+  };
 
   await chrome.storage.session.set({
-    [`${EXTENSION_STORAGE_PREFIX}${token}`]: {
-      snapshot,
-      createdAt: new Date().toISOString()
-    }
+    [`${EXTENSION_STORAGE_PREFIX}${token}`]: payload
+  });
+
+  await chrome.storage.local.set({
+    [`${EXTENSION_STORAGE_PREFIX}${token}`]: payload
   });
 
   await chrome.tabs.create({
     url: buildReportUrl(token)
   });
+}
+
+async function loadStoredSnapshot(token) {
+  const key = `${EXTENSION_STORAGE_PREFIX}${token}`;
+  const result = await chrome.storage.session.get(key);
+  return result[key] ?? null;
 }
 
 chrome.action.onClicked.addListener(async () => {
@@ -57,4 +68,26 @@ chrome.action.onClicked.addListener(async () => {
       url: chrome.runtime.getURL(`report.html?error=${message}`)
     });
   }
+});
+
+chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
+  if (!message || message.type !== "ncu-grad:get" || !message.token) {
+    return undefined;
+  }
+
+  loadStoredSnapshot(message.token)
+    .then((payload) => {
+      sendResponse({
+        payload,
+        error: payload ? null : "No stored student snapshot was found for this token."
+      });
+    })
+    .catch((error) => {
+      sendResponse({
+        payload: null,
+        error: error instanceof Error ? error.message : "Unknown bridge error."
+      });
+    });
+
+  return true;
 });

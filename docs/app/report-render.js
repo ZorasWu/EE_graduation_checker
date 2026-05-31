@@ -7,6 +7,56 @@ function escapeHtml(input) {
     .replace(/'/g, "&#39;");
 }
 
+function formatDiagnosticPayload(payload) {
+  if (payload === undefined) {
+    return "";
+  }
+
+  if (typeof payload === "string") {
+    return payload;
+  }
+
+  try {
+    return JSON.stringify(payload, null, 2);
+  } catch {
+    return String(payload);
+  }
+}
+
+function renderDiagnostics(diagnostics = []) {
+  if (!diagnostics.length) {
+    return "";
+  }
+
+  return `
+    <section class="panel">
+      <div class="section-head">
+        <p class="eyebrow">Diagnostics</p>
+        <h2>Bridge trace</h2>
+      </div>
+      <div class="card-grid">
+        ${diagnostics
+          .map((entry, index) => {
+            const payloadBlock =
+              entry.payload !== undefined
+                ? `<pre class="diagnostic-payload">${escapeHtml(formatDiagnosticPayload(entry.payload))}</pre>`
+                : "";
+
+            return `
+              <article class="card">
+                <p class="eyebrow">Step ${index + 1}${entry.time ? ` · ${escapeHtml(entry.time)}` : ""}</p>
+                <h3>${escapeHtml(entry.step || "event")}</h3>
+                <p class="meta-row">${escapeHtml(entry.detail || "")}</p>
+                ${payloadBlock}
+              </article>
+            `;
+          })
+          .join("")}
+      </div>
+    </section>
+  `;
+}
+
 function renderCheckCard(check) {
   const missingList =
     check.missingItems && check.missingItems.length
@@ -180,7 +230,7 @@ export function renderReport(root, snapshot) {
   `;
 }
 
-export function renderMessage(root, title, body, tone = "neutral") {
+export function renderMessage(root, title, body, tone = "neutral", diagnostics = []) {
   root.innerHTML = `
     <main class="layout">
       <section class="hero hero-${escapeHtml(tone)}">
@@ -190,6 +240,7 @@ export function renderMessage(root, title, body, tone = "neutral") {
           <p class="hero-copy">${escapeHtml(body)}</p>
         </div>
       </section>
+      ${renderDiagnostics(diagnostics)}
     </main>
   `;
 }
