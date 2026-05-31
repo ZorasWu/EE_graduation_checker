@@ -57,6 +57,21 @@ function renderDetailList(lines, label = "") {
   `;
 }
 
+function renderDetailSections(sections = []) {
+  if (!sections.length) {
+    return "";
+  }
+
+  return sections
+    .map((section) => {
+      const primary = renderDetailList(section.lines ?? [], section.label);
+      const pending = renderDetailList(section.pendingLines ?? [], `${section.label} In progress`);
+      const missing = renderDetailList(section.missingLines ?? [], `${section.label} Missing`);
+      return [primary, pending, missing].filter(Boolean).join("");
+    })
+    .join("");
+}
+
 function renderCategoryBreakdown(check) {
   if (!check.categories?.length) {
     return "";
@@ -217,6 +232,7 @@ function renderCheckCard(check) {
   const showDetailLines = !check.categories?.length && detailLines.length > 1;
   const missingList = renderDetailList(check.missingItems ?? [], "Missing");
   const pendingList = renderDetailList(check.pendingItems ?? [], "In progress");
+  const detailSections = renderDetailSections(check.detailSections ?? []);
   const categoryList = renderCategoryBreakdown(check);
   const detailText = showDetailLines ? "" : check.details || "";
   const extraDetailLines = showDetailLines ? renderDetailList(detailLines) : "";
@@ -242,6 +258,7 @@ function renderCheckCard(check) {
       </div>
       ${detailText ? `<p class="meta-row">${escapeHtml(detailText)}</p>` : ""}
       ${extraDetailLines}
+      ${detailSections}
       ${missingList}
       ${pendingList}
       ${categoryList}

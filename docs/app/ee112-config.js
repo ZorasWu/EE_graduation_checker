@@ -97,7 +97,7 @@ export const EE112_CONFIG = {
       }
     }
   },
-  portalOnlyRuleIds: ["11320", "11400", "18100", "18200", "18300", "18500", "19200", "19230"],
+  portalOnlyRuleIds: ["11320", "11400", "18100", "18200", "18300", "18500", "19200"],
   derivedPortalMappings: {
     freshmanEnglish: "11201",
     serviceLearning: "18400",

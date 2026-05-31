@@ -157,6 +157,50 @@ function buildRequirementGroups(derivedChecks, portalOnlyChecks) {
     .sort((left, right) => left.order - right.order);
 }
 
+function formatPortalCourseLabel(course) {
+  const status =
+    course.passStatus === "not_entered" ? "未輸入" : course.passStatus === "in_progress" ? "修課中" : null;
+  const statusSuffix = status ? ` (${status})` : "";
+  return `${course.courseId} ${course.courseName}${statusSuffix}`.trim();
+}
+
+function classifyPortalCourses(courses) {
+  const passed = [];
+  const pending = [];
+
+  for (const course of courses) {
+    if (course.passStatus === "passed") {
+      passed.push(course);
+      continue;
+    }
+
+    if (course.passStatus === "in_progress" || course.passStatus === "not_entered") {
+      pending.push(course);
+    }
+  }
+
+  return { passed, pending };
+}
+
+function buildPortalSections(graduateReport, sectionConfigs) {
+  return sectionConfigs.map((config) => {
+    const rule = graduateReport.rulesById[config.ruleId];
+    const courses = rule?.matchedCourses ?? [];
+    const classified = classifyPortalCourses(courses);
+    const passedLines = classified.passed.map(formatPortalCourseLabel);
+    const pendingLines = classified.pending.map(formatPortalCourseLabel);
+    const missingCount = Math.max(0, (rule?.requiredCourses ?? 0) - classified.passed.length - classified.pending.length);
+    const missingLines = Array.from({ length: missingCount }, (_, index) => `${config.title}待完成 ${index + 1}`);
+
+    return {
+      label: config.title,
+      lines: passedLines,
+      pendingLines,
+      missingLines
+    };
+  });
+}
+
 function formatCourseLabel(courseOrRequirement) {
   return `${courseOrRequirement.courseId} ${courseOrRequirement.title ?? courseOrRequirement.courseName ?? ""}`.trim();
 }
@@ -417,17 +461,40 @@ function buildPortalOnlyChecks(graduateReport) {
   return EE112_CONFIG.portalOnlyRuleIds
     .map((ruleId) => graduateReport.rulesById[ruleId])
     .filter(Boolean)
-    .map((rule) => ({
-      id: `portal-${rule.ruleId}`,
-      title: rule.ruleName,
-      source: "Graduate Report",
-      portalRuleId: rule.ruleId,
-      pass: rule.portalPass,
-      statusText: buildStatusText(rule.portalPass),
-      currentValue: `${rule.currentCredits} credits / ${rule.currentCourses} courses`,
-      requiredValue: `${rule.requiredCredits} credits / ${rule.requiredCourses} courses`,
-      details: sanitizePortalMemo(rule.memo) || "Portal-only requirement."
-    }));
+    .map((rule) => {
+      const baseCheck = {
+        id: `portal-${rule.ruleId}`,
+        title: rule.ruleName,
+        source: "Graduate Report",
+        portalRuleId: rule.ruleId,
+        pass: rule.portalPass,
+        statusText: buildStatusText(rule.portalPass),
+        currentValue: `${rule.currentCredits} credits / ${rule.currentCourses} courses`,
+        requiredValue: `${rule.requiredCredits} credits / ${rule.requiredCourses} courses`,
+        details: sanitizePortalMemo(rule.memo) || "Portal-only requirement."
+      };
+
+      if (rule.ruleId === "11400") {
+        return {
+          ...baseCheck,
+          details: "需通過 2 門大一國文。",
+          detailSections: buildPortalSections(graduateReport, [{ ruleId: "11401", title: "國文課程" }])
+        };
+      }
+
+      if (rule.ruleId === "18200") {
+        return {
+          ...baseCheck,
+          details: "需通過 2 門大一體育與 3 門興趣體育。",
+          detailSections: buildPortalSections(graduateReport, [
+            { ruleId: "18201", title: "大一體育" },
+            { ruleId: "18202", title: "興趣體育" }
+          ])
+        };
+      }
+
+      return baseCheck;
+    });
 }
 
 export function evaluateEe112(snapshot) {
