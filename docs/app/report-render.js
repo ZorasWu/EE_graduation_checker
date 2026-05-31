@@ -226,7 +226,7 @@ function renderCheckCard(check) {
       <div class="card-head">
         <div>
           <p class="eyebrow">${escapeHtml(check.source)}</p>
-          <h3>${escapeHtml(check.title)}</h3>
+          <h3>${escapeHtml(check.displayTitle || check.title)}</h3>
         </div>
         <span class="status-pill ${check.pass ? "status-pass" : "status-fail"}">${escapeHtml(check.statusText)}</span>
       </div>
@@ -246,6 +246,20 @@ function renderCheckCard(check) {
       ${pendingList}
       ${categoryList}
     </article>
+  `;
+}
+
+function renderRequirementGroup(group) {
+  return `
+    <section class="panel">
+      <div class="section-head">
+        <p class="eyebrow">Requirements</p>
+        <h2>${escapeHtml(group.title)}</h2>
+      </div>
+      <div class="card-grid">
+        ${group.checks.map(renderCheckCard).join("")}
+      </div>
+    </section>
   `;
 }
 
@@ -301,6 +315,7 @@ function renderSemesterTable(semester) {
 export function renderReport(root, snapshot) {
   const { evaluation, transcript, graduateReport, student } = snapshot;
   const progressSummary = summarizeTranscriptProgress(transcript);
+  const requirementSections = evaluation.requirementGroups.map(renderRequirementGroup).join("");
   const discrepancySection = evaluation.discrepancies.length
     ? `
       <section class="panel">
@@ -351,25 +366,7 @@ export function renderReport(root, snapshot) {
         </div>
       </section>
 
-      <section class="panel">
-        <div class="section-head">
-          <p class="eyebrow">Custom checks</p>
-          <h2>EE112 derived rules</h2>
-        </div>
-        <div class="card-grid">
-          ${evaluation.derivedChecks.map(renderCheckCard).join("")}
-        </div>
-      </section>
-
-      <section class="panel">
-        <div class="section-head">
-          <p class="eyebrow">Portal-backed</p>
-          <h2>Requirements still sourced from Graduate Report</h2>
-        </div>
-        <div class="card-grid">
-          ${evaluation.portalOnlyChecks.map(renderCheckCard).join("")}
-        </div>
-      </section>
+      ${requirementSections}
 
       ${discrepancySection}
 

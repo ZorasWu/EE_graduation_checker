@@ -1,6 +1,37 @@
 import { EE112_CONFIG } from "./ee112-config.js";
 import { normalizeCourseCode, uniqueBy } from "./html-utils.js";
 
+const REQUIREMENT_GROUP_CONFIG = {
+  overall: { title: "整體畢業", order: 10 },
+  commonRequired: { title: "共同必修", order: 20 },
+  campusRequirements: { title: "服務與校級條件", order: 30 },
+  majorRequired: { title: "系訂必修", order: 40 },
+  majorElectives: { title: "系訂選修與限制", order: 50 },
+  other: { title: "其他條件", order: 90 }
+};
+
+const CHECK_PRESENTATION = {
+  "graduation-credits": { groupKey: "overall", title: "最低畢業學分", order: 10 },
+  "freshman-english": { groupKey: "commonRequired", title: "大一英文", order: 10 },
+  "service-learning": { groupKey: "campusRequirements", title: "服務學習", order: 10 },
+  "required-course-set-a": { groupKey: "majorRequired", title: "一般系訂必修學分", order: 10 },
+  "department-college-elective": { groupKey: "majorElectives", title: "本系或資電學院選修 12 學分", order: 10 },
+  "star-elective": { groupKey: "majorElectives", title: "星號選修 18 學分", order: 20 },
+  "lab-elective": { groupKey: "majorElectives", title: "跨組實驗 9 學分", order: 30 },
+  "project-cap": { groupKey: "majorElectives", title: "專題學分上限", order: 40 }
+};
+
+const PORTAL_RULE_PRESENTATION = {
+  "11320": { groupKey: "commonRequired", title: "通識課程", order: 30 },
+  "11400": { groupKey: "commonRequired", title: "國文", order: 20 },
+  "18100": { groupKey: "commonRequired", title: "操行", order: 60 },
+  "18200": { groupKey: "commonRequired", title: "體育", order: 40 },
+  "18300": { groupKey: "commonRequired", title: "軍訓", order: 50 },
+  "18500": { groupKey: "campusRequirements", title: "學生學習護照", order: 20 },
+  "19200": { groupKey: "campusRequirements", title: "英語能力檢定", order: 30 },
+  "19230": { groupKey: "majorElectives", title: "本系選修與自訂它系課程總學分", order: 50 }
+};
+
 function courseSortValue(course) {
   return Number.parseInt(course.semester || "0", 10);
 }
@@ -79,6 +110,51 @@ function sanitizePortalMemo(memo) {
     .replace(/※未通過類別:18101,?/g, "")
     .replace(/\(尚未達到畢業基礎門檻,詳細資料請參考:服務櫃台>訊息與活動>活動報名>時數儀表板\)/g, "")
     .trim();
+}
+
+function annotateCheck(check) {
+  const portalPresentation = check.portalRuleId ? PORTAL_RULE_PRESENTATION[check.portalRuleId] : null;
+  const checkPresentation = CHECK_PRESENTATION[check.id] ?? null;
+  const presentation = checkPresentation ?? portalPresentation;
+  return {
+    ...check,
+    displayTitle: presentation?.title ?? check.title,
+    groupKey: presentation?.groupKey ?? "other",
+    displayOrder: presentation?.order ?? 999
+  };
+}
+
+function buildRequirementGroups(derivedChecks, portalOnlyChecks) {
+  const grouped = new Map();
+  const checks = [...derivedChecks, ...portalOnlyChecks].map(annotateCheck);
+
+  for (const check of checks) {
+    const groupKey = check.groupKey ?? "other";
+    const config = REQUIREMENT_GROUP_CONFIG[groupKey] ?? REQUIREMENT_GROUP_CONFIG.other;
+    if (!grouped.has(groupKey)) {
+      grouped.set(groupKey, {
+        key: groupKey,
+        title: config.title,
+        order: config.order,
+        checks: []
+      });
+    }
+
+    grouped.get(groupKey).checks.push(check);
+  }
+
+  return [...grouped.values()]
+    .map((group) => ({
+      ...group,
+      checks: group.checks.sort((left, right) => {
+        if (left.displayOrder !== right.displayOrder) {
+          return left.displayOrder - right.displayOrder;
+        }
+
+        return left.displayTitle.localeCompare(right.displayTitle, "zh-Hant");
+      })
+    }))
+    .sort((left, right) => left.order - right.order);
 }
 
 function formatCourseLabel(courseOrRequirement) {
@@ -395,6 +471,7 @@ export function evaluateEe112(snapshot) {
     overallPass,
     derivedChecks,
     portalOnlyChecks,
+    requirementGroups: buildRequirementGroups(derivedChecks, portalOnlyChecks),
     discrepancies
   };
 }
