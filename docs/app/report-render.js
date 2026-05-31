@@ -29,6 +29,18 @@ function formatCourseStatus(passStatus) {
   }
 }
 
+function formatScoreText(course) {
+  if (course.passStatus === "not_entered") {
+    return "未輸入";
+  }
+
+  if (course.passStatus === "in_progress") {
+    return "修課中";
+  }
+
+  return course.scoreText;
+}
+
 function renderDetailList(lines, label = "") {
   if (!lines.length) {
     return "";
@@ -116,6 +128,7 @@ function renderCheckCard(check) {
   const detailLines = Array.isArray(check.detailLines) && check.detailLines.length ? check.detailLines : splitInlineList(check.details);
   const showDetailLines = !check.categories?.length && detailLines.length > 1;
   const missingList = renderDetailList(check.missingItems ?? [], "Missing");
+  const pendingList = renderDetailList(check.pendingItems ?? [], "In progress");
   const categoryList = check.categories?.length
     ? renderDetailList(
         check.categories.map((category) => `${category.title}: ${category.credits} credits`),
@@ -147,6 +160,7 @@ function renderCheckCard(check) {
       ${detailText ? `<p class="meta-row">${escapeHtml(detailText)}</p>` : ""}
       ${extraDetailLines}
       ${missingList}
+      ${pendingList}
       ${categoryList}
     </article>
   `;
@@ -171,7 +185,7 @@ function renderSemesterTable(semester) {
           <td>${escapeHtml(course.courseName || course.courseNameEn)}</td>
           <td>${escapeHtml(course.courseAttribute)}</td>
           <td>${escapeHtml(course.credits)}</td>
-          <td>${escapeHtml(course.scoreText)}</td>
+          <td>${escapeHtml(formatScoreText(course))}</td>
           <td>${escapeHtml(formatCourseStatus(course.passStatus))}</td>
         </tr>
       `
