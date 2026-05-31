@@ -47,7 +47,14 @@ function parseScoreStatus(scoreText) {
     };
   }
 
-  if (/未到|not entered|修課中|in progress/i.test(scoreText)) {
+  if (/未到|not entered/i.test(scoreText)) {
+    return {
+      numericScore: null,
+      passStatus: "not_entered"
+    };
+  }
+
+  if (/修課中|in progress/i.test(scoreText)) {
     return {
       numericScore: null,
       passStatus: "in_progress"

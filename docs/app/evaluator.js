@@ -45,7 +45,7 @@ function buildCourseIndexes(courses) {
       completedByCode.set(code, pickBestCourse(completedByCode.get(code), course));
     }
 
-    if (course.passStatus === "in_progress") {
+    if (course.passStatus === "in_progress" || course.passStatus === "not_entered") {
       inProgressByCode.set(code, pickBestCourse(inProgressByCode.get(code), course));
     }
   }
@@ -97,9 +97,7 @@ function evaluateRequiredCourseSet(indexes) {
     statusText: buildStatusText(missing.length === 0),
     currentValue: `${matchedCourses.length}/${EE112_CONFIG.requiredCourseSetA.length} courses`,
     requiredValue: "23 courses / 55 credits",
-    details: missing.length
-      ? `Missing: ${missing.map((item) => item.courseId).join(", ")}`
-      : "All EE112 core required courses are completed.",
+    details: missing.length ? `${missing.length} required courses are still missing.` : "All EE112 core required courses are completed.",
     missingItems: missing.map((item) => `${item.courseId} ${item.title}`)
   };
 }
@@ -109,6 +107,7 @@ function evaluateRequiredChoice(indexes) {
   const completedChoice = group.groups.some((choiceGroup) =>
     choiceGroup.some((courseId) => indexes.completedByCode.has(courseId))
   );
+  const optionCourseIds = [...new Set(group.groups.flat())];
 
   return {
     id: "required-choice",
@@ -119,7 +118,8 @@ function evaluateRequiredChoice(indexes) {
     statusText: buildStatusText(completedChoice),
     currentValue: completedChoice ? "1/1 course" : "0/1 course",
     requiredValue: "1 course",
-    details: completedChoice ? "One configured m-of-n requirement is completed." : "Missing CO3005."
+    details: completedChoice ? "One configured m-of-n requirement is completed." : "One configured m-of-n requirement is still missing.",
+    missingItems: completedChoice ? [] : optionCourseIds
   };
 }
 
@@ -158,10 +158,6 @@ function evaluateCreditCategories(indexes, config, label) {
   }
 
   const pass = totalCredits >= config.minCredits && matchedCategoryCount >= config.minCategories;
-  const detailText = categoryDetails
-    .map((item) => `${item.title}: ${item.credits} credits`)
-    .join(" | ");
-
   return {
     id: label,
     title: label === "star-elective" ? "Star elective requirement" : "Cross-group lab requirement",
@@ -171,7 +167,7 @@ function evaluateCreditCategories(indexes, config, label) {
     statusText: buildStatusText(pass),
     currentValue: `${totalCredits} credits / ${matchedCategoryCount} categories`,
     requiredValue: `${config.minCredits} credits / ${config.minCategories} categories`,
-    details: detailText,
+    details: `Matched ${matchedCategoryCount} categories with ${totalCredits} credits.`,
     categories: categoryDetails
   };
 }
@@ -213,9 +209,8 @@ function evaluateFreshmanEnglish(indexes) {
     statusText: buildStatusText(pass),
     currentValue: `${totalCredits} credits`,
     requiredValue: `${EE112_CONFIG.freshmanEnglishCredits} credits`,
-    details: matchedCourses.length
-      ? matchedCourses.map((course) => `${course.courseId} ${course.courseName}`).join(" | ")
-      : "No qualifying freshman-English courses found."
+    details: matchedCourses.length ? "Completed freshman-English courses." : "No qualifying freshman-English courses found.",
+    detailLines: matchedCourses.map((course) => `${course.courseId} ${course.courseName}`)
   };
 }
 
@@ -234,9 +229,8 @@ function evaluateServiceLearning(indexes) {
     statusText: buildStatusText(pass),
     currentValue: `${matchedCourses.length} courses`,
     requiredValue: "2 courses",
-    details: matchedCourses.length
-      ? matchedCourses.map((course) => `${course.courseId} ${course.courseName}`).join(" | ")
-      : "No qualifying service-learning courses found."
+    details: matchedCourses.length ? "Completed service-learning courses." : "No qualifying service-learning courses found.",
+    detailLines: matchedCourses.map((course) => `${course.courseId} ${course.courseName}`)
   };
 }
 

@@ -25,7 +25,9 @@ test("transcript parser extracts student and semester data", async () => {
   assert.equal(transcript.totals.emiCredits, 9);
   assert.ok(transcript.semesters.length >= 5);
   assert.ok(transcript.courses.some((course) => course.courseId === "SC0003"));
-  assert.ok(transcript.courses.some((course) => course.passStatus === "in_progress"));
+  assert.ok(
+    transcript.courses.some((course) => course.passStatus === "in_progress" || course.passStatus === "not_entered")
+  );
 });
 
 test("graduate-report parser extracts major summary and rule IDs", async () => {

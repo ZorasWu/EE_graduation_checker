@@ -7,6 +7,61 @@ function escapeHtml(input) {
     .replace(/'/g, "&#39;");
 }
 
+function splitInlineList(text) {
+  return String(text ?? "")
+    .split(" | ")
+    .map((item) => item.trim())
+    .filter(Boolean);
+}
+
+function formatCourseStatus(passStatus) {
+  switch (passStatus) {
+    case "passed":
+      return "通過";
+    case "failed":
+      return "不通過";
+    case "in_progress":
+      return "修課中";
+    case "not_entered":
+      return "未輸入";
+    default:
+      return "未判定";
+  }
+}
+
+function renderDetailList(lines, label = "") {
+  if (!lines.length) {
+    return "";
+  }
+
+  const labelBlock = label ? `<strong>${escapeHtml(label)}</strong>` : "";
+  return `
+    <div class="meta-row">
+      ${labelBlock}
+      <div class="detail-list">
+        ${lines.map((line) => `<div class="detail-item">${escapeHtml(line)}</div>`).join("")}
+      </div>
+    </div>
+  `;
+}
+
+function summarizeTranscriptProgress(transcript) {
+  return transcript.courses.reduce(
+    (summary, course) => {
+      if (course.passStatus === "in_progress") {
+        summary.inProgress += 1;
+      }
+
+      if (course.passStatus === "not_entered") {
+        summary.notEntered += 1;
+      }
+
+      return summary;
+    },
+    { inProgress: 0, notEntered: 0 }
+  );
+}
+
 function formatDiagnosticPayload(payload) {
   if (payload === undefined) {
     return "";
@@ -58,23 +113,17 @@ function renderDiagnostics(diagnostics = []) {
 }
 
 function renderCheckCard(check) {
-  const missingList =
-    check.missingItems && check.missingItems.length
-      ? `<p class="meta-row"><strong>Missing:</strong> ${escapeHtml(check.missingItems.join(", "))}</p>`
-      : "";
-  const categoryList =
-    check.categories && check.categories.length
-      ? `<div class="category-grid">${check.categories
-          .map(
-            (category) => `
-              <div class="category-chip">
-                <span>${escapeHtml(category.title)}</span>
-                <strong>${escapeHtml(category.credits)} cr</strong>
-              </div>
-            `
-          )
-          .join("")}</div>`
-      : "";
+  const detailLines = Array.isArray(check.detailLines) && check.detailLines.length ? check.detailLines : splitInlineList(check.details);
+  const showDetailLines = !check.categories?.length && detailLines.length > 1;
+  const missingList = renderDetailList(check.missingItems ?? [], "Missing");
+  const categoryList = check.categories?.length
+    ? renderDetailList(
+        check.categories.map((category) => `${category.title}: ${category.credits} credits`),
+        "Category breakdown"
+      )
+    : "";
+  const detailText = showDetailLines ? "" : check.details || "";
+  const extraDetailLines = showDetailLines ? renderDetailList(detailLines) : "";
 
   return `
     <article class="card ${check.pass ? "card-pass" : "card-fail"}">
@@ -95,7 +144,8 @@ function renderCheckCard(check) {
           <strong>${escapeHtml(check.requiredValue)}</strong>
         </div>
       </div>
-      <p class="meta-row">${escapeHtml(check.details || "")}</p>
+      ${detailText ? `<p class="meta-row">${escapeHtml(detailText)}</p>` : ""}
+      ${extraDetailLines}
       ${missingList}
       ${categoryList}
     </article>
@@ -122,7 +172,7 @@ function renderSemesterTable(semester) {
           <td>${escapeHtml(course.courseAttribute)}</td>
           <td>${escapeHtml(course.credits)}</td>
           <td>${escapeHtml(course.scoreText)}</td>
-          <td>${escapeHtml(course.passStatus)}</td>
+          <td>${escapeHtml(formatCourseStatus(course.passStatus))}</td>
         </tr>
       `
     )
@@ -153,6 +203,7 @@ function renderSemesterTable(semester) {
 
 export function renderReport(root, snapshot) {
   const { evaluation, transcript, graduateReport, student } = snapshot;
+  const progressSummary = summarizeTranscriptProgress(transcript);
   const discrepancySection = evaluation.discrepancies.length
     ? `
       <section class="panel">
@@ -187,6 +238,14 @@ export function renderReport(root, snapshot) {
           <div class="hero-stat">
             <span>Portal major status</span>
             <strong>${escapeHtml(graduateReport.major.portalStatusText || "Unknown")}</strong>
+          </div>
+          <div class="hero-stat">
+            <span>修課中</span>
+            <strong>${escapeHtml(progressSummary.inProgress)}</strong>
+          </div>
+          <div class="hero-stat">
+            <span>未輸入</span>
+            <strong>${escapeHtml(progressSummary.notEntered)}</strong>
           </div>
           <div class="hero-stat">
             <span>Current semester</span>
