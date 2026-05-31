@@ -57,6 +57,94 @@ function renderDetailList(lines, label = "") {
   `;
 }
 
+function renderCategoryBreakdown(check) {
+  if (!check.categories?.length) {
+    return "";
+  }
+
+  return `
+    <div class="meta-row">
+      <strong>Category breakdown</strong>
+      <div class="category-accordion">
+        ${check.categories
+          .map((category, index) => {
+            const countedCourses = category.matchedCourses.map(
+              (course) =>
+                `${course.courseId} ${course.courseName} (${course.credits} credits${course.possibleCategories?.length > 1 ? `，可列入 ${course.possibleCategories.join(" / ")}` : ""})`
+            );
+            const pendingCourses = category.pendingCourses.map(
+              (course) =>
+                `${course.courseId} ${course.courseName} (${course.passStatus === "not_entered" ? "未輸入" : "修課中"}${course.possibleCategories?.length > 1 ? `，可列入 ${course.possibleCategories.join(" / ")}` : ""})`
+            );
+            const detailSections = [
+              renderDetailList(countedCourses, "Counted"),
+              renderDetailList(pendingCourses, "In progress")
+            ]
+              .filter(Boolean)
+              .join("");
+            const emptyState = detailSections ? "" : `<div class="detail-item">No matched courses.</div>`;
+
+            return `
+              <div class="category-entry">
+                <button type="button" class="category-toggle" data-accordion-button aria-expanded="false" aria-controls="category-panel-${escapeHtml(check.id)}-${index}">
+                  <span>${escapeHtml(category.title)}</span>
+                  <strong>${escapeHtml(category.credits)} cr</strong>
+                </button>
+                <div id="category-panel-${escapeHtml(check.id)}-${index}" class="category-panel" data-accordion-panel hidden>
+                  ${detailSections || emptyState}
+                </div>
+              </div>
+            `;
+          })
+          .join("")}
+      </div>
+    </div>
+  `;
+}
+
+function attachAnimatedAccordions(root) {
+  const buttons = root.querySelectorAll("[data-accordion-button]");
+
+  for (const button of buttons) {
+    button.addEventListener("click", () => {
+      const panel = button.parentElement?.querySelector("[data-accordion-panel]");
+      if (!panel) {
+        return;
+      }
+
+      const isExpanded = button.getAttribute("aria-expanded") === "true";
+      const startHeight = `${panel.offsetHeight}px`;
+
+      if (isExpanded) {
+        const endHeight = "0px";
+        panel.animate([{ height: startHeight, opacity: 1 }, { height: endHeight, opacity: 0 }], {
+          duration: 180,
+          easing: "ease"
+        }).onfinish = () => {
+          panel.hidden = true;
+          panel.style.height = "";
+          panel.style.opacity = "";
+        };
+        button.setAttribute("aria-expanded", "false");
+        return;
+      }
+
+      panel.hidden = false;
+      const expandedHeight = `${panel.scrollHeight}px`;
+      panel.style.height = "0px";
+      panel.style.opacity = "0";
+      panel.animate([{ height: "0px", opacity: 0 }, { height: expandedHeight, opacity: 1 }], {
+        duration: 220,
+        easing: "ease"
+      }).onfinish = () => {
+        panel.style.height = "";
+        panel.style.opacity = "";
+      };
+      button.setAttribute("aria-expanded", "true");
+    });
+  }
+}
+
 function summarizeTranscriptProgress(transcript) {
   return transcript.courses.reduce(
     (summary, course) => {
@@ -129,12 +217,7 @@ function renderCheckCard(check) {
   const showDetailLines = !check.categories?.length && detailLines.length > 1;
   const missingList = renderDetailList(check.missingItems ?? [], "Missing");
   const pendingList = renderDetailList(check.pendingItems ?? [], "In progress");
-  const categoryList = check.categories?.length
-    ? renderDetailList(
-        check.categories.map((category) => `${category.title}: ${category.credits} credits`),
-        "Category breakdown"
-      )
-    : "";
+  const categoryList = renderCategoryBreakdown(check);
   const detailText = showDetailLines ? "" : check.details || "";
   const extraDetailLines = showDetailLines ? renderDetailList(detailLines) : "";
 
@@ -301,6 +384,7 @@ export function renderReport(root, snapshot) {
       </section>
     </main>
   `;
+  attachAnimatedAccordions(root);
 }
 
 export function renderMessage(root, title, body, tone = "neutral", diagnostics = []) {

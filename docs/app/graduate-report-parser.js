@@ -10,7 +10,11 @@ function parsePortalQualified(qualified, scoreText) {
     return "passed";
   }
 
-  if (String(qualified) === "2" || /未到|not entered/i.test(scoreText)) {
+  if (/未到|not entered/i.test(scoreText)) {
+    return "not_entered";
+  }
+
+  if (String(qualified) === "2") {
     return "in_progress";
   }
 

@@ -30,13 +30,11 @@ export const EE112_CONFIG = {
     { courseId: "PH1031", title: "普通物理 A I", credits: 3 },
     { courseId: "PH1032", title: "普通物理 A II", credits: 3 }
   ],
-  requiredChoiceGroups: [
-    {
-      ruleId: "12200",
-      title: "必修課程 m 選 n",
-      groups: [["CO3005"]]
-    }
-  ],
+  departmentCollegeElective: {
+    minCredits: 12,
+    allowedPrefixes: ["EE", "CO", "CE"],
+    description: "系同學畢業以前須自本系或資電學院開授的課程中選修 12 學分，始得畢業(不包含第2項之18學分及第3項之9學分)。"
+  },
   starElective: {
     portalRuleId: "13200",
     minCredits: 18,
@@ -104,7 +102,6 @@ export const EE112_CONFIG = {
     freshmanEnglish: "11201",
     serviceLearning: "18400",
     requiredCourseSetA: "12101",
-    requiredChoice: "12200",
     starElective: "13200",
     labElective: "13300",
     projectCap: "19260"

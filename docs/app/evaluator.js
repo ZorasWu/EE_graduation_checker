@@ -81,6 +81,96 @@ function sanitizePortalMemo(memo) {
     .trim();
 }
 
+function formatCourseLabel(courseOrRequirement) {
+  return `${courseOrRequirement.courseId} ${courseOrRequirement.title ?? courseOrRequirement.courseName ?? ""}`.trim();
+}
+
+function formatPendingCourseLabel(courseOrRequirement, passStatus) {
+  const status = passStatus === "not_entered" ? "未輸入" : "修課中";
+  return `${formatCourseLabel(courseOrRequirement)} (${status})`;
+}
+
+function buildCategoryAssignments(indexes, config) {
+  const categoryEntries = Object.entries(config.categories).map(([key, category], index) => ({
+    key,
+    order: index,
+    title: category.title,
+    courseIds: new Set(category.courseIds),
+    credits: 0,
+    matchedCourses: [],
+    pendingCourses: []
+  }));
+  const categoryMap = new Map(categoryEntries.map((entry) => [entry.key, entry]));
+  const completedCandidates = uniqueBy(
+    categoryEntries
+      .flatMap((entry) => [...entry.courseIds].map((courseId) => indexes.completedByCode.get(courseId)).filter(Boolean)),
+    (course) => course.courseId
+  );
+  const pendingCandidates = uniqueBy(
+    categoryEntries
+      .flatMap((entry) => [...entry.courseIds].map((courseId) => indexes.inProgressByCode.get(courseId)).filter(Boolean)),
+    (course) => course.courseId
+  );
+
+  function getCandidateCategories(course) {
+    return categoryEntries.filter((entry) => entry.courseIds.has(course.courseId));
+  }
+
+  for (const course of completedCandidates
+    .map((course) => ({ course, categories: getCandidateCategories(course) }))
+    .sort((left, right) => left.categories.length - right.categories.length || left.course.courseId.localeCompare(right.course.courseId))) {
+    const targetCategory = [...course.categories]
+      .sort((left, right) => {
+        const leftEmpty = left.matchedCourses.length === 0 ? 0 : 1;
+        const rightEmpty = right.matchedCourses.length === 0 ? 0 : 1;
+        if (leftEmpty !== rightEmpty) {
+          return leftEmpty - rightEmpty;
+        }
+
+        if (left.credits !== right.credits) {
+          return left.credits - right.credits;
+        }
+
+        return left.order - right.order;
+      })[0];
+
+    targetCategory.matchedCourses.push({
+      ...course.course,
+      countedCategory: targetCategory.key,
+      countedCategoryTitle: targetCategory.title,
+      possibleCategories: course.categories.map((category) => category.title)
+    });
+    targetCategory.credits += course.course.credits;
+  }
+
+  for (const course of pendingCandidates
+    .map((course) => ({ course, categories: getCandidateCategories(course) }))
+    .sort((left, right) => left.categories.length - right.categories.length || left.course.courseId.localeCompare(right.course.courseId))) {
+    const targetCategory = [...course.categories]
+      .sort((left, right) => left.pendingCourses.length - right.pendingCourses.length || left.order - right.order)[0];
+
+    targetCategory.pendingCourses.push({
+      ...course.course,
+      countedCategory: targetCategory.key,
+      countedCategoryTitle: targetCategory.title,
+      possibleCategories: course.categories.map((category) => category.title)
+    });
+  }
+
+  return {
+    categories: categoryEntries.map((entry) => ({
+      key: entry.key,
+      title: entry.title,
+      credits: entry.credits,
+      matchedCourses: entry.matchedCourses,
+      pendingCourses: entry.pendingCourses
+    })),
+    countedCourseIds: new Set(completedCandidates.map((course) => course.courseId)),
+    totalCredits: completedCandidates.reduce((sum, course) => sum + course.credits, 0),
+    matchedCategoryCount: categoryEntries.filter((entry) => entry.credits > 0).length
+  };
+}
+
 function evaluateRequiredCourseSet(indexes) {
   const missing = [];
   const pending = [];
@@ -123,76 +213,9 @@ function evaluateRequiredCourseSet(indexes) {
   };
 }
 
-function evaluateRequiredChoice(indexes) {
-  const group = EE112_CONFIG.requiredChoiceGroups[0];
-  const completedChoice = group.groups.some((choiceGroup) =>
-    choiceGroup.some((courseId) => indexes.completedByCode.has(courseId))
-  );
-  const optionCourseIds = [...new Set(group.groups.flat())];
-  const pendingItems = optionCourseIds
-    .map((courseId) => indexes.inProgressByCode.get(courseId))
-    .filter(Boolean);
-  const pendingChoice = !completedChoice && pendingItems.length > 0;
-
-  return {
-    id: "required-choice",
-    title: optionCourseIds.length === 1 ? "Configured required-choice course" : "Configured required-choice group",
-    source: "Derived",
-    portalRuleId: EE112_CONFIG.derivedPortalMappings.requiredChoice,
-    pass: completedChoice,
-    statusText: buildStatusText(completedChoice),
-    currentValue: completedChoice ? "1/1 course" : "0/1 course",
-    requiredValue: "1 course",
-    details: completedChoice
-      ? "Configured required-choice requirement is completed."
-      : pendingChoice
-        ? "Configured required-choice requirement is in progress."
-        : "Configured required-choice requirement is still missing.",
-    missingItems: completedChoice || pendingChoice ? [] : optionCourseIds,
-    pendingItems: completedChoice
-      ? []
-      : optionCourseIds
-          .map((courseId) => indexes.inProgressByCode.get(courseId))
-          .filter(Boolean)
-          .map((course) => `${course.courseId}${course.courseName ? ` ${course.courseName}` : ""} (${course.passStatus === "not_entered" ? "未輸入" : "修課中"})`)
-  };
-}
-
 function evaluateCreditCategories(indexes, config, label) {
-  let totalCredits = 0;
-  let matchedCategoryCount = 0;
-  const categoryDetails = [];
-
-  for (const [categoryKey, category] of Object.entries(config.categories)) {
-    const matchedCourses = uniqueBy(
-      category.courseIds
-        .map((courseId) => indexes.completedByCode.get(courseId))
-        .filter(Boolean),
-      (course) => course.courseId
-    );
-    const inProgressCourses = uniqueBy(
-      category.courseIds
-        .map((courseId) => indexes.inProgressByCode.get(courseId))
-        .filter(Boolean),
-      (course) => course.courseId
-    );
-    const categoryCredits = matchedCourses.reduce((sum, course) => sum + course.credits, 0);
-
-    totalCredits += categoryCredits;
-    if (categoryCredits > 0) {
-      matchedCategoryCount += 1;
-    }
-
-    categoryDetails.push({
-      key: categoryKey,
-      title: category.title,
-      credits: categoryCredits,
-      matchedCourses,
-      inProgressCourses
-    });
-  }
-
-  const pass = totalCredits >= config.minCredits && matchedCategoryCount >= config.minCategories;
+  const assignment = buildCategoryAssignments(indexes, config);
+  const pass = assignment.totalCredits >= config.minCredits && assignment.matchedCategoryCount >= config.minCategories;
   return {
     id: label,
     title: label === "star-elective" ? "Star elective requirement" : "Cross-group lab requirement",
@@ -200,10 +223,38 @@ function evaluateCreditCategories(indexes, config, label) {
     portalRuleId: config.portalRuleId,
     pass,
     statusText: buildStatusText(pass),
-    currentValue: `${totalCredits} credits / ${matchedCategoryCount} categories`,
+    currentValue: `${assignment.totalCredits} credits / ${assignment.matchedCategoryCount} categories`,
     requiredValue: `${config.minCredits} credits / ${config.minCategories} categories`,
-    details: `Matched ${matchedCategoryCount} categories with ${totalCredits} credits.`,
-    categories: categoryDetails
+    details: `Matched ${assignment.matchedCategoryCount} categories with ${assignment.totalCredits} credits.`,
+    categories: assignment.categories,
+    countedCourseIds: [...assignment.countedCourseIds]
+  };
+}
+
+function evaluateDepartmentCollegeElective(indexes, excludedCourseIds) {
+  const allowedPrefixes = EE112_CONFIG.departmentCollegeElective.allowedPrefixes;
+  const matchesAllowedCode = (courseId) => allowedPrefixes.some((prefix) => new RegExp(`^${prefix}\\d{4}$`).test(courseId));
+  const isEligibleElective = (course) =>
+    Boolean(course) &&
+    matchesAllowedCode(course.courseId) &&
+    course.courseAttribute === "選修" &&
+    !excludedCourseIds.has(course.courseId);
+  const completedCourses = [...indexes.completedByCode.values()].filter(isEligibleElective);
+  const pendingCourses = [...indexes.inProgressByCode.values()].filter(isEligibleElective);
+  const totalCredits = completedCourses.reduce((sum, course) => sum + course.credits, 0);
+  const pass = totalCredits >= EE112_CONFIG.departmentCollegeElective.minCredits;
+
+  return {
+    id: "department-college-elective",
+    title: "本系或資電學院選修 12 學分",
+    source: "Derived",
+    pass,
+    statusText: buildStatusText(pass),
+    currentValue: `${totalCredits} credits`,
+    requiredValue: `${EE112_CONFIG.departmentCollegeElective.minCredits} credits`,
+    details: EE112_CONFIG.departmentCollegeElective.description,
+    detailLines: completedCourses.map(formatCourseLabel),
+    pendingItems: pendingCourses.map((course) => formatPendingCourseLabel(course, course.passStatus))
   };
 }
 
@@ -305,15 +356,22 @@ function buildPortalOnlyChecks(graduateReport) {
 
 export function evaluateEe112(snapshot) {
   const indexes = buildCourseIndexes(snapshot.transcript.courses);
+  const starElective = evaluateCreditCategories(indexes, EE112_CONFIG.starElective, "star-elective");
+  const labElective = evaluateCreditCategories(indexes, EE112_CONFIG.labElective, "lab-elective");
+  const excludedDepartmentElectiveCourseIds = new Set([
+    ...starElective.countedCourseIds,
+    ...labElective.countedCourseIds
+  ]);
+  const departmentCollegeElective = evaluateDepartmentCollegeElective(indexes, excludedDepartmentElectiveCourseIds);
   const projectCap = evaluateProjectCap(indexes);
   const derivedChecks = [
     evaluateGraduationCredits(snapshot.transcript.totals, projectCap),
     evaluateFreshmanEnglish(indexes),
     evaluateServiceLearning(indexes),
     evaluateRequiredCourseSet(indexes),
-    evaluateRequiredChoice(indexes),
-    evaluateCreditCategories(indexes, EE112_CONFIG.starElective, "star-elective"),
-    evaluateCreditCategories(indexes, EE112_CONFIG.labElective, "lab-elective"),
+    departmentCollegeElective,
+    starElective,
+    labElective,
     projectCap
   ];
   const portalOnlyChecks = buildPortalOnlyChecks(snapshot.graduateReport);
