@@ -1,0 +1,19 @@
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor settings
+.idea/
+.vscode/
+
+# Local packaging and scratch files
+*.zip
+*.crx
+*.log
+tmp/
+dist/
+
+# Test coverage or local reports
+coverage/

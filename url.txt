@@ -1,0 +1,3 @@
+Grade: https://cis.ncu.edu.tw/iNCU/academic/score/transcriptQuery
+GraduateReport:https://cis.ncu.edu.tw/iNCU/academic/graduate/graduateReport
+Access:https://portal.ncu.edu.tw/

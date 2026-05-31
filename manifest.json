@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "NCU EE 112 Graduation Checker",
+  "version": "0.1.0",
+  "description": "Transcript-first graduation checking for NCU EE 112 students.",
+  "action": {
+    "default_title": "Generate EE 112 graduation report"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://portal.ncu.edu.tw/*",
+    "https://cis.ncu.edu.tw/*",
+    "https://*.github.io/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.github.io/*"
+      ],
+      "js": [
+        "content-bridge.js"
+      ],
+      "run_at": "document_start"
+    }
+  ]
+}

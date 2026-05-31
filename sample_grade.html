@@ -1,0 +1,1544 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0.8,maximum-scale=2.0,user-scalable=no" />
+	
+	<title>國立中央大學 - 服務櫃台 (iNCU)</title>
+	<link rel="shortcut icon" href="https://cis.ncu.edu.tw/iNCU/images/favicon.png" />
+	
+		<link rel="stylesheet" type="text/css" href="https://cis.ncu.edu.tw/iNCU/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="https://cis.ncu.edu.tw/iNCU/css/bootstrap-icons-v1.13.1.min.css?v=1769745236"> 	<link rel="stylesheet" type="text/css" href="https://cis.ncu.edu.tw/iNCU/css/smart_wizard.css" />	<link rel="stylesheet" type="text/css" href="https://cis.ncu.edu.tw/iNCU/css/smart_wizard_theme_dots.css" />	<link rel="stylesheet" type="text/css" href="https://cis.ncu.edu.tw/iNCU/css/component-custom-switch.min.css">	<link rel="stylesheet" type="text/css" href="https://cis.ncu.edu.tw/iNCU/css/typeaheadjs.css" />	<link rel="stylesheet" type="text/css" href="https://cis.ncu.edu.tw/iNCU/css/flatpickr.min.css" />  
+	<link rel="stylesheet" type="text/css" href="https://cis.ncu.edu.tw/iNCU/css/body.css?v=1775552282" />	<link rel="stylesheet" type="text/css" href="https://cis.ncu.edu.tw/iNCU/css/card.css?v=1769138642" />	<link rel="stylesheet" type="text/css" href="https://cis.ncu.edu.tw/iNCU/css/nav.css?v=1763610760" />	
+	<link rel="stylesheet" type="text/css" href="https://cis.ncu.edu.tw/iNCU/css/formGrid.css?v=1770792357" />	<link rel="stylesheet" type="text/css" href="https://cis.ncu.edu.tw/iNCU/css/main.css?v=1769138642" />	
+		<script src="https://cis.ncu.edu.tw/iNCU/js/cleave.min.js"></script>
+	<script src="https://cis.ncu.edu.tw/iNCU/js/jquery-3.7.1.min.js"></script>
+	<script src="https://cis.ncu.edu.tw/iNCU/js/bootstrap.bundle.min.js"></script>
+ 	<script src="https://cis.ncu.edu.tw/iNCU/js/typeahead/typeahead.jquery.js"></script>	<script src="https://cis.ncu.edu.tw/iNCU/js/typeahead/typeahead.bundle.js"></script>		<script src="https://cis.ncu.edu.tw/iNCU/js/flatpickr.min.js"></script>	<script src="https://cis.ncu.edu.tw/iNCU/js/jquery.validate.min.js"></script>	<script src="https://cis.ncu.edu.tw/iNCU/js/jquery.blockUI.js"></script>
+	<script src="https://cis.ncu.edu.tw/iNCU/js/jquery.smartWizard.min.js"></script>	
+	<script src="https://cis.ncu.edu.tw/iNCU/js/nav.js"></script>	<script src="https://cis.ncu.edu.tw/iNCU/js/blankTools.js?v=1733723617"></script>	<script src="https://cis.ncu.edu.tw/iNCU/js/tools.js?v=1775099845"></script>	
+	<script src="https://cis.ncu.edu.tw/iNCU/js/jquery.rwdImageMaps.min.js"></script>	
+	<script src="https://cis.ncu.edu.tw/iNCU/js/chart.umd.js"></script>	
+		<script src="https://cis.ncu.edu.tw/iNCU/js/charts.js"></script>	<script src="https://cis.ncu.edu.tw/iNCU/js/jquery.circliful.min.js"></script>
+</head>
+
+<body>
+	<div class="loading blockOverlay" style="z-index: 1000; border: none; margin: 0px; padding: 0px; width: 100%; height: 100%; top: 0px; left: 0px; background-color: #fff; opacity: 0.5; cursor: wait; position: fixed;"></div>
+<div class="loading" style="z-index: 1011; position: fixed; padding: 15px; margin-top: -180px; margin-left: -108px; top: 50%; left: 50%; text-align: center;  border: none;  cursor: wait; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; ">
+	<div class='uil-default-css' style='transform:scale(0.2);'><div style='top:80px;left:93px;width:14px;height:40px;background:#00b2ff;-webkit-transform:rotate(0deg) translate(0,-60px);transform:rotate(0deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#00b2ff;-webkit-transform:rotate(30deg) translate(0,-60px);transform:rotate(30deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#00b2ff;-webkit-transform:rotate(60deg) translate(0,-60px);transform:rotate(60deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#00b2ff;-webkit-transform:rotate(90deg) translate(0,-60px);transform:rotate(90deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#00b2ff;-webkit-transform:rotate(120deg) translate(0,-60px);transform:rotate(120deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#00b2ff;-webkit-transform:rotate(150deg) translate(0,-60px);transform:rotate(150deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#00b2ff;-webkit-transform:rotate(180deg) translate(0,-60px);transform:rotate(180deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#00b2ff;-webkit-transform:rotate(210deg) translate(0,-60px);transform:rotate(210deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#00b2ff;-webkit-transform:rotate(240deg) translate(0,-60px);transform:rotate(240deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#00b2ff;-webkit-transform:rotate(270deg) translate(0,-60px);transform:rotate(270deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#00b2ff;-webkit-transform:rotate(300deg) translate(0,-60px);transform:rotate(300deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#00b2ff;-webkit-transform:rotate(330deg) translate(0,-60px);transform:rotate(330deg) translate(0,-60px);border-radius:10px;position:absolute;'></div></div>
+</div>	
+		<div>
+		<style>
+	.title-sub {		
+		display: none;
+	}
+	
+	@media(max-width: 768px) {
+		.title-text {		
+			display: none;
+		}
+		.title-sub {		
+			display: inline;
+		}
+	}
+</style>
+<div class="header-bg-img">
+	<nav class="navbar navbar-expand-md navbar-light pl-4">
+		<div class="d-flex align-items-center">
+			<img src="https://cis.ncu.edu.tw/iNCU/images/favicon.png" class="float-left me-2" alt="" style="height:40px;" />&nbsp;
+			<a class="navbar-brand" href="https://cis.ncu.edu.tw/iNCU/home">
+				<span class="title-text text_black">
+					國立中央大學 - 服務櫃台 (iNCU)
+									</span>
+
+				<span class="title-sub text_black">
+					服務櫃台 (iNCU)
+									</span>
+			</a>
+		</div>
+		<button class="navbar-toggler ml-auto" type="button" data-bs-toggle="collapse" data-bs-target=".navbars-ul" aria-controls="navbars-ul" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		
+		<div class="collapse navbar-collapse navbars-ul" id="navMenuSub">
+			<ul class="navbar-nav ms-auto">
+													<li class="nav-item">
+						<a class="nav-link text-black disabled-link">
+							<i class="bi bi-person-fill icon_text_spacing me-1"></i>吳尚原
+						</a>
+					</li>
+										<li class="nav-item">
+						<a class="nav-link text-black disabled-link">
+							<i class="bi bi-calendar icon_text_spacing me-1"></i>學期&nbsp;1142
+						</a>
+					</li>
+			    			    
+			    			    <li class="nav-item dropdown">
+			    	<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" style="color:black;">
+						<i class="bi bi-globe icon_text_spacing me-1"></i>中文
+					</a>
+					<div class="dropdown-menu dropdown-menu-end">
+						 
+							<a class="dropdown-item" href="https://cis.ncu.edu.tw/iNCU/locale/tw">中文</a>
+						 
+							<a class="dropdown-item" href="https://cis.ncu.edu.tw/iNCU/locale/en">English</a>
+											</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	
+		<nav class="navbar navbar-expand-md navbar-light pl-4">
+		<div class="collapse navbar-collapse navbars-ul" id="navMenu">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="menu_publicService" role="button" data-bs-toggle="dropdown" aria-expanded="false">公開服務</a>
+<ul class="dropdown-menu" aria-labelledby="menu_publicService">
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/publicService/calenderQuery" class="dropdown-item">行事曆總覽</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/publicService/announcementQuery" class="dropdown-item">電子佈告欄</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/publicService/newStudentNoQuery" class="dropdown-item">新生學號查詢</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/publicService/activityQuery" class="dropdown-item">活動報名系統</a>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="menu_messageNotice" role="button" data-bs-toggle="dropdown" aria-expanded="false">訊息與活動</a>
+<ul class="dropdown-menu" aria-labelledby="menu_messageNotice">
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/messageNotice/calenderView" class="dropdown-item">行事曆總覽</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/messageNotice/announcement" class="dropdown-item">電子佈告欄</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/messageNotice/mailManagement" class="dropdown-item">校務通告收件匣</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/messageNotice/officeMailManagement" class="dropdown-item">公務信箱收件匣</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/messageNotice/surveyManagement" class="dropdown-item">問卷與票選</a>
+</li>
+<li class="nav-item dropdown">
+<li class="dropdown-submenu">
+<a class="dropdown-item dropdown-toggle" href="#" id="submenu_activityManagement" role="button" data-bs-toggle="dropdown" aria-expanded="false">活動報名</a>
+<ul class="dropdown-menu" aria-labelledby="submenu_activityManagement">
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/messageNotice/activityManagement/activity" class="dropdown-item">活動報名系統</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/messageNotice/activityManagement/signup" class="dropdown-item">個人報名資料</a>
+</li>
+</ul>
+</li>
+</li>
+<li class="nav-item dropdown">
+<li class="dropdown-submenu">
+<a class="dropdown-item dropdown-toggle" href="#" id="submenu_dashboard" role="button" data-bs-toggle="dropdown" aria-expanded="false">時數儀表板</a>
+<ul class="dropdown-menu" aria-labelledby="submenu_dashboard">
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/messageNotice/dashboard/signupDashboard" class="dropdown-item">學習護照</a>
+</li>
+</ul>
+</li>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/messageNotice/meetingMinutes" class="dropdown-item">會議記錄</a>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="menu_forms" role="button" data-bs-toggle="dropdown" aria-expanded="false">表單申請</a>
+<ul class="dropdown-menu" aria-labelledby="menu_forms">
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/forms/eformLinkQuery" class="dropdown-item">校務系統表單</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/forms/unitEformQuery" class="dropdown-item">單位自訂表單</a>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown active">
+<a class="nav-link dropdown-toggle" href="#" id="menu_academic" role="button" data-bs-toggle="dropdown" aria-expanded="false">教務專區</a>
+<ul class="dropdown-menu" aria-labelledby="menu_academic">
+<li class="nav-item dropdown">
+<li class="dropdown-submenu">
+<a class="dropdown-item dropdown-toggle" href="#" id="submenu_register" role="button" data-bs-toggle="dropdown" aria-expanded="false">學籍/註冊</a>
+<ul class="dropdown-menu" aria-labelledby="submenu_register">
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/academic/register/registerFlow" class="dropdown-item">學籍登錄</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/academic/register/registerChangeApply" class="dropdown-item">基本資料異動申請</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/academic/register/leaveFlow" class="dropdown-item">離校流程檢核</a>
+</li>
+</ul>
+</li>
+</li>
+<li class="nav-item dropdown">
+<li class="dropdown-submenu">
+<a class="dropdown-item dropdown-toggle" href="#" id="submenu_course" role="button" data-bs-toggle="dropdown" aria-expanded="false">課務</a>
+<ul class="dropdown-menu" aria-labelledby="submenu_course">
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/academic/course/courseEvaluate" class="dropdown-item">教學評量與問卷</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/academic/course/reducingCreditApply" class="dropdown-item">減修學分申請</a>
+</li>
+</ul>
+</li>
+</li>
+<li class="nav-item dropdown active">
+<li class="dropdown-submenu">
+<a class="dropdown-item dropdown-toggle" href="#" id="submenu_score" role="button" data-bs-toggle="dropdown" aria-expanded="false">成績</a>
+<ul class="dropdown-menu" aria-labelledby="submenu_score">
+<li class="nav-item active">
+<a href="https://cis.ncu.edu.tw/iNCU/academic/score/transcriptQuery" class="dropdown-item">學生成績查詢</a>
+</li>
+</ul>
+</li>
+</li>
+<li class="nav-item dropdown">
+<li class="dropdown-submenu">
+<a class="dropdown-item dropdown-toggle" href="#" id="submenu_midTermAcademicAlert" role="button" data-bs-toggle="dropdown" aria-expanded="false">期中預警</a>
+<ul class="dropdown-menu" aria-labelledby="submenu_midTermAcademicAlert">
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/academic/midTermAcademicAlert/ewarningStudentNotification" class="dropdown-item">學生期中預警通知查詢</a>
+</li>
+</ul>
+</li>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/academic/englishLicenseQuery" class="dropdown-item">英文檢定查詢</a>
+</li>
+<li class="nav-item dropdown">
+<li class="dropdown-submenu">
+<a class="dropdown-item dropdown-toggle" href="#" id="submenu_graduate" role="button" data-bs-toggle="dropdown" aria-expanded="false">畢業審核</a>
+<ul class="dropdown-menu" aria-labelledby="submenu_graduate">
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/academic/graduate/studyDegreeApply" class="dropdown-item">修讀跨域申請</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/academic/graduate/courseTransferApply" class="dropdown-item">課程抵免修申請</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/academic/graduate/graduateReport" class="dropdown-item">畢業資格審查表</a>
+</li>
+</ul>
+</li>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="menu_stdAffair" role="button" data-bs-toggle="dropdown" aria-expanded="false">學務專區</a>
+<ul class="dropdown-menu" aria-labelledby="menu_stdAffair">
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/stdAffair/ucanEduOauth" class="dropdown-item">UCAN就業職能平台</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/stdAffair/leaveRequest" class="dropdown-item">假單申請</a>
+</li>
+<li class="nav-item dropdown">
+<li class="dropdown-submenu">
+<a class="dropdown-item dropdown-toggle" href="#" id="submenu_reward" role="button" data-bs-toggle="dropdown" aria-expanded="false">獎懲</a>
+<ul class="dropdown-menu" aria-labelledby="submenu_reward">
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/stdAffair/reward/destroyPunishment" class="dropdown-item">獎懲紀錄與銷過申請</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/stdAffair/reward/conductScore" class="dropdown-item">學期操行成績</a>
+</li>
+</ul>
+</li>
+</li>
+<li class="nav-item dropdown">
+<li class="dropdown-submenu">
+<a class="dropdown-item dropdown-toggle" href="#" id="submenu_subsidy" role="button" data-bs-toggle="dropdown" aria-expanded="false">就學補助</a>
+<ul class="dropdown-menu" aria-labelledby="submenu_subsidy">
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/stdAffair/subsidy/deductionApply" class="dropdown-item">學雜費減免申請</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/stdAffair/subsidy/precreditApply" class="dropdown-item">預估學分數申請</a>
+</li>
+</ul>
+</li>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/stdAffair/healthSelfReportingApply" class="dropdown-item">健康監測自主回報作業</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/stdAffair/dormRequest" class="dropdown-item">宿舍申請/查詢</a>
+</li>
+<li class="nav-item dropdown">
+<li class="dropdown-submenu">
+<a class="dropdown-item dropdown-toggle" href="#" id="submenu_stdOrg" role="button" data-bs-toggle="dropdown" aria-expanded="false">學生組織</a>
+<ul class="dropdown-menu" aria-labelledby="submenu_stdOrg">
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/stdAffair/stdOrg/stdOrgApplyList" class="dropdown-item">學生組織總覽</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/stdAffair/stdOrg/stdOrgApply" class="dropdown-item">學生組織申請單</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/stdAffair/stdOrg/stdOrgPersonalHistory" class="dropdown-item">個人組織參與歷程管理</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/stdAffair/stdOrg/classManager" class="dropdown-item">班級幹部證明查詢</a>
+</li>
+</ul>
+</li>
+</li>
+<li class="nav-item dropdown">
+<li class="dropdown-submenu">
+<a class="dropdown-item dropdown-toggle" href="#" id="submenu_serl" role="button" data-bs-toggle="dropdown" aria-expanded="false">服務學習發展中心</a>
+<ul class="dropdown-menu" aria-labelledby="submenu_serl">
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/stdAffair/serl/serlPersonalHourApply" class="dropdown-item">學生個人時數申請</a>
+</li>
+</ul>
+</li>
+</li>
+<li class="nav-item dropdown">
+<li class="dropdown-submenu">
+<a class="dropdown-item dropdown-toggle" href="#" id="submenu_teacherTutoring" role="button" data-bs-toggle="dropdown" aria-expanded="false">導師輔導</a>
+<ul class="dropdown-menu" aria-labelledby="submenu_teacherTutoring">
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/stdAffair/teacherTutoring/matchTeacherInfo" class="dropdown-item">配對導師資料</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/stdAffair/teacherTutoring/coursePWD" class="dropdown-item">檢視導師輔導選課程序</a>
+</li>
+</ul>
+</li>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="menu_oga" role="button" data-bs-toggle="dropdown" aria-expanded="false">總務專區</a>
+<ul class="dropdown-menu" aria-labelledby="menu_oga">
+<li class="nav-item dropdown">
+<li class="dropdown-submenu">
+<a class="dropdown-item dropdown-toggle" href="#" id="submenu_affairs" role="button" data-bs-toggle="dropdown" aria-expanded="false">事務</a>
+<ul class="dropdown-menu" aria-labelledby="submenu_affairs">
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/oga/affairs/bikeLicenseApply" class="dropdown-item">自行車證申請</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/oga/affairs/bikeAbandonNotice" class="dropdown-item">自行車清運公告</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/oga/affairs/bikeViolateRecord" class="dropdown-item">自行車違規紀錄</a>
+</li>
+</ul>
+</li>
+</li>
+<li class="nav-item dropdown">
+<li class="dropdown-submenu">
+<a class="dropdown-item dropdown-toggle" href="#" id="submenu_documents" role="button" data-bs-toggle="dropdown" aria-expanded="false">文書</a>
+<ul class="dropdown-menu" aria-labelledby="submenu_documents">
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/oga/documents/personalPostalQuery" class="dropdown-item">個人/單位代領郵件查詢</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/oga/documents/proxyPickupApply" class="dropdown-item">授權代領申請</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/oga/documents/personalUnitConfig" class="dropdown-item">個人領件單位設定</a>
+</li>
+</ul>
+</li>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="menu_personal" role="button" data-bs-toggle="dropdown" aria-expanded="false">基本資料與權限</a>
+<ul class="dropdown-menu" aria-labelledby="menu_personal">
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/personal/emailManagement" class="dropdown-item">個人信箱設定</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/personal/eid" class="dropdown-item">數位證件</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/logout" class="nav-link logoutTag">登出</a>
+</li>
+
+			</ul>
+		</div>
+
+					</nav>
+</div>
+
+<script>
+	$(".logoutTag").click(function(e){
+		if(!confirm("是否確定登出本系統？\n本系統登出後將導頁至Portal。\n")){
+			e.preventDefault();
+		}
+	});
+</script>	</div>
+	
+	<div class="container-fluid mainContent" style="margin-top:20px;">
+		<div class="contents">			
+			<div>
+								
+				<nav aria-label="breadcrumb">		
+					<i class="bi bi-house-door-fill"></i> 
+					<i class="bi bi-chevron-double-right"></i> 			
+  					<span class='text-info'>教務專區</span> <i class="bi bi-chevron-double-right"></i> <span class='text-info'>成績</span> <i class="bi bi-chevron-double-right"></i> <span class='text-grape'>學生成績查詢</span>
+				</nav>
+	 
+				<br />
+								<h1>
+					<span class="font_fit">學生成績查詢</span>
+				</h1>				
+			</div>
+						<div class="alert alert-info">
+	<i class="bi bi-exclamation-triangle me-1"></i>網頁成績資料僅供參考，不得做為成績證明之用，若有任何疑義，請洽詢教務處註冊組。
+</div>
+
+	
+	
+	<div class="col-md-10 mx-auto panel panel-boss">
+		<h4 class="text-center fw-bold">學生基本資料</h4> 
+		<div class="panel-body">
+			<div class="row col-md-12 m-0 p-0">
+				<div class="fmlabel">姓名</div> 				<div class="col-md-4 fminput">
+					<span class="fmreadonly form-control">
+						吳尚原
+						(WU,SHANG-YUEN)
+					</span>
+				</div>
+				<div class="fmlabel">性別</div> 				<div class="col-md-4 fminput">
+					<span class="fmreadonly form-control">男性</span>
+				</div>
+			</div>
+
+			<div class="row col-md-12 m-0 p-0">
+				<div class="fmlabel">身份別</div> 				<div class="col-md-4 fminput">
+					<span class="fmreadonly form-control">一般生</span>
+				</div>
+				<div class="fmlabel">學號</div> 				<div class="col-md-4 fminput">
+					<span class="fmreadonly form-control">112501549</span>
+				</div>
+			</div>
+
+			<div class="row col-md-12 m-0 p-0">
+				<div class="fmlabel">系所</div> 				<div class="col-md-4 fminput">
+					<span class="fmreadonly form-control">資訊電機學院電機工程學系 / 不分組</span>
+				</div>
+				<div class="fmlabel">年級</div> 				<div class="col-md-4 fminput">
+					<span class="fmreadonly form-control">三年B班</span>
+				</div>
+			</div>
+
+			<div class="row col-md-12 m-0 p-0">
+				<div class="fmlabel">學制</div> 				<div class="col-md-4 fminput">
+					<span class="fmreadonly form-control">學士班</span>
+				</div>
+				<div class="fmlabel">EMI課程學分</div> 				<div class="col-md-4 fminput">
+					<span class="fmreadonly form-control">9</span>
+				</div>
+			</div>
+
+			<div class="row col-md-12 m-0 p-0">
+				<div class="fmlabel">累計學分</div> 				<div class="col-md-4 fminput">
+					<span class="fmreadonly form-control">115</span>
+				</div>
+				<div class="fmlabel">學業平均成績</div> 				<div class="col-md-4 fminput">
+					<span class="fmreadonly form-control">85.52</span>
+				</div>
+			</div>
+
+					</div>
+	</div>
+
+			<div class="col-10 mx-auto col-md-10" style="margin-top:20px;">
+		<h4 class="text-center fw-bold">學期成績</h4> 			
+							<table>
+					<tr>
+						<th colspan="9"><i class="bi bi-list-task me-1"></i>第114學年度第2學期 (115年2月至115年6月)</th>
+					</tr>
+											<tr>
+							<th style="width:10%">課號</th> 							<th style="width:10%">班別</th> 							<th>課名</th> 							<th style="width:10%">課程屬性</th> 							<th style="width:10%">學制屬性</th> 							<th style="width:10%">學分數</th> 							<th style="width:12%">成績</th> 														<th style="width:12%">備註</th>
+						</tr>
+																				<tr class="alert alert-warning">
+								<td>CO3005    </td>
+								<td>  </td>
+								<td>網路概論<br />Computer Networks</td>
+								<td>必修                                    </td>
+								<td>學士班</td>
+								<td>3 </td>
+								<td>
+																												<span style="color:blue; font-weight:bold;">未到                                                        <span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="alert alert-warning">
+								<td>EE3049    </td>
+								<td>  </td>
+								<td>積體電路設計專題<br />Special Project on VLSI Design</td>
+								<td>必修                                    </td>
+								<td>學士班</td>
+								<td>3 </td>
+								<td>
+																												<span style="color:blue; font-weight:bold;">未到                                                        <span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="alert alert-warning">
+								<td>EE4032    </td>
+								<td>  </td>
+								<td>類比積體電路導論<br />Introduction to Analog Integrated Circuit</td>
+								<td>選修                                    </td>
+								<td>學士班</td>
+								<td>3 </td>
+								<td>
+																												<span style="color:blue; font-weight:bold;">未到                                                        <span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="alert alert-warning">
+								<td>EE4036    </td>
+								<td>  </td>
+								<td>電磁波實驗<br />Electromagnetics Laboratories</td>
+								<td>選修                                    </td>
+								<td>學士班</td>
+								<td>3 </td>
+								<td>
+																												<span style="color:blue; font-weight:bold;">未到                                                        <span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="alert alert-warning">
+								<td>EE6094    </td>
+								<td>  </td>
+								<td>電腦輔助超大型積體電路設計<br />CAD for VLSI Design</td>
+								<td>選修                                    </td>
+								<td>碩博同修</td>
+								<td>3 </td>
+								<td>
+																												<span style="color:blue; font-weight:bold;">未到                                                        <span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="alert alert-warning">
+								<td>EE8061    </td>
+								<td>  </td>
+								<td>半導體製程實務<br />Semiconductor Technology Seminar</td>
+								<td>選修                                    </td>
+								<td>碩博同修</td>
+								<td>3 </td>
+								<td>
+																												<span style="color:blue; font-weight:bold;">未到                                                        <span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="alert alert-warning">
+								<td>PH1031    </td>
+								<td>9 </td>
+								<td>普通物理A<br />General Physics A</td>
+								<td>暑修                                    </td>
+								<td>學士班</td>
+								<td>3 </td>
+								<td>
+																												<span style="color:blue; font-weight:bold;">未到                                                        <span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																												  <? /* EMI實得學分 */ ?>
+						<tr>
+							<td colspan="9"><label class="m-0">操行成績：0、學期平均：0、修習學分數：18、學期實得學分(不含暑修、抵免)：0、EMI實得學分：0</label></td>
+						</tr>
+									</table>
+							<table>
+					<tr>
+						<th colspan="9"><i class="bi bi-list-task me-1"></i>第114學年度第1學期 (114年9月至115年1月)</th>
+					</tr>
+											<tr>
+							<th style="width:10%">課號</th> 							<th style="width:10%">班別</th> 							<th>課名</th> 							<th style="width:10%">課程屬性</th> 							<th style="width:10%">學制屬性</th> 							<th style="width:10%">學分數</th> 							<th style="width:12%">成績</th> 														<th style="width:12%">備註</th>
+						</tr>
+																				<tr class="">
+								<td>EE3047    </td>
+								<td>B </td>
+								<td>電子電路實驗Ⅲ<br />Electronical Circuits Laboratory Ⅲ</td>
+								<td>必修                                    </td>
+								<td>學士班</td>
+								<td>1 </td>
+								<td>
+																												<span>83.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>GS4524    </td>
+								<td>B </td>
+								<td>人工智慧跨域應用專題<br />Special topic for interdisciplinary artificial intelligence</td>
+								<td>通識                                    </td>
+								<td>學士班</td>
+								<td>3 </td>
+								<td>
+																												<span>98.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>GS4530    </td>
+								<td>  </td>
+								<td>人工智慧倫理導論<br />Introduction to Artificial Intelligence Intelligence Ethics</td>
+								<td>通識                                    </td>
+								<td>學士班</td>
+								<td>2 </td>
+								<td>
+																												<span>87.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>EE3001    </td>
+								<td>  </td>
+								<td>電子學  Ⅲ<br />Electronics Ⅲ</td>
+								<td>選修                                    </td>
+								<td>學士班</td>
+								<td>3 </td>
+								<td>
+																												<span>72.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>EE3003    </td>
+								<td>  </td>
+								<td>控制系統<br />Control System </td>
+								<td>選修                                    </td>
+								<td>學士班</td>
+								<td>3 </td>
+								<td>
+																												<span>93.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>EE3032    </td>
+								<td>  </td>
+								<td>超大型積體電路導論<br />Introduction to VLSI</td>
+								<td>選修                                    </td>
+								<td>學士班</td>
+								<td>3 </td>
+								<td>
+																												<span>80.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>EE3053    </td>
+								<td>  </td>
+								<td>電子專題<br />Special Project of Circuit Design Techniques</td>
+								<td>選修                                    </td>
+								<td>學士班</td>
+								<td>3 </td>
+								<td>
+																												<span>98.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>EE8094    </td>
+								<td>  </td>
+								<td>深度學習系統設計與應用<br />Deep Learning System Design and Applications</td>
+								<td>選修                                    </td>
+								<td>碩博同修</td>
+								<td>3 </td>
+								<td>
+																												<span>81.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>LN0025    </td>
+								<td>D </td>
+								<td>日文(一)A<br />Japanese(I) A</td>
+								<td>選修                                    </td>
+								<td>學士班</td>
+								<td>3 </td>
+								<td>
+																												<span>95.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>LN1202    </td>
+								<td>  </td>
+								<td>科技英文寫作溝通與口語表達<br />Technical Writing and Communication Skills</td>
+								<td>選修                                    </td>
+								<td>學士班</td>
+								<td>2 </td>
+								<td>
+																												<span>88.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>PE2051    </td>
+								<td>B </td>
+								<td>籃球入門<br />Basketball I</td>
+								<td>體育                                    </td>
+								<td>學士班</td>
+								<td>0 </td>
+								<td>
+																												<span>77.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>GS0076    </td>
+								<td>I </td>
+								<td>自主學習微學分(一)<br />Independent Microcredit course I</td>
+								<td>微學分                                  </td>
+								<td>學士班</td>
+								<td>1 </td>
+								<td>
+																												<span style="color:blue; font-weight:bold;">一般課程通過                                                <span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																												  <? /* EMI實得學分 */ ?>
+						<tr>
+							<td colspan="9"><label class="m-0">操行成績：86.00、學期平均：87.85、修習學分數：26、學期實得學分(不含暑修、抵免)：26、EMI實得學分：0</label></td>
+						</tr>
+									</table>
+							<table>
+					<tr>
+						<th colspan="9"><i class="bi bi-list-task me-1"></i>第113學年度第2學期 (114年2月至114年6月)</th>
+					</tr>
+											<tr>
+							<th style="width:10%">課號</th> 							<th style="width:10%">班別</th> 							<th>課名</th> 							<th style="width:10%">課程屬性</th> 							<th style="width:10%">學制屬性</th> 							<th style="width:10%">學分數</th> 							<th style="width:12%">成績</th> 														<th style="width:12%">備註</th>
+						</tr>
+																				<tr class="">
+								<td>EE2009    </td>
+								<td>B </td>
+								<td>電子學  Ⅱ<br />Electronics Ⅱ</td>
+								<td>必修                                    </td>
+								<td>學士班</td>
+								<td>3 </td>
+								<td>
+																												<span>86.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>EE2015    </td>
+								<td>B </td>
+								<td>電磁學  Ⅱ<br />Electromagnetics Ⅱ</td>
+								<td>必修                                    </td>
+								<td>學士班</td>
+								<td>3 </td>
+								<td>
+																												<span>96.00<span>
+																	</td>
+																<td>
+																											 
+																																					<span>EMI</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>EE2028    </td>
+								<td>B </td>
+								<td>電子電路實驗Ⅱ<br />Electronic Circuits Laboratory Ⅱ</td>
+								<td>必修                                    </td>
+								<td>學士班</td>
+								<td>1 </td>
+								<td>
+																												<span>94.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>EE3009    </td>
+								<td>  </td>
+								<td>信號與系統<br />Signals and System</td>
+								<td>必修                                    </td>
+								<td>學士班</td>
+								<td>3 </td>
+								<td>
+																												<span>85.00<span>
+																	</td>
+																<td>
+																											 
+																																					<span>EMI</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>GS4719    </td>
+								<td>A </td>
+								<td>程式設計-Python<br />Programming-Python</td>
+								<td>通識                                    </td>
+								<td>學士班</td>
+								<td>3 </td>
+								<td>
+																												<span>99.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>EE2023    </td>
+								<td>  </td>
+								<td>近代物理<br />Modern Physics</td>
+								<td>選修                                    </td>
+								<td>學士班</td>
+								<td>3 </td>
+								<td>
+																												<span>69.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>EE3046    </td>
+								<td>  </td>
+								<td>微算機原理與實作<br />Microcomputer Theory and Laboratory</td>
+								<td>選修                                    </td>
+								<td>學士班</td>
+								<td>3 </td>
+								<td>
+																												<span>91.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>EE3058    </td>
+								<td>  </td>
+								<td>人工智慧晶片設計導論<br />Introduction to AI Chip Design</td>
+								<td>選修                                    </td>
+								<td>學士班</td>
+								<td>3 </td>
+								<td>
+																												<span>93.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>EE4004    </td>
+								<td>  </td>
+								<td>專題實作<br />Independent Study</td>
+								<td>選修                                    </td>
+								<td>學士班</td>
+								<td>3 </td>
+								<td>
+																												<span>96.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>LN2920    </td>
+								<td>B </td>
+								<td>英文寫作一<br />English Writing I</td>
+								<td>選修                                    </td>
+								<td>學士班</td>
+								<td>2 </td>
+								<td>
+																												<span>92.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>PE2071    </td>
+								<td>D </td>
+								<td>排球入門<br />Volleyball I</td>
+								<td>體育                                    </td>
+								<td>學士班</td>
+								<td>0 </td>
+								<td>
+																												<span>82.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																												  <? /* EMI實得學分 */ ?>
+						<tr>
+							<td colspan="9"><label class="m-0">操行成績：85.00、學期平均：89.74、修習學分數：27、學期實得學分(不含暑修、抵免)：27、EMI實得學分：6</label></td>
+						</tr>
+									</table>
+							<table>
+					<tr>
+						<th colspan="9"><i class="bi bi-list-task me-1"></i>第113學年度第1學期 (113年9月至114年1月)</th>
+					</tr>
+											<tr>
+							<th style="width:10%">課號</th> 							<th style="width:10%">班別</th> 							<th>課名</th> 							<th style="width:10%">課程屬性</th> 							<th style="width:10%">學制屬性</th> 							<th style="width:10%">學分數</th> 							<th style="width:12%">成績</th> 														<th style="width:12%">備註</th>
+						</tr>
+																				<tr class="">
+								<td>EE2001    </td>
+								<td>B </td>
+								<td>電子學  Ｉ<br />Electronics Ⅰ</td>
+								<td>必修                                    </td>
+								<td>學士班</td>
+								<td>3 </td>
+								<td>
+																												<span>68.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>EE2004    </td>
+								<td>B </td>
+								<td>電磁學  Ｉ<br />Electromagnetics Ⅰ</td>
+								<td>必修                                    </td>
+								<td>學士班</td>
+								<td>3 </td>
+								<td>
+																												<span>76.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>EE2011    </td>
+								<td>B </td>
+								<td>電路學  Ⅱ<br />Electrical Circuits Ⅱ</td>
+								<td>必修                                    </td>
+								<td>學士班</td>
+								<td>3 </td>
+								<td>
+																												<span>81.00<span>
+																	</td>
+																<td>
+																											 
+																																					<span>EMI</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>EE2027    </td>
+								<td>B </td>
+								<td>電子電路實驗Ⅰ<br />Electronic Circuits Laboratory I</td>
+								<td>必修                                    </td>
+								<td>學士班</td>
+								<td>1 </td>
+								<td>
+																												<span>92.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>EE2030    </td>
+								<td>B </td>
+								<td>工程數學-複變<br />Engineering Mathematics-Complex Variables</td>
+								<td>必修                                    </td>
+								<td>學士班</td>
+								<td>3 </td>
+								<td>
+																												<span>94.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>GS3073    </td>
+								<td>  </td>
+								<td>AI人工智慧導論<br />Introduction to Artificial Intelligence</td>
+								<td>通識                                    </td>
+								<td>學士班</td>
+								<td>3 </td>
+								<td>
+																												<span>99.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>GS4518    </td>
+								<td>  </td>
+								<td>自然語言處理<br />Natural language processing</td>
+								<td>通識                                    </td>
+								<td>學士班</td>
+								<td>3 </td>
+								<td>
+																												<span>76.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>GS4519    </td>
+								<td>A </td>
+								<td>機器學習概論<br />Introduction to machine learning</td>
+								<td>通識                                    </td>
+								<td>學士班</td>
+								<td>2 </td>
+								<td>
+																												<span>87.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>PE2301    </td>
+								<td>F </td>
+								<td>健身運動<br />Power Exercise</td>
+								<td>體育                                    </td>
+								<td>學士班</td>
+								<td>0 </td>
+								<td>
+																												<span>84.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																												  <? /* EMI實得學分 */ ?>
+						<tr>
+							<td colspan="9"><label class="m-0">操行成績：85.00、學期平均：83.24、修習學分數：21、學期實得學分(不含暑修、抵免)：21、EMI實得學分：3</label></td>
+						</tr>
+									</table>
+							<table>
+					<tr>
+						<th colspan="9"><i class="bi bi-list-task me-1"></i>第112學年度第2學期 (113年2月至113年6月)</th>
+					</tr>
+											<tr>
+							<th style="width:10%">課號</th> 							<th style="width:10%">班別</th> 							<th>課名</th> 							<th style="width:10%">課程屬性</th> 							<th style="width:10%">學制屬性</th> 							<th style="width:10%">學分數</th> 							<th style="width:12%">成績</th> 														<th style="width:12%">備註</th>
+						</tr>
+																				<tr class="">
+								<td>CL0135    </td>
+								<td>  </td>
+								<td>國文（A）經典閱讀：傳統文化名篇選讀<br />Chinese（A）：Chinese Characters, Languages and Culture</td>
+								<td>必修                                    </td>
+								<td>學士班</td>
+								<td>3 </td>
+								<td>
+																												<span>82.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>EE1006    </td>
+								<td>B </td>
+								<td>數位邏輯實驗<br />Digital Logic Circuit Laboratories</td>
+								<td>必修                                    </td>
+								<td>學士班</td>
+								<td>1 </td>
+								<td>
+																												<span>84.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>EE1010    </td>
+								<td>B </td>
+								<td>工程數學-微分方程<br />Engineering Mathematics-Differential Equation</td>
+								<td>必修                                    </td>
+								<td>學士班</td>
+								<td>3 </td>
+								<td>
+																												<span>76.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>EE2002    </td>
+								<td>B </td>
+								<td>電路學  Ｉ<br />Electrical Circuits Ⅰ</td>
+								<td>必修                                    </td>
+								<td>學士班</td>
+								<td>3 </td>
+								<td>
+																												<span>86.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>LN1002    </td>
+								<td>H </td>
+								<td>大一英文:工程課群<br />Freshman English as an Introduction to Engineering</td>
+								<td>必修                                    </td>
+								<td>學士班</td>
+								<td>3 </td>
+								<td>
+																												<span>88.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>MA1004    </td>
+								<td>G </td>
+								<td>微積分<br />Calculus</td>
+								<td>必修                                    </td>
+								<td>學士班</td>
+								<td>3 </td>
+								<td>
+																												<span>74.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>PH1004    </td>
+								<td>P </td>
+								<td>普通物理實驗<br />General Physics Laboratory</td>
+								<td>必修                                    </td>
+								<td>學士班</td>
+								<td>1 </td>
+								<td>
+																												<span>91.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>PH1032    </td>
+								<td>F </td>
+								<td>普通物理A<br />General Physics A</td>
+								<td>必修                                    </td>
+								<td>學士班</td>
+								<td>3 </td>
+								<td>
+																												<span>88.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>PE1022    </td>
+								<td>V </td>
+								<td>大一體育<br />Freshman PE II</td>
+								<td>體育                                    </td>
+								<td>學士班</td>
+								<td>0 </td>
+								<td>
+																												<span>83.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>SC0004    </td>
+								<td>Q </td>
+								<td>服務學習課程<br />Student Service-Learning</td>
+								<td>勞動服務                                </td>
+								<td>學士班</td>
+								<td>0 </td>
+								<td>
+																												<span style="color:blue; font-weight:bold;">勞動服務通過                                                <span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																												  <? /* EMI實得學分 */ ?>
+						<tr>
+							<td colspan="9"><label class="m-0">操行成績：85.00、學期平均：82.85、修習學分數：20、學期實得學分(不含暑修、抵免)：20、EMI實得學分：0</label></td>
+						</tr>
+									</table>
+							<table>
+					<tr>
+						<th colspan="9"><i class="bi bi-list-task me-1"></i>第112學年度第1學期 (112年9月至113年1月)</th>
+					</tr>
+											<tr>
+							<th style="width:10%">課號</th> 							<th style="width:10%">班別</th> 							<th>課名</th> 							<th style="width:10%">課程屬性</th> 							<th style="width:10%">學制屬性</th> 							<th style="width:10%">學分數</th> 							<th style="width:12%">成績</th> 														<th style="width:12%">備註</th>
+						</tr>
+																				<tr class="">
+								<td>CL0201    </td>
+								<td>M </td>
+								<td>國文（B）：中文寫作<br />Chinese (B): Chinese writing</td>
+								<td>必修                                    </td>
+								<td>學士班</td>
+								<td>2 </td>
+								<td>
+																												<span>90.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>EE1003    </td>
+								<td>  </td>
+								<td>計算機概論 I<br />Introduction to Computer I</td>
+								<td>必修                                    </td>
+								<td>學士班</td>
+								<td>3 </td>
+								<td>
+																												<span>96.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>EE1007    </td>
+								<td>B </td>
+								<td>計算機概論實習<br />Introduction to Computer Science Laboratory</td>
+								<td>必修                                    </td>
+								<td>學士班</td>
+								<td>1 </td>
+								<td>
+																												<span>98.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>EE1009    </td>
+								<td>  </td>
+								<td>工程數學-線性代數<br />Engineering Mathematics-Linear Algebra</td>
+								<td>必修                                    </td>
+								<td>學士班</td>
+								<td>3 </td>
+								<td>
+																												<span>70.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>EE2016    </td>
+								<td>B </td>
+								<td>數位系統導論<br />Introduction to Digital Systems</td>
+								<td>必修                                    </td>
+								<td>學士班</td>
+								<td>3 </td>
+								<td>
+																												<span>93.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>LN1001    </td>
+								<td>H </td>
+								<td>大一英文:工程課群<br />Freshman English as an Introduction to Engineering</td>
+								<td>必修                                    </td>
+								<td>學士班</td>
+								<td>3 </td>
+								<td>
+																												<span>94.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>MA1003    </td>
+								<td>G </td>
+								<td>微積分<br />Calculus</td>
+								<td>必修                                    </td>
+								<td>學士班</td>
+								<td>3 </td>
+								<td>
+																												<span>72.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>PH1003    </td>
+								<td>P </td>
+								<td>普通物理實驗<br />General Physics Laboratory</td>
+								<td>必修                                    </td>
+								<td>學士班</td>
+								<td>1 </td>
+								<td>
+																												<span>90.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="alert alert-danger">
+								<td>PH1031    </td>
+								<td>F </td>
+								<td>普通物理A<br />General Physics A</td>
+								<td>必修                                    </td>
+								<td>學士班</td>
+								<td>3 </td>
+								<td>
+																												<span>55.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>PE1011    </td>
+								<td>V </td>
+								<td>大一體育<br />Freshman PE I</td>
+								<td>體育                                    </td>
+								<td>學士班</td>
+								<td>0 </td>
+								<td>
+																												<span>91.00<span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>SC0003    </td>
+								<td>Q </td>
+								<td>服務學習課程<br />Student Service-Learning</td>
+								<td>勞動服務                                </td>
+								<td>學士班</td>
+								<td>0 </td>
+								<td>
+																												<span style="color:blue; font-weight:bold;">勞動服務通過                                                <span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																				<tr class="">
+								<td>GS0077    </td>
+								<td>C </td>
+								<td>自主學習微學分(二)<br />Independent Microcredit course II</td>
+								<td>微學分                                  </td>
+								<td>學士班</td>
+								<td>1 </td>
+								<td>
+																												<span style="color:blue; font-weight:bold;">一般課程通過                                                <span>
+																	</td>
+																<td>
+																																													<span>-</span>
+								</td>
+							</tr>
+																												  <? /* EMI實得學分 */ ?>
+						<tr>
+							<td colspan="9"><label class="m-0">操行成績：85.00、學期平均：82.18、修習學分數：22、學期實得學分(不含暑修、抵免)：19、EMI實得學分：0</label></td>
+						</tr>
+									</table>
+				
+			</div>
+				<div class="col-10 mx-auto col-md-10">
+			<h4 class="text-center fw-bold">學期排名</h4> 							<table class="fixed-table">
+					<tr>
+						<th style="width:10%">學年度</th> 						<th>學期平均</th> 						<th>班排名</th> 						<th>系(組)排名</th> 						<th style="width:12%">排名鎖定</th> 					</tr>
+											<tr>
+							<td>1121</td>
+							<td>82.18</td>
+							<td>22/48 </td>
+							<td>49/96 </td>
+							<td>鎖定</td>
+						</tr>
+											<tr>
+							<td>1122</td>
+							<td>82.85</td>
+							<td>27/47 </td>
+							<td>60/94 </td>
+							<td>鎖定</td>
+						</tr>
+											<tr>
+							<td>1131</td>
+							<td>83.24</td>
+							<td>34/57 </td>
+							<td>73/114</td>
+							<td>鎖定</td>
+						</tr>
+											<tr>
+							<td>1132</td>
+							<td>89.74</td>
+							<td>34/55 </td>
+							<td>72/112</td>
+							<td>鎖定</td>
+						</tr>
+											<tr>
+							<td>1141</td>
+							<td>87.85</td>
+							<td>37/56 </td>
+							<td>75/111</td>
+							<td>鎖定</td>
+						</tr>
+									</table>
+									</div>
+
+		<div class="col-10 mx-auto col-md-10">
+			<h4 class="text-center fw-bold">累計排名</h4> 							<table class="fixed-table">
+					<tr>
+						<th style="width:10%">學年度</th> 						<th>學期平均</th> 						<th>班排名</th> 						<th>系(組)排名</th> 						<th style="width:12%">排名鎖定</th> 					</tr>
+											<tr>
+							<td>1121</td>
+							<td>82.18</td>
+							<td>22/48 </td>
+							<td>49/96 </td>
+							<td>鎖定</td>
+						</tr>
+											<tr>
+							<td>1122</td>
+							<td>82.50</td>
+							<td>25/47 </td>
+							<td>56/94 </td>
+							<td>鎖定</td>
+						</tr>
+											<tr>
+							<td>1131</td>
+							<td>82.75</td>
+							<td>34/57 </td>
+							<td>74/114</td>
+							<td>鎖定</td>
+						</tr>
+											<tr>
+							<td>1132</td>
+							<td>84.84</td>
+							<td>34/55 </td>
+							<td>74/112</td>
+							<td>鎖定</td>
+						</tr>
+											<tr>
+							<td>1141</td>
+							<td>85.52</td>
+							<td>35/56 </td>
+							<td>74/111</td>
+							<td>鎖定</td>
+						</tr>
+									</table>
+									</div>
+
+		<div class="col-10 mx-auto col-md-10">
+			<h4 class="text-center fw-bold">畢業排名</h4> 							<p class="alert alert-warning text-center"><strong>查無相關資料</strong></p>
+					</div>
+	 	
+					  	<div class="gotop" title="回頂端">
+			   <i class="bi bi-caret-up-fill"></i>		  
+			</div>
+			
+			<div style="clear:both;"></div>
+		</div>
+	</div>
+	
+		<footer class="bg-light mt-4">
+		<div class="container">
+	<div class="copyright">
+		<p>
+			版號：4658d80c，建議瀏覽器：Chrome、Firefox等瀏覽器，或Edge以上。<br />
+			Copyright &copy; 2016 NCU.CC. All Rights Reserved
+					</p>
+	</div>
+</div>	</footer>	
+	
+	<script>
+		//===document.ready===(start)
+		$(document).ready(function() {
+			dressCSS(); //穿上全局CSS樣式	
+			getBlockUI(); //穿上blockUI自訂樣式
+			//@todo:FIXME 若要增加JS可加在tools.js或blankTools.js
+	    });
+		//===document.ready===(end)		
+		
+		//GoTop 按鈕事件
+		$(function() {
+		    /* 按下 GoTop 按鈕時的事件 */
+		    $('.gotop').click(function() {
+		        $('html,body').animate({ scrollTop: 0 }, 400); /* 返回到最頂上 */
+		        
+				return false;
+		    });
+		    /* 偵測卷軸滑動時，往下滑超過200px就讓GoTop按鈕出現 */
+		    $(window).scroll(function() {
+		        if ( $(this).scrollTop() >= 200){
+		            $('.gotop').show(10).animate({bottom:"30px"}, 10);
+		        } else {
+		            $('.gotop').animate({bottom:"-50px"}, 10);	
+		        }	              
+		    });
+		});
+		//H1標題超過長度字體變小
+		let fitHeight = parseInt($("h1").css("min-height"))/2,
+			titleHeight = $(".font_fit")[0].offsetHeight;		
+		if (titleHeight > fitHeight) {
+			$(".font_fit").addClass("font_auto_fit");
+		} else {
+			$(".font_fit").removeClass("font_auto_fit");
+		}
+	</script>
+</body>
+</html>

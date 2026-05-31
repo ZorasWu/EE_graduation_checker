@@ -1,0 +1,2759 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0.8,maximum-scale=2.0,user-scalable=no" />
+	
+	<title>國立中央大學 - 服務櫃台 (iNCU)</title>
+	<link rel="shortcut icon" href="https://cis.ncu.edu.tw/iNCU/images/favicon.png" />
+	
+		<link rel="stylesheet" type="text/css" href="https://cis.ncu.edu.tw/iNCU/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="https://cis.ncu.edu.tw/iNCU/css/bootstrap-icons-v1.13.1.min.css?v=1769745236"> 	<link rel="stylesheet" type="text/css" href="https://cis.ncu.edu.tw/iNCU/css/smart_wizard.css" />	<link rel="stylesheet" type="text/css" href="https://cis.ncu.edu.tw/iNCU/css/smart_wizard_theme_dots.css" />	<link rel="stylesheet" type="text/css" href="https://cis.ncu.edu.tw/iNCU/css/component-custom-switch.min.css">	<link rel="stylesheet" type="text/css" href="https://cis.ncu.edu.tw/iNCU/css/typeaheadjs.css" />	<link rel="stylesheet" type="text/css" href="https://cis.ncu.edu.tw/iNCU/css/flatpickr.min.css" />  
+	<link rel="stylesheet" type="text/css" href="https://cis.ncu.edu.tw/iNCU/css/body.css?v=1775552282" />	<link rel="stylesheet" type="text/css" href="https://cis.ncu.edu.tw/iNCU/css/card.css?v=1769138642" />	<link rel="stylesheet" type="text/css" href="https://cis.ncu.edu.tw/iNCU/css/nav.css?v=1763610760" />	
+	<link rel="stylesheet" type="text/css" href="https://cis.ncu.edu.tw/iNCU/css/formGrid.css?v=1770792357" />	<link rel="stylesheet" type="text/css" href="https://cis.ncu.edu.tw/iNCU/css/main.css?v=1769138642" />	
+		<script src="https://cis.ncu.edu.tw/iNCU/js/cleave.min.js"></script>
+	<script src="https://cis.ncu.edu.tw/iNCU/js/jquery-3.7.1.min.js"></script>
+	<script src="https://cis.ncu.edu.tw/iNCU/js/bootstrap.bundle.min.js"></script>
+ 	<script src="https://cis.ncu.edu.tw/iNCU/js/typeahead/typeahead.jquery.js"></script>	<script src="https://cis.ncu.edu.tw/iNCU/js/typeahead/typeahead.bundle.js"></script>		<script src="https://cis.ncu.edu.tw/iNCU/js/flatpickr.min.js"></script>	<script src="https://cis.ncu.edu.tw/iNCU/js/jquery.validate.min.js"></script>	<script src="https://cis.ncu.edu.tw/iNCU/js/jquery.blockUI.js"></script>
+	<script src="https://cis.ncu.edu.tw/iNCU/js/jquery.smartWizard.min.js"></script>	
+	<script src="https://cis.ncu.edu.tw/iNCU/js/nav.js"></script>	<script src="https://cis.ncu.edu.tw/iNCU/js/blankTools.js?v=1733723617"></script>	<script src="https://cis.ncu.edu.tw/iNCU/js/tools.js?v=1775099845"></script>	
+	<script src="https://cis.ncu.edu.tw/iNCU/js/jquery.rwdImageMaps.min.js"></script>	
+	<script src="https://cis.ncu.edu.tw/iNCU/js/chart.umd.js"></script>	
+		<script src="https://cis.ncu.edu.tw/iNCU/js/charts.js"></script>	<script src="https://cis.ncu.edu.tw/iNCU/js/jquery.circliful.min.js"></script>
+</head>
+
+<body>
+	<div class="loading blockOverlay" style="z-index: 1000; border: none; margin: 0px; padding: 0px; width: 100%; height: 100%; top: 0px; left: 0px; background-color: #fff; opacity: 0.5; cursor: wait; position: fixed;"></div>
+<div class="loading" style="z-index: 1011; position: fixed; padding: 15px; margin-top: -180px; margin-left: -108px; top: 50%; left: 50%; text-align: center;  border: none;  cursor: wait; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; ">
+	<div class='uil-default-css' style='transform:scale(0.2);'><div style='top:80px;left:93px;width:14px;height:40px;background:#00b2ff;-webkit-transform:rotate(0deg) translate(0,-60px);transform:rotate(0deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#00b2ff;-webkit-transform:rotate(30deg) translate(0,-60px);transform:rotate(30deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#00b2ff;-webkit-transform:rotate(60deg) translate(0,-60px);transform:rotate(60deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#00b2ff;-webkit-transform:rotate(90deg) translate(0,-60px);transform:rotate(90deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#00b2ff;-webkit-transform:rotate(120deg) translate(0,-60px);transform:rotate(120deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#00b2ff;-webkit-transform:rotate(150deg) translate(0,-60px);transform:rotate(150deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#00b2ff;-webkit-transform:rotate(180deg) translate(0,-60px);transform:rotate(180deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#00b2ff;-webkit-transform:rotate(210deg) translate(0,-60px);transform:rotate(210deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#00b2ff;-webkit-transform:rotate(240deg) translate(0,-60px);transform:rotate(240deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#00b2ff;-webkit-transform:rotate(270deg) translate(0,-60px);transform:rotate(270deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#00b2ff;-webkit-transform:rotate(300deg) translate(0,-60px);transform:rotate(300deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#00b2ff;-webkit-transform:rotate(330deg) translate(0,-60px);transform:rotate(330deg) translate(0,-60px);border-radius:10px;position:absolute;'></div></div>
+</div>	
+		<div>
+		<style>
+	.title-sub {		
+		display: none;
+	}
+	
+	@media(max-width: 768px) {
+		.title-text {		
+			display: none;
+		}
+		.title-sub {		
+			display: inline;
+		}
+	}
+</style>
+<div class="header-bg-img">
+	<nav class="navbar navbar-expand-md navbar-light pl-4">
+		<div class="d-flex align-items-center">
+			<img src="https://cis.ncu.edu.tw/iNCU/images/favicon.png" class="float-left me-2" alt="" style="height:40px;" />&nbsp;
+			<a class="navbar-brand" href="https://cis.ncu.edu.tw/iNCU/home">
+				<span class="title-text text_black">
+					國立中央大學 - 服務櫃台 (iNCU)
+									</span>
+
+				<span class="title-sub text_black">
+					服務櫃台 (iNCU)
+									</span>
+			</a>
+		</div>
+		<button class="navbar-toggler ml-auto" type="button" data-bs-toggle="collapse" data-bs-target=".navbars-ul" aria-controls="navbars-ul" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		
+		<div class="collapse navbar-collapse navbars-ul" id="navMenuSub">
+			<ul class="navbar-nav ms-auto">
+													<li class="nav-item">
+						<a class="nav-link text-black disabled-link">
+							<i class="bi bi-person-fill icon_text_spacing me-1"></i>吳尚原
+						</a>
+					</li>
+										<li class="nav-item">
+						<a class="nav-link text-black disabled-link">
+							<i class="bi bi-calendar icon_text_spacing me-1"></i>學期&nbsp;1142
+						</a>
+					</li>
+			    			    
+			    			    <li class="nav-item dropdown">
+			    	<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" style="color:black;">
+						<i class="bi bi-globe icon_text_spacing me-1"></i>中文
+					</a>
+					<div class="dropdown-menu dropdown-menu-end">
+						 
+							<a class="dropdown-item" href="https://cis.ncu.edu.tw/iNCU/locale/tw">中文</a>
+						 
+							<a class="dropdown-item" href="https://cis.ncu.edu.tw/iNCU/locale/en">English</a>
+											</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	
+		<nav class="navbar navbar-expand-md navbar-light pl-4">
+		<div class="collapse navbar-collapse navbars-ul" id="navMenu">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="menu_publicService" role="button" data-bs-toggle="dropdown" aria-expanded="false">公開服務</a>
+<ul class="dropdown-menu" aria-labelledby="menu_publicService">
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/publicService/calenderQuery" class="dropdown-item">行事曆總覽</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/publicService/announcementQuery" class="dropdown-item">電子佈告欄</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/publicService/newStudentNoQuery" class="dropdown-item">新生學號查詢</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/publicService/activityQuery" class="dropdown-item">活動報名系統</a>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="menu_messageNotice" role="button" data-bs-toggle="dropdown" aria-expanded="false">訊息與活動</a>
+<ul class="dropdown-menu" aria-labelledby="menu_messageNotice">
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/messageNotice/calenderView" class="dropdown-item">行事曆總覽</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/messageNotice/announcement" class="dropdown-item">電子佈告欄</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/messageNotice/mailManagement" class="dropdown-item">校務通告收件匣</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/messageNotice/officeMailManagement" class="dropdown-item">公務信箱收件匣</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/messageNotice/surveyManagement" class="dropdown-item">問卷與票選</a>
+</li>
+<li class="nav-item dropdown">
+<li class="dropdown-submenu">
+<a class="dropdown-item dropdown-toggle" href="#" id="submenu_activityManagement" role="button" data-bs-toggle="dropdown" aria-expanded="false">活動報名</a>
+<ul class="dropdown-menu" aria-labelledby="submenu_activityManagement">
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/messageNotice/activityManagement/activity" class="dropdown-item">活動報名系統</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/messageNotice/activityManagement/signup" class="dropdown-item">個人報名資料</a>
+</li>
+</ul>
+</li>
+</li>
+<li class="nav-item dropdown">
+<li class="dropdown-submenu">
+<a class="dropdown-item dropdown-toggle" href="#" id="submenu_dashboard" role="button" data-bs-toggle="dropdown" aria-expanded="false">時數儀表板</a>
+<ul class="dropdown-menu" aria-labelledby="submenu_dashboard">
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/messageNotice/dashboard/signupDashboard" class="dropdown-item">學習護照</a>
+</li>
+</ul>
+</li>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/messageNotice/meetingMinutes" class="dropdown-item">會議記錄</a>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="menu_forms" role="button" data-bs-toggle="dropdown" aria-expanded="false">表單申請</a>
+<ul class="dropdown-menu" aria-labelledby="menu_forms">
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/forms/eformLinkQuery" class="dropdown-item">校務系統表單</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/forms/unitEformQuery" class="dropdown-item">單位自訂表單</a>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown active">
+<a class="nav-link dropdown-toggle" href="#" id="menu_academic" role="button" data-bs-toggle="dropdown" aria-expanded="false">教務專區</a>
+<ul class="dropdown-menu" aria-labelledby="menu_academic">
+<li class="nav-item dropdown">
+<li class="dropdown-submenu">
+<a class="dropdown-item dropdown-toggle" href="#" id="submenu_register" role="button" data-bs-toggle="dropdown" aria-expanded="false">學籍/註冊</a>
+<ul class="dropdown-menu" aria-labelledby="submenu_register">
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/academic/register/registerFlow" class="dropdown-item">學籍登錄</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/academic/register/registerChangeApply" class="dropdown-item">基本資料異動申請</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/academic/register/leaveFlow" class="dropdown-item">離校流程檢核</a>
+</li>
+</ul>
+</li>
+</li>
+<li class="nav-item dropdown">
+<li class="dropdown-submenu">
+<a class="dropdown-item dropdown-toggle" href="#" id="submenu_course" role="button" data-bs-toggle="dropdown" aria-expanded="false">課務</a>
+<ul class="dropdown-menu" aria-labelledby="submenu_course">
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/academic/course/courseEvaluate" class="dropdown-item">教學評量與問卷</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/academic/course/reducingCreditApply" class="dropdown-item">減修學分申請</a>
+</li>
+</ul>
+</li>
+</li>
+<li class="nav-item dropdown">
+<li class="dropdown-submenu">
+<a class="dropdown-item dropdown-toggle" href="#" id="submenu_score" role="button" data-bs-toggle="dropdown" aria-expanded="false">成績</a>
+<ul class="dropdown-menu" aria-labelledby="submenu_score">
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/academic/score/transcriptQuery" class="dropdown-item">學生成績查詢</a>
+</li>
+</ul>
+</li>
+</li>
+<li class="nav-item dropdown">
+<li class="dropdown-submenu">
+<a class="dropdown-item dropdown-toggle" href="#" id="submenu_midTermAcademicAlert" role="button" data-bs-toggle="dropdown" aria-expanded="false">期中預警</a>
+<ul class="dropdown-menu" aria-labelledby="submenu_midTermAcademicAlert">
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/academic/midTermAcademicAlert/ewarningStudentNotification" class="dropdown-item">學生期中預警通知查詢</a>
+</li>
+</ul>
+</li>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/academic/englishLicenseQuery" class="dropdown-item">英文檢定查詢</a>
+</li>
+<li class="nav-item dropdown active">
+<li class="dropdown-submenu">
+<a class="dropdown-item dropdown-toggle" href="#" id="submenu_graduate" role="button" data-bs-toggle="dropdown" aria-expanded="false">畢業審核</a>
+<ul class="dropdown-menu" aria-labelledby="submenu_graduate">
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/academic/graduate/studyDegreeApply" class="dropdown-item">修讀跨域申請</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/academic/graduate/courseTransferApply" class="dropdown-item">課程抵免修申請</a>
+</li>
+<li class="nav-item active">
+<a href="https://cis.ncu.edu.tw/iNCU/academic/graduate/graduateReport" class="dropdown-item">畢業資格審查表</a>
+</li>
+</ul>
+</li>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="menu_stdAffair" role="button" data-bs-toggle="dropdown" aria-expanded="false">學務專區</a>
+<ul class="dropdown-menu" aria-labelledby="menu_stdAffair">
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/stdAffair/ucanEduOauth" class="dropdown-item">UCAN就業職能平台</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/stdAffair/leaveRequest" class="dropdown-item">假單申請</a>
+</li>
+<li class="nav-item dropdown">
+<li class="dropdown-submenu">
+<a class="dropdown-item dropdown-toggle" href="#" id="submenu_reward" role="button" data-bs-toggle="dropdown" aria-expanded="false">獎懲</a>
+<ul class="dropdown-menu" aria-labelledby="submenu_reward">
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/stdAffair/reward/destroyPunishment" class="dropdown-item">獎懲紀錄與銷過申請</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/stdAffair/reward/conductScore" class="dropdown-item">學期操行成績</a>
+</li>
+</ul>
+</li>
+</li>
+<li class="nav-item dropdown">
+<li class="dropdown-submenu">
+<a class="dropdown-item dropdown-toggle" href="#" id="submenu_subsidy" role="button" data-bs-toggle="dropdown" aria-expanded="false">就學補助</a>
+<ul class="dropdown-menu" aria-labelledby="submenu_subsidy">
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/stdAffair/subsidy/deductionApply" class="dropdown-item">學雜費減免申請</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/stdAffair/subsidy/precreditApply" class="dropdown-item">預估學分數申請</a>
+</li>
+</ul>
+</li>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/stdAffair/healthSelfReportingApply" class="dropdown-item">健康監測自主回報作業</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/stdAffair/dormRequest" class="dropdown-item">宿舍申請/查詢</a>
+</li>
+<li class="nav-item dropdown">
+<li class="dropdown-submenu">
+<a class="dropdown-item dropdown-toggle" href="#" id="submenu_stdOrg" role="button" data-bs-toggle="dropdown" aria-expanded="false">學生組織</a>
+<ul class="dropdown-menu" aria-labelledby="submenu_stdOrg">
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/stdAffair/stdOrg/stdOrgApplyList" class="dropdown-item">學生組織總覽</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/stdAffair/stdOrg/stdOrgApply" class="dropdown-item">學生組織申請單</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/stdAffair/stdOrg/stdOrgPersonalHistory" class="dropdown-item">個人組織參與歷程管理</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/stdAffair/stdOrg/classManager" class="dropdown-item">班級幹部證明查詢</a>
+</li>
+</ul>
+</li>
+</li>
+<li class="nav-item dropdown">
+<li class="dropdown-submenu">
+<a class="dropdown-item dropdown-toggle" href="#" id="submenu_serl" role="button" data-bs-toggle="dropdown" aria-expanded="false">服務學習發展中心</a>
+<ul class="dropdown-menu" aria-labelledby="submenu_serl">
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/stdAffair/serl/serlPersonalHourApply" class="dropdown-item">學生個人時數申請</a>
+</li>
+</ul>
+</li>
+</li>
+<li class="nav-item dropdown">
+<li class="dropdown-submenu">
+<a class="dropdown-item dropdown-toggle" href="#" id="submenu_teacherTutoring" role="button" data-bs-toggle="dropdown" aria-expanded="false">導師輔導</a>
+<ul class="dropdown-menu" aria-labelledby="submenu_teacherTutoring">
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/stdAffair/teacherTutoring/matchTeacherInfo" class="dropdown-item">配對導師資料</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/stdAffair/teacherTutoring/coursePWD" class="dropdown-item">檢視導師輔導選課程序</a>
+</li>
+</ul>
+</li>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="menu_oga" role="button" data-bs-toggle="dropdown" aria-expanded="false">總務專區</a>
+<ul class="dropdown-menu" aria-labelledby="menu_oga">
+<li class="nav-item dropdown">
+<li class="dropdown-submenu">
+<a class="dropdown-item dropdown-toggle" href="#" id="submenu_affairs" role="button" data-bs-toggle="dropdown" aria-expanded="false">事務</a>
+<ul class="dropdown-menu" aria-labelledby="submenu_affairs">
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/oga/affairs/bikeLicenseApply" class="dropdown-item">自行車證申請</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/oga/affairs/bikeAbandonNotice" class="dropdown-item">自行車清運公告</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/oga/affairs/bikeViolateRecord" class="dropdown-item">自行車違規紀錄</a>
+</li>
+</ul>
+</li>
+</li>
+<li class="nav-item dropdown">
+<li class="dropdown-submenu">
+<a class="dropdown-item dropdown-toggle" href="#" id="submenu_documents" role="button" data-bs-toggle="dropdown" aria-expanded="false">文書</a>
+<ul class="dropdown-menu" aria-labelledby="submenu_documents">
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/oga/documents/personalPostalQuery" class="dropdown-item">個人/單位代領郵件查詢</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/oga/documents/proxyPickupApply" class="dropdown-item">授權代領申請</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/oga/documents/personalUnitConfig" class="dropdown-item">個人領件單位設定</a>
+</li>
+</ul>
+</li>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="menu_personal" role="button" data-bs-toggle="dropdown" aria-expanded="false">基本資料與權限</a>
+<ul class="dropdown-menu" aria-labelledby="menu_personal">
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/personal/emailManagement" class="dropdown-item">個人信箱設定</a>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/personal/eid" class="dropdown-item">數位證件</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a href="https://cis.ncu.edu.tw/iNCU/logout" class="nav-link logoutTag">登出</a>
+</li>
+
+			</ul>
+		</div>
+
+					</nav>
+</div>
+
+<script>
+	$(".logoutTag").click(function(e){
+		if(!confirm("是否確定登出本系統？\n本系統登出後將導頁至Portal。\n")){
+			e.preventDefault();
+		}
+	});
+</script>	</div>
+	
+	<div class="container-fluid mainContent" style="margin-top:20px;">
+		<div class="contents">			
+			<div>
+								
+				<nav aria-label="breadcrumb">		
+					<i class="bi bi-house-door-fill"></i> 
+					<i class="bi bi-chevron-double-right"></i> 			
+  					<span class='text-info'>教務專區</span> <i class="bi bi-chevron-double-right"></i> <span class='text-info'>畢業審核</span> <i class="bi bi-chevron-double-right"></i> <span class='text-grape'>畢業資格審查表</span>
+				</nav>
+	 
+				<br />
+								<h1>
+					<span class="font_fit">畢業資格審查表</span>
+				</h1>				
+			</div>
+						<link rel="stylesheet" href="https://cis.ncu.edu.tw/iNCU/css/graduateReport.css?v1780225548">
+
+	<div class="container-fluid text-center mb-2">
+		<button type="button" class="btn btn-primary" onclick="exportPdfBtn()">
+			<i class="bi bi-download"></i>
+			<span>匯出PDF</span>
+		</button>
+	</div>
+
+<div class="div-info">
+	<span style="color:red;">特別提醒：畢業審核僅供參考，若有任何疑義，以各學系及教務處審查為準。研究生之畢業審核，請依各系所之修業規章辦理。</span>
+</div>
+
+	<div class="main-content">
+		<div class="button-container">
+			<button type="button" class="tab-button" id="dashboard" data-key="0">儀表板</button>
+							<button class="tab-button" id="1" data-key="1">主系</button>
+							<button class="tab-button" id="4" data-key="4">學分學程</button>
+					</div>	
+	</div>
+
+	<div class="main-content dashboardContent">
+									<div id="major-container">
+					<div id="circle-container">
+						<div class="circle" data-percentage="87.12">
+							<div class="text-container">
+								<p class="major-text">主系</p>
+								<p class="department">112-電機工程學系</p>
+								<p class="credit">
+																		<span>115</span>學分,
+									<span>58</span>門課
+								</p>
+								<p class="total-credits">應修132學分</p>
+								<p class="graduation-threshold text-danger">尚未通過及格門檻</p>
+							</div>
+						</div>
+					</div>
+					
+					<div id="text-block-container">
+													<div class="text-block" data-credits="{&quot;ruleName&quot;:&quot;\u5171\u540c\u5fc5\u4fee\u5b78\u5206&quot;,&quot;isPass&quot;:&quot;F&quot;,&quot;creditCred&quot;:29,&quot;creditCourse&quot;:12,&quot;lowCredits&quot;:&quot;25&quot;,&quot;lowCourses&quot;:&quot;10&quot;,&quot;percentage&quot;:66.67,&quot;memo&quot;:&quot;\u203b\u672a\u901a\u904e\u985e\u5225:11320,&quot;,&quot;course&quot;:&quot;{\&quot;11200\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u5171\\u540c\\u5fc5\\u4fee-\\u5916\\u6587\&quot;,\&quot;isPass\&quot;:\&quot;T\&quot;,\&quot;creditCred\&quot;:6,\&quot;creditCourse\&quot;:2,\&quot;lowCredits\&quot;:\&quot;6\&quot;,\&quot;lowCourses\&quot;:\&quot;2\&quot;,\&quot;memo\&quot;:\&quot;\&quot;,\&quot;11201\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u5916\\u6587-\\u5927\\u4e00\\u82f1\\u6587\&quot;,\&quot;isPass\&quot;:\&quot;T\&quot;,\&quot;creditCred\&quot;:6,\&quot;creditCourse\&quot;:2,\&quot;lowCredits\&quot;:\&quot;0\&quot;,\&quot;lowCourses\&quot;:\&quot;0\&quot;,\&quot;memo\&quot;:\&quot;\&quot;,\&quot;course\&quot;:[{\&quot;semester\&quot;:\&quot;1121\&quot;,\&quot;c_id\&quot;:\&quot;LN1001\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u5927\\u4e00\\u82f1\\u6587:\\u5de5\\u7a0b\\u8ab2\\u7fa4\&quot;,\&quot;en\&quot;:\&quot;Freshman English as an Introduction to Engineering\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;94.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1122\&quot;,\&quot;c_id\&quot;:\&quot;LN1002\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u5927\\u4e00\\u82f1\\u6587:\\u5de5\\u7a0b\\u8ab2\\u7fa4\&quot;,\&quot;en\&quot;:\&quot;Freshman English as an Introduction to Engineering\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;88.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}}]},\&quot;11204\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u5916\\u6587-\\u82f1\\u6587\\u7cfb\\u8ab2\\u7a0b\&quot;,\&quot;isPass\&quot;:\&quot;T\&quot;,\&quot;creditCred\&quot;:0,\&quot;creditCourse\&quot;:0,\&quot;lowCredits\&quot;:\&quot;0\&quot;,\&quot;lowCourses\&quot;:\&quot;0\&quot;,\&quot;memo\&quot;:\&quot;\&quot;,\&quot;course\&quot;:null}},\&quot;11320\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u6838\\u5fc3\\u901a\\u8b58\\u8ab2\\u7a0b\&quot;,\&quot;isPass\&quot;:\&quot;F\&quot;,\&quot;creditCred\&quot;:18,\&quot;creditCourse\&quot;:8,\&quot;lowCredits\&quot;:\&quot;14\&quot;,\&quot;lowCourses\&quot;:\&quot;0\&quot;,\&quot;memo\&quot;:\&quot;\\u203b\\u6240\\u4fee\\u5b78\\u5206\\u672a\\u8de8\\u6eff1\\u500b\\u985e\\u5225.\&quot;,\&quot;11321\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u6838\\u5fc3\\u901a\\u8b58-\\u4eba\\u6587\\u8207\\u601d\\u60f3\&quot;,\&quot;isPass\&quot;:\&quot;T\&quot;,\&quot;creditCred\&quot;:0,\&quot;creditCourse\&quot;:0,\&quot;lowCredits\&quot;:\&quot;0\&quot;,\&quot;lowCourses\&quot;:\&quot;0\&quot;,\&quot;memo\&quot;:\&quot;\&quot;,\&quot;course\&quot;:null},\&quot;11322\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u6838\\u5fc3\\u901a\\u8b58-\\u81ea\\u7136\\u79d1\\u5b78\&quot;,\&quot;isPass\&quot;:\&quot;T\&quot;,\&quot;creditCred\&quot;:0,\&quot;creditCourse\&quot;:0,\&quot;lowCredits\&quot;:\&quot;0\&quot;,\&quot;lowCourses\&quot;:\&quot;0\&quot;,\&quot;memo\&quot;:\&quot;\&quot;,\&quot;course\&quot;:null},\&quot;11323\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u6838\\u5fc3\\u901a\\u8b58-\\u61c9\\u7528\\u79d1\\u5b78\&quot;,\&quot;isPass\&quot;:\&quot;T\&quot;,\&quot;creditCred\&quot;:0,\&quot;creditCourse\&quot;:0,\&quot;lowCredits\&quot;:\&quot;0\&quot;,\&quot;lowCourses\&quot;:\&quot;0\&quot;,\&quot;memo\&quot;:\&quot;\&quot;,\&quot;course\&quot;:null},\&quot;11324\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u6838\\u5fc3\\u901a\\u8b58-\\u793e\\u6703\\u601d\\u6f6e\\u8207\\u73fe\\u8c61\&quot;,\&quot;isPass\&quot;:\&quot;T\&quot;,\&quot;creditCred\&quot;:0,\&quot;creditCourse\&quot;:0,\&quot;lowCredits\&quot;:\&quot;0\&quot;,\&quot;lowCourses\&quot;:\&quot;0\&quot;,\&quot;memo\&quot;:\&quot;\&quot;,\&quot;course\&quot;:null},\&quot;11325\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u6838\\u5fc3\\u901a\\u8b58-\\u5176\\u5b83\\u901a\\u8b58\\u8ab2\\u7a0b\&quot;,\&quot;isPass\&quot;:\&quot;T\&quot;,\&quot;creditCred\&quot;:18,\&quot;creditCourse\&quot;:8,\&quot;lowCredits\&quot;:\&quot;0\&quot;,\&quot;lowCourses\&quot;:\&quot;0\&quot;,\&quot;memo\&quot;:\&quot;\&quot;,\&quot;course\&quot;:[{\&quot;semester\&quot;:\&quot;1141\&quot;,\&quot;c_id\&quot;:\&quot;GS0076\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u81ea\\u4e3b\\u5b78\\u7fd2\\u5fae\\u5b78\\u5206(\\u4e00)\&quot;,\&quot;en\&quot;:\&quot;Independent Microcredit course I\&quot;},\&quot;c_cred\&quot;:\&quot;1\&quot;,\&quot;l_cred\&quot;:\&quot;1\&quot;,\&quot;score\&quot;:\&quot;\\u4e00\\u822c\\u8ab2\\u7a0b\\u901a\\u904e(Pass)\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1121\&quot;,\&quot;c_id\&quot;:\&quot;GS0077\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u81ea\\u4e3b\\u5b78\\u7fd2\\u5fae\\u5b78\\u5206(\\u4e8c)\&quot;,\&quot;en\&quot;:\&quot;Independent Microcredit course II\&quot;},\&quot;c_cred\&quot;:\&quot;1\&quot;,\&quot;l_cred\&quot;:\&quot;1\&quot;,\&quot;score\&quot;:\&quot;\\u4e00\\u822c\\u8ab2\\u7a0b\\u901a\\u904e(Pass)\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1131\&quot;,\&quot;c_id\&quot;:\&quot;GS3073\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;AI\\u4eba\\u5de5\\u667a\\u6167\\u5c0e\\u8ad6\&quot;,\&quot;en\&quot;:\&quot;Introduction to Artificial Intelligence\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;99.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1131\&quot;,\&quot;c_id\&quot;:\&quot;GS4518\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u81ea\\u7136\\u8a9e\\u8a00\\u8655\\u7406\&quot;,\&quot;en\&quot;:\&quot;Natural language processing\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;76.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1131\&quot;,\&quot;c_id\&quot;:\&quot;GS4519\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u6a5f\\u5668\\u5b78\\u7fd2\\u6982\\u8ad6\&quot;,\&quot;en\&quot;:\&quot;Introduction to machine learning\&quot;},\&quot;c_cred\&quot;:\&quot;2\&quot;,\&quot;l_cred\&quot;:\&quot;2\&quot;,\&quot;score\&quot;:\&quot;87.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1141\&quot;,\&quot;c_id\&quot;:\&quot;GS4524\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u4eba\\u5de5\\u667a\\u6167\\u8de8\\u57df\\u61c9\\u7528\\u5c08\\u984c\&quot;,\&quot;en\&quot;:\&quot;Special topic for interdisciplinary artificial intelligence\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;98.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1141\&quot;,\&quot;c_id\&quot;:\&quot;GS4530\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u4eba\\u5de5\\u667a\\u6167\\u502b\\u7406\\u5c0e\\u8ad6\&quot;,\&quot;en\&quot;:\&quot;Introduction to Artificial Intelligence Intelligence Ethics\&quot;},\&quot;c_cred\&quot;:\&quot;2\&quot;,\&quot;l_cred\&quot;:\&quot;2\&quot;,\&quot;score\&quot;:\&quot;87.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1132\&quot;,\&quot;c_id\&quot;:\&quot;GS4719\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u7a0b\\u5f0f\\u8a2d\\u8a08-Python\&quot;,\&quot;en\&quot;:\&quot;Programming-Python\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;99.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}}]}},\&quot;11400\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u57fa\\u790e\\u8ab2\\u7a0b-\\u5927\\u4e00\\u570b\\u6587\&quot;,\&quot;isPass\&quot;:\&quot;T\&quot;,\&quot;creditCred\&quot;:5,\&quot;creditCourse\&quot;:2,\&quot;lowCredits\&quot;:\&quot;5\&quot;,\&quot;lowCourses\&quot;:\&quot;2\&quot;,\&quot;memo\&quot;:\&quot;\&quot;,\&quot;11401\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u5927\\u4e00\\u570b\\u6587A\\u985e\&quot;,\&quot;isPass\&quot;:\&quot;T\&quot;,\&quot;creditCred\&quot;:5,\&quot;creditCourse\&quot;:2,\&quot;lowCredits\&quot;:\&quot;5\&quot;,\&quot;lowCourses\&quot;:\&quot;2\&quot;,\&quot;memo\&quot;:\&quot;\&quot;,\&quot;course\&quot;:[{\&quot;semester\&quot;:\&quot;1122\&quot;,\&quot;c_id\&quot;:\&quot;CL0135\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u570b\\u6587\\uff08A\\uff09\\u7d93\\u5178\\u95b1\\u8b80\\uff1a\\u50b3\\u7d71\\u6587\\u5316\\u540d\\u7bc7\\u9078\\u8b80\&quot;,\&quot;en\&quot;:\&quot;Chinese\\uff08A\\uff09\\uff1aChinese Characters, Languages and Culture\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;82.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1121\&quot;,\&quot;c_id\&quot;:\&quot;CL0201\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u570b\\u6587\\uff08B\\uff09\\uff1a\\u4e2d\\u6587\\u5beb\\u4f5c\&quot;,\&quot;en\&quot;:\&quot;Chinese (B): Chinese writing\&quot;},\&quot;c_cred\&quot;:\&quot;2\&quot;,\&quot;l_cred\&quot;:\&quot;2\&quot;,\&quot;score\&quot;:\&quot;90.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}}]}}}&quot;}">
+								<div class="text-above-bar">
+									<p class="common-credits">共同必修學分</p>					
+																													<p class="ungone">
+											<img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/exclamation_icon.png">
+											<span>未完成</span>
+										</p>
+																	</div>
+								<div class="text-above-bar">
+									<span class="cred_course">
+										(應修)										25學分, 
+										10門課	
+										/<br />
+										(實修)										29學分,										12門課				
+									</span>
+									<img class="cred_img" src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/right_arrow.png">
+								</div>
+							<div class="bar-wrapper">
+								<div class="bar" style="width: 66.67%;"><p>66.67%</p></div>
+								<p class="percentage-value">66.67%</p>
+							</div>
+							</div> 
+													<div class="text-block" data-credits="{&quot;ruleName&quot;:&quot;\u7cfb\u8a02\u5fc5\u4fee\u5b78\u5206&quot;,&quot;isPass&quot;:&quot;F&quot;,&quot;creditCred&quot;:52,&quot;creditCourse&quot;:22,&quot;lowCredits&quot;:&quot;58&quot;,&quot;lowCourses&quot;:&quot;24&quot;,&quot;percentage&quot;:89.66,&quot;memo&quot;:&quot;\u203b\u5b78\u5206\u6578\u6216\u8ab2\u7a0b\u6578\u4e0d\u8db3.\u203b\u672a\u901a\u904e\u985e\u5225:12100,12200,&quot;,&quot;course&quot;:&quot;{\&quot;12100\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u4e00\\u822c\\u7cfb\\u8a02\\u5fc5\\u4fee\\u5b78\\u5206\&quot;,\&quot;isPass\&quot;:\&quot;F\&quot;,\&quot;creditCred\&quot;:52,\&quot;creditCourse\&quot;:22,\&quot;lowCredits\&quot;:\&quot;55\&quot;,\&quot;lowCourses\&quot;:\&quot;23\&quot;,\&quot;memo\&quot;:\&quot;\\u203b\\u672a\\u901a\\u904e\\u985e\\u5225:12101,\&quot;,\&quot;12101\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u4e00\\u822c\\u7cfb\\u8a02\\u5fc5\\u4fee\\u5b78\\u5206-A\\u985e\&quot;,\&quot;isPass\&quot;:\&quot;F\&quot;,\&quot;creditCred\&quot;:52,\&quot;creditCourse\&quot;:22,\&quot;lowCredits\&quot;:\&quot;55\&quot;,\&quot;lowCourses\&quot;:\&quot;23\&quot;,\&quot;memo\&quot;:\&quot;\&quot;,\&quot;course\&quot;:[{\&quot;semester\&quot;:\&quot;1121\&quot;,\&quot;c_id\&quot;:\&quot;EE1003\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u8a08\\u7b97\\u6a5f\\u6982\\u8ad6 I\&quot;,\&quot;en\&quot;:\&quot;Introduction to Computer I\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;96.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1122\&quot;,\&quot;c_id\&quot;:\&quot;EE1006\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u6578\\u4f4d\\u908f\\u8f2f\\u5be6\\u9a57\&quot;,\&quot;en\&quot;:\&quot;Digital Logic Circuit Laboratories\&quot;},\&quot;c_cred\&quot;:\&quot;1\&quot;,\&quot;l_cred\&quot;:\&quot;1\&quot;,\&quot;score\&quot;:\&quot;84.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1121\&quot;,\&quot;c_id\&quot;:\&quot;EE1007\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u8a08\\u7b97\\u6a5f\\u6982\\u8ad6\\u5be6\\u7fd2\&quot;,\&quot;en\&quot;:\&quot;Introduction to Computer Science Laboratory\&quot;},\&quot;c_cred\&quot;:\&quot;1\&quot;,\&quot;l_cred\&quot;:\&quot;1\&quot;,\&quot;score\&quot;:\&quot;98.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1121\&quot;,\&quot;c_id\&quot;:\&quot;EE1009\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u5de5\\u7a0b\\u6578\\u5b78-\\u7dda\\u6027\\u4ee3\\u6578\&quot;,\&quot;en\&quot;:\&quot;Engineering Mathematics-Linear Algebra\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;70.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1122\&quot;,\&quot;c_id\&quot;:\&quot;EE1010\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u5de5\\u7a0b\\u6578\\u5b78-\\u5fae\\u5206\\u65b9\\u7a0b\&quot;,\&quot;en\&quot;:\&quot;Engineering Mathematics-Differential Equation\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;76.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1131\&quot;,\&quot;c_id\&quot;:\&quot;EE2001\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u96fb\\u5b50\\u5b78  \\uff29\&quot;,\&quot;en\&quot;:\&quot;Electronics \\u2160\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;68.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1122\&quot;,\&quot;c_id\&quot;:\&quot;EE2002\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u96fb\\u8def\\u5b78  \\uff29\&quot;,\&quot;en\&quot;:\&quot;Electrical Circuits \\u2160\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;86.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1131\&quot;,\&quot;c_id\&quot;:\&quot;EE2004\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u96fb\\u78c1\\u5b78  \\uff29\&quot;,\&quot;en\&quot;:\&quot;Electromagnetics \\u2160\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;76.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1132\&quot;,\&quot;c_id\&quot;:\&quot;EE2009\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u96fb\\u5b50\\u5b78  \\u2161\&quot;,\&quot;en\&quot;:\&quot;Electronics \\u2161\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;86.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1131\&quot;,\&quot;c_id\&quot;:\&quot;EE2011\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u96fb\\u8def\\u5b78  \\u2161\&quot;,\&quot;en\&quot;:\&quot;Electrical Circuits \\u2161\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;81.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1132\&quot;,\&quot;c_id\&quot;:\&quot;EE2015\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u96fb\\u78c1\\u5b78  \\u2161\&quot;,\&quot;en\&quot;:\&quot;Electromagnetics \\u2161\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;96.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1121\&quot;,\&quot;c_id\&quot;:\&quot;EE2016\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u6578\\u4f4d\\u7cfb\\u7d71\\u5c0e\\u8ad6\&quot;,\&quot;en\&quot;:\&quot;Introduction to Digital Systems\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;93.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1131\&quot;,\&quot;c_id\&quot;:\&quot;EE2027\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u96fb\\u5b50\\u96fb\\u8def\\u5be6\\u9a57\\u2160\&quot;,\&quot;en\&quot;:\&quot;Electronic Circuits Laboratory I\&quot;},\&quot;c_cred\&quot;:\&quot;1\&quot;,\&quot;l_cred\&quot;:\&quot;1\&quot;,\&quot;score\&quot;:\&quot;92.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1132\&quot;,\&quot;c_id\&quot;:\&quot;EE2028\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u96fb\\u5b50\\u96fb\\u8def\\u5be6\\u9a57\\u2161\&quot;,\&quot;en\&quot;:\&quot;Electronic Circuits Laboratory \\u2161\&quot;},\&quot;c_cred\&quot;:\&quot;1\&quot;,\&quot;l_cred\&quot;:\&quot;1\&quot;,\&quot;score\&quot;:\&quot;94.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1131\&quot;,\&quot;c_id\&quot;:\&quot;EE2030\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u5de5\\u7a0b\\u6578\\u5b78-\\u8907\\u8b8a\&quot;,\&quot;en\&quot;:\&quot;Engineering Mathematics-Complex Variables\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;94.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1132\&quot;,\&quot;c_id\&quot;:\&quot;EE3009\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u4fe1\\u865f\\u8207\\u7cfb\\u7d71\&quot;,\&quot;en\&quot;:\&quot;Signals and System\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;85.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1141\&quot;,\&quot;c_id\&quot;:\&quot;EE3047\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u96fb\\u5b50\\u96fb\\u8def\\u5be6\\u9a57\\u2162\&quot;,\&quot;en\&quot;:\&quot;Electronical Circuits Laboratory \\u2162\&quot;},\&quot;c_cred\&quot;:\&quot;1\&quot;,\&quot;l_cred\&quot;:\&quot;1\&quot;,\&quot;score\&quot;:\&quot;83.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1121\&quot;,\&quot;c_id\&quot;:\&quot;MA1003\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u5fae\\u7a4d\\u5206\&quot;,\&quot;en\&quot;:\&quot;Calculus\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;72.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1122\&quot;,\&quot;c_id\&quot;:\&quot;MA1004\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u5fae\\u7a4d\\u5206\&quot;,\&quot;en\&quot;:\&quot;Calculus\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;74.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1121\&quot;,\&quot;c_id\&quot;:\&quot;PH1003\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u666e\\u901a\\u7269\\u7406\\u5be6\\u9a57\&quot;,\&quot;en\&quot;:\&quot;General Physics Laboratory\&quot;},\&quot;c_cred\&quot;:\&quot;1\&quot;,\&quot;l_cred\&quot;:\&quot;1\&quot;,\&quot;score\&quot;:\&quot;90.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1122\&quot;,\&quot;c_id\&quot;:\&quot;PH1004\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u666e\\u901a\\u7269\\u7406\\u5be6\\u9a57\&quot;,\&quot;en\&quot;:\&quot;General Physics Laboratory\&quot;},\&quot;c_cred\&quot;:\&quot;1\&quot;,\&quot;l_cred\&quot;:\&quot;1\&quot;,\&quot;score\&quot;:\&quot;91.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1121\&quot;,\&quot;c_id\&quot;:\&quot;PH1031\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u666e\\u901a\\u7269\\u7406A\&quot;,\&quot;en\&quot;:\&quot;General Physics A\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;55.00\&quot;,\&quot;qualified\&quot;:\&quot;0\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1142\&quot;,\&quot;c_id\&quot;:\&quot;PH1031\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u666e\\u901a\\u7269\\u7406A\&quot;,\&quot;en\&quot;:\&quot;General Physics A\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;\\u672a\\u5230(Not Entered)\&quot;,\&quot;qualified\&quot;:\&quot;2\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1122\&quot;,\&quot;c_id\&quot;:\&quot;PH1032\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u666e\\u901a\\u7269\\u7406A\&quot;,\&quot;en\&quot;:\&quot;General Physics A\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;88.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}}]}},\&quot;12200\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u5fc5\\u4fee-\\u8ab2\\u7a0bm\\u9078n\&quot;,\&quot;isPass\&quot;:\&quot;F\&quot;,\&quot;creditCred\&quot;:0,\&quot;creditCourse\&quot;:0,\&quot;lowCredits\&quot;:\&quot;3\&quot;,\&quot;lowCourses\&quot;:\&quot;1\&quot;,\&quot;memo\&quot;:\&quot;\\u203b\\u672a\\u901a\\u904e\\u985e\\u5225:12201,\&quot;,\&quot;12201\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u5fc5\\u4fee-\\u8ab2\\u7a0bm\\u9078n\\u4e00A\\u985e\&quot;,\&quot;isPass\&quot;:\&quot;F\&quot;,\&quot;creditCred\&quot;:0,\&quot;creditCourse\&quot;:0,\&quot;lowCredits\&quot;:\&quot;3\&quot;,\&quot;lowCourses\&quot;:\&quot;1\&quot;,\&quot;memo\&quot;:\&quot;\&quot;,\&quot;course\&quot;:[{\&quot;semester\&quot;:\&quot;1142\&quot;,\&quot;c_id\&quot;:\&quot;EE3049\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u7a4d\\u9ad4\\u96fb\\u8def\\u8a2d\\u8a08\\u5c08\\u984c\&quot;,\&quot;en\&quot;:\&quot;Special Project on VLSI Design\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;\\u672a\\u5230(Not Entered)\&quot;,\&quot;qualified\&quot;:\&quot;2\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}}]}}}&qquot;}">
+								<div class="text-above-bar">
+									<p class="common-credits">系訂必修學分</p>					
+																													<p class="ungone">
+											<img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/exclamation_icon.png">
+											<span>未完成</span>
+										</p>
+																	</div>
+								<div class="text-above-bar">
+									<span class="cred_course">
+										(應修)										58學分, 
+										24門課	
+										/<br />
+										(實修)										52學分,										22門課				
+									</span>
+									<img class="cred_img" src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/right_arrow.png">
+								</div>
+							<div class="bar-wrapper">
+								<div class="bar" style="width: 89.66%;"><p>89.66%</p></div>
+								<p class="percentage-value">89.66%</p>
+							</div>
+							</div> 
+													<div class="text-block" data-credits="{&quot;ruleName&quot;:&quot;\u7cfb\u8a02\u5fc5\u9078\u5b78\u5206&quot;,&quot;isPass&quot;:&quot;F&quot;,&quot;creditCred&quot;:18,&quot;creditCourse&quot;:6,&quot;lowCredits&quot;:&quot;27&quot;,&quot;lowCourses&quot;:&quot;9&quot;,&quot;percentage&quot;:66.67,&quot;memo&quot;:&quot;\u203b\u5b78\u5206\u6578\u6216\u8ab2\u7a0b\u6578\u4e0d\u8db3.\u203b\u672a\u901a\u904e\u985e\u5225:13200,13300,\u203b\u672a\u901a\u904e\u5b50\u898f\u5247:13200,13300,&quot;,&quot;course&quot;:&quot;{\&quot;13200\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u7cfb\\u8a02\\u5fc5\\u9078m\\u9078n\&quot;,\&quot;isPass\&quot;:\&quot;F\&quot;,\&quot;creditCred\&quot;:12,\&quot;creditCourse\&quot;:4,\&quot;lowCredits\&quot;:\&quot;18\&quot;,\&quot;lowCourses\&quot;:\&quot;6\&quot;,\&quot;memo\&quot;:\&quot;\\u203b\\u5b78\\u5206\\u6578\\u6216\\u8ab2\\u7a0b\\u6578\\u4e0d\\u8db3.\&quot;,\&quot;13201\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u7cfb\\u8a02\\u5fc5\\u9078m\\u9078n-A\\u985e\&quot;,\&quot;isPass\&quot;:\&quot;T\&quot;,\&quot;creditCred\&quot;:6,\&quot;creditCourse\&quot;:2,\&quot;lowCredits\&quot;:\&quot;0\&quot;,\&quot;lowCourses\&quot;:\&quot;1\&quot;,\&quot;memo\&quot;:\&quot;\&quot;,\&quot;course\&quot;:[{\&quot;semester\&quot;:\&quot;1141\&quot;,\&quot;c_id\&quot;:\&quot;EE3001\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u96fb\\u5b50\\u5b78  \\u2162\&quot;,\&quot;en\&quot;:\&quot;Electronics \\u2162\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;72.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1141\&quot;,\&quot;c_id\&quot;:\&quot;EE3032\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u8d85\\u5927\\u578b\\u7a4d\\u9ad4\\u96fb\\u8def\\u5c0e\\u8ad6\&quot;,\&quot;en\&quot;:\&quot;Introduction to VLSI\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;80.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1142\&quot;,\&quot;c_id\&quot;:\&quot;EE4032\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u985e\\u6bd4\\u7a4d\\u9ad4\\u96fb\\u8def\\u5c0e\\u8ad6\&quot;,\&quot;en\&quot;:\&quot;Introduction to Analog Integrated Circuit\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;\\u672a\\u5230(Not Entered)\&quot;,\&quot;qualified\&quot;:\&quot;2\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}}]},\&quot;13202\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u7cfb\\u8a02\\u5fc5\\u9078m\\u9078n-B\\u985e\&quot;,\&quot;isPass\&quot;:\&quot;T\&quot;,\&quot;creditCred\&quot;:3,\&quot;creditCourse\&quot;:1,\&quot;lowCredits\&quot;:\&quot;0\&quot;,\&quot;lowCourses\&quot;:\&quot;1\&quot;,\&quot;memo\&quot;:\&quot;\&quot;,\&quot;course\&quot;:[{\&quot;semester\&quot;:\&quot;1132\&quot;,\&quot;c_id\&quot;:\&quot;EE2023\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u8fd1\\u4ee3\\u7269\\u7406\&quot;,\&quot;en\&quot;:\&quot;Modern Physics\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;69.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}}]},\&quot;13203\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u7cfb\\u8a02\\u5fc5\\u9078m\\u9078n-C\\u985e\&quot;,\&quot;isPass\&quot;:\&quot;T\&quot;,\&quot;creditCred\&quot;:3,\&quot;creditCourse\&quot;:1,\&quot;lowCredits\&quot;:\&quot;0\&quot;,\&quot;lowCourses\&quot;:\&quot;1\&quot;,\&quot;memo\&quot;:\&quot;\&quot;,\&quot;course\&quot;:[{\&quot;semester\&quot;:\&quot;1141\&quot;,\&quot;c_id\&quot;:\&quot;EE3003\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u63a7\\u5236\\u7cfb\\u7d71\&quot;,\&quot;en\&quot;:\&quot;Control System\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;93.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}}]},\&quot;13204\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u7cfb\\u8a02\\u5fc5\\u9078m\\u9078n-D\\u985e\&quot;,\&quot;isPass\&quot;:\&quot;F\&quot;,\&quot;creditCred\&quot;:0,\&quot;creditCourse\&quot;:0,\&quot;lowCredits\&quot;:\&quot;0\&quot;,\&quot;lowCourses\&quot;:\&quot;1\&quot;,\&quot;memo\&quot;:\&quot;\&quot;,\&quot;course\&quot;:null},\&quot;13205\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u7cfb\\u8a02\\u5fc5\\u9078m\\u9078n-E\\u985e\&quot;,\&quot;isPass\&quot;:\&quot;F\&quot;,\&quot;creditCred\&quot;:0,\&quot;creditCourse\&quot;:0,\&quot;lowCredits\&quot;:\&quot;0\&quot;,\&quot;lowCourses\&quot;:\&quot;1\&quot;,\&quot;memo\&quot;:\&quot;\&quot;,\&quot;course\&quot;:null},\&quot;13206\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u7cfb\\u8a02\\u5fc5\\u9078m\\u9078n-F\\u985e\&quot;,\&quot;isPass\&quot;:\&quot;F\&quot;,\&quot;creditCred\&quot;:0,\&quot;creditCourse\&quot;:0,\&quot;lowCredits\&quot;:\&quot;0\&quot;,\&quot;lowCourses\&quot;:\&quot;1\&quot;,\&quot;memo\&quot;:\&quot;\&quot;,\&quot;course\&quot;:[{\&quot;semester\&quot;:\&quot;1142\&quot;,\&quot;c_id\&quot;:\&quot;CO3005\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u7db2\\u8def\\u6982\\u8ad6\&quot;,\&quot;en\&quot;:\&quot;Computer Networks\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;\\u672a\\u5230(Not Entered)\&quot;,\&quot;qualified\&quot;:\&quot;2\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}}]}},\&quot;13300\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u7cfb\\u8a02\\u5fc5\\u9078-\\u96fb\\u6a5f\\u7cfb\\u8de8\\u7d44\\u9078\\u4fee\&quot;,\&quot;isPass\&quot;:\&quot;F\&quot;,\&quot;creditCred\&quot;:6,\&quot;creditCourse\&quot;:2,\&quot;lowCredits\&quot;:\&quot;9\&quot;,\&quot;lowCourses\&quot;:\&quot;3\&quot;,\&quot;memo\&quot;:\&quot;\\u203b\\u6240\\u4fee\\u5b78\\u5206\\u672a\\u8de8\\u6eff3\\u500b\\u985e\\u5225.\&quot;,\&quot;13301\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u7cfb\\u8a02\\u5fc5\\u9078-\\u96fb\\u6a5f\\u7cfb\\u8de8\\u7d44\\u9078\\u4fee\\u96fb\\u5b50\\u985e\\u5225\&quot;,\&quot;isPass\&quot;:\&quot;T\&quot;,\&quot;creditCred\&quot;:3,\&quot;creditCourse\&quot;:1,\&quot;lowCredits\&quot;:\&quot;0\&quot;,\&quot;lowCourses\&quot;:\&quot;1\&quot;,\&quot;memo\&quot;:\&quot;\&quot;,\&quot;course\&quot;:[{\&quot;semester\&quot;:\&quot;1141\&quot;,\&quot;c_id\&quot;:\&quot;EE3053\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u96fb\\u5b50\\u5c08\\u984c\&quot;,\&quot;en\&quot;:\&quot;Special Project of Circuit Design Techniques\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;98.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}}]},\&quot;13302\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u7cfb\\u8a02\\u5fc5\\u9078-\\u96fb\\u6a5f\\u7cfb\\u8de8\\u7d44\\u9078\\u4fee\\u56fa\\u614b\\u985e\\u5225\&quot;,\&quot;isPass\&quot;:\&quot;F\&quot;,\&quot;creditCred\&quot;:0,\&quot;creditCourse\&quot;:0,\&quot;lowCredits\&quot;:\&quot;0\&quot;,\&quot;lowCourses\&quot;:\&quot;1\&quot;,\&quot;memo\&quot;:\&quot;\&quot;,\&quot;course\&quot;:null},\&quot;13304\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u7cfb\\u8a02\\u5fc5\\u9078-\\u96fb\\u6a5f\\u7cfb\\u8de8\\u7d44\\u9078\\u4fee\\u901a\\u8a0a\\u985e\\u5225\&quot;,\&quot;isPass\&quot;:\&quot;F\&quot;,\&quot;creditCred\&quot;:0,\&quot;creditCourse\&quot;:0,\&quot;lowCredits\&quot;:\&quot;0\&quot;,\&quot;lowCourses\&quot;:\&quot;1\&quot;,\&quot;memo\&quot;:\&quot;\&quot;,\&quot;course\&quot;:null},\&quot;13306\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u7cfb\\u8a02\\u5fc5\\u9078-\\u96fb\\u6a5f\\u7cfb\\u8de8\\u7d44\\u9078\\u4fee\\u96fb\\u6ce2\\u985e\\u5225\&quot;,\&quot;isPass\&quot;:\&quot;F\&quot;,\&quot;creditCred\&quot;:0,\&quot;creditCourse\&quot;:0,\&quot;lowCredits\&quot;:\&quot;0\&quot;,\&quot;lowCourses\&quot;:\&quot;1\&quot;,\&quot;memo\&quot;:\&quot;\&quot;,\&quot;course\&quot;:[{\&quot;semester\&quot;:\&quot;1142\&quot;,\&quot;c_id\&quot;:\&quot;EE4036\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u96fb\\u78c1\\u6ce2\\u5be6\\u9a57\&quot;,\&quot;en\&quot;:\&quot;Electromagnetics Laboratories\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;\\u672a\\u5230(Not Entered)\&quot;,\&quot;qualified\&quot;:\&quot;2\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}}]},\&quot;13307\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u7cfb\\u8a02\\u5fc5\\u9078-\\u96fb\\u6a5f\\u7cfb\\u8de8\\u7d44\\u9078\\u4fee\\u7cfb\\u7d71\\u8207\\u751f\\u91ab\\u985e\\u5225\&quot;,\&quot;isPass\&quot;:\&quot;T\&quot;,\&quot;creditCred\&quot;:3,\&quot;creditCourse\&quot;:1,\&quot;lowCredits\&quot;:\&quot;0\&quot;,\&quot;lowCourses\&quot;:\&quot;1\&quot;,\&quot;memo\&quot;:\&quot;\&quot;,\&quot;course\&quot;:[{\&quot;semester\&quot;:\&quot;1132\&quot;,\&quot;c_id\&quot;:\&quot;EE3046\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u5fae\\u7b97\\u6a5f\\u539f\\u7406\\u8207\\u5be6\\u4f5c\&quot;,\&quot;en\&quot;:\&quot;Microcomputer Theory and Laboratory\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;91.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}}]},\&quot;13308\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u7cfb\\u8a02\\u5fc5\\u9078-\\u96fb\\u6a5f\\u7cfb\\u8de8\\u7d44\\u9078\\u4fee\\u8cc7\\u901a\\u8a0a\\u985e\\u5225\&quot;,\&quot;isPass\&quot;:\&quot;F\&quot;,\&quot;creditCred\&quot;:0,\&quot;creditCourse\&quot;:0,\&quot;lowCredits\&quot;:\&quot;0\&quot;,\&quot;lowCourses\&quot;:\&quot;1\&quot;,\&quot;memo\&quot;:\&quot;\&quot;,\&quot;course\&quot;:null}}}&quot;}">
+								<div class="text-above-bar">
+									<p class="common-credits">系訂必選學分</p>					
+																													<p class="ungone">
+											<img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/exclamation_icon.png">
+											<span>未完成</span>
+										</p>
+																	</div>
+								<div class="text-above-bar">
+									<span class="cred_course">
+										(應修)										27學分, 
+										9門課	
+										/<br />
+										(實修)										18學分,										6門課				
+									</span>
+									<img class="cred_img" src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/right_arrow.png">
+								</div>
+							<div class="bar-wrapper">
+								<div class="bar" style="width: 66.67%;"><p>66.67%</p></div>
+								<p class="percentage-value">66.67%</p>
+							</div>
+							</div> 
+													<div class="text-block" data-credits="{&quot;ruleName&quot;:&quot;\u4e00\u822c\u9078\u4fee&quot;,&quot;isPass&quot;:&quot;T&quot;,&quot;creditCred&quot;:16,&quot;creditCourse&quot;:6,&quot;lowCredits&quot;:&quot;0&quot;,&quot;lowCourses&quot;:&quot;0&quot;,&quot;percentage&quot;:100,&quot;memo&quot;:&quot;&quot;,&quot;course&quot;:&quot;{\&quot;14100\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u4e00\\u822c\\u9078\\u4fee\&quot;,\&quot;isPass\&quot;:\&quot;T\&quot;,\&quot;creditCred\&quot;:16,\&quot;creditCourse\&quot;:6,\&quot;lowCredits\&quot;:\&quot;0\&quot;,\&quot;lowCourses\&quot;:\&quot;0\&quot;,\&quot;memo\&quot;:\&quot;\&quot;,\&quot;14101\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u4e00\\u822c\\u9078\\u4fee\&quot;,\&quot;isPass\&quot;:\&quot;T\&quot;,\&quot;creditCred\&quot;:16,\&quot;creditCourse\&quot;:6,\&quot;lowCredits\&quot;:\&quot;0\&quot;,\&quot;lowCourses\&quot;:\&quot;0\&quot;,\&quot;memo\&quot;:\&quot;\&quot;,\&quot;course\&quot;:[{\&quot;semester\&quot;:\&quot;1132\&quot;,\&quot;c_id\&quot;:\&quot;EE3058\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u4eba\\u5de5\\u667a\\u6167\\u6676\\u7247\\u8a2d\\u8a08\\u5c0e\\u8ad6\&quot;,\&quot;en\&quot;:\&quot;Introduction to AI Chip Design\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;93.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1132\&quot;,\&quot;c_id\&quot;:\&quot;EE4004\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u5c08\\u984c\\u5be6\\u4f5c\&quot;,\&quot;en\&quot;:\&quot;Independent Study\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;96.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1142\&quot;,\&quot;c_id\&quot;:\&quot;EE6094\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u96fb\\u8166\\u8f14\\u52a9\\u8d85\\u5927\\u578b\\u7a4d\\u9ad4\\u96fb\\u8def\\u8a2d\\u8a08\&quot;,\&quot;en\&quot;:\&quot;CAD for VLSI Design\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;\\u672a\\u5230(Not Entered)\&quot;,\&quot;qualified\&quot;:\&quot;2\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1142\&quot;,\&quot;c_id\&quot;:\&quot;EE8061\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u534a\\u5c0e\\u9ad4\\u88fd\\u7a0b\\u5be6\\u52d9\&quot;,\&quot;en\&quot;:\&quot;Semiconductor Technology Seminar\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;\\u672a\\u5230(Not Entered)\&quot;,\&quot;qualified\&quot;:\&quot;2\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1141\&quot;,\&quot;c_id\&quot;:\&quot;EE8094\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u6df1\\u5ea6\\u5b78\\u7fd2\\u7cfb\\u7d71\\u8a2d\\u8a08\\u8207\\u61c9\\u7528\&quot;,\&quot;en\&quot;:\&quot;Deep Learning System Design and Applications\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;81.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1141\&quot;,\&quot;c_id\&quot;:\&quot;LN0025\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u65e5\\u6587(\\u4e00)A\&quot;,\&quot;en\&quot;:\&quot;Japanese(I) A\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;95.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1141\&quot;,\&quot;c_id\&quot;:\&quot;LN1202\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u79d1\\u6280\\u82f1\\u6587\\u5beb\\u4f5c\\u6e9d\\u901a\\u8207\\u53e3\\u8a9e\\u8868\\u9054\&quot;,\&quot;en\&quot;:\&quot;Technical Writing and Communication Skills\&quot;},\&quot;c_cred\&quot;:\&quot;2\&quot;,\&quot;l_cred\&quot;:\&quot;2\&quot;,\&quot;score\&quot;:\&quot;88.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1132\&quot;,\&quot;c_id\&quot;:\&quot;LN2920\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u82f1\\u6587\\u5beb\\u4f5c\\u4e00\&quot;,\&quot;en\&quot;:\&quot;English Writing I\&quot;},\&quot;c_cred\&quot;:\&quot;2\&quot;,\&quot;l_cred\&quot;:\&quot;2\&quot;,\&quot;score\&quot;:\&quot;92.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}}]}}}&quot;}">
+								<div class="text-above-bar">
+									<p class="common-credits">一般選修</p>					
+																													<p class="gone">
+											<img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">
+											<span>完成</span>
+										</p>
+																	</div>
+								<div class="text-above-bar">
+									<span class="cred_course">
+										(應修)										0學分, 
+										0門課	
+										/<br />
+										(實修)										16學分,										6門課				
+									</span>
+									<img class="cred_img" src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/right_arrow.png">
+								</div>
+							<div class="bar-wrapper">
+								<div class="bar" style="width: 100%;"><p>100%</p></div>
+								<p class="percentage-value">100%</p>
+							</div>
+							</div> 
+													<div class="text-block" data-credits="{&quot;ruleName&quot;:&quot;\u5176\u5b83\u5b78\u5206&quot;,&quot;isPass&quot;:&quot;F&quot;,&quot;creditCred&quot;:0,&quot;creditCourse&quot;:13,&quot;lowCredits&quot;:&quot;0&quot;,&quot;lowCourses&quot;:&quot;15&quot;,&quot;percentage&quot;:86.67,&quot;memo&quot;:&quot;\u203b\u5df2\u5305\u542b18500\u4e4b\u4fee\u7fd2\u8ab2\u7a0b\u6578: 1 .\u203b\u5b78\u5206\u6578\u6216\u8ab2\u7a0b\u6578\u4e0d\u8db3.\u203b\u672a\u901a\u904e\u985e\u5225:18100,18500,&quot;,&quot;course&quot;:&quot;{\&quot;18100\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u64cd\\u884c\&quot;,\&quot;isPass\&quot;:\&quot;F\&quot;,\&quot;creditCred\&quot;:0,\&quot;creditCourse\&quot;:5,\&quot;lowCredits\&quot;:\&quot;0\&quot;,\&quot;lowCourses\&quot;:\&quot;8\&quot;,\&quot;memo\&quot;:\&quot;\\u203b\\u672a\\u901a\\u904e\\u985e\\u5225:18101,\&quot;,\&quot;18101\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u64cd\\u884c\&quot;,\&quot;isPass\&quot;:\&quot;F\&quot;,\&quot;creditCred\&quot;:0,\&quot;creditCourse\&quot;:5,\&quot;lowCredits\&quot;:\&quot;0\&quot;,\&quot;lowCourses\&quot;:\&quot;8\&quot;,\&quot;memo\&quot;:\&quot;\&quot;,\&quot;course\&quot;:[{\&quot;semester\&quot;:\&quot;1121\&quot;,\&quot;c_id\&quot;:\&quot;CR0001\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u64cd\\u884c\&quot;,\&quot;en\&quot;:\&quot;Conduct\&quot;},\&quot;c_cred\&quot;:0,\&quot;l_cred\&quot;:0,\&quot;score\&quot;:\&quot;85.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1122\&quot;,\&quot;c_id\&quot;:\&quot;CR0001\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u64cd\\u884c\&quot;,\&quot;en\&quot;:\&quot;Conduct\&quot;},\&quot;c_cred\&quot;:0,\&quot;l_cred\&quot;:0,\&quot;score\&quot;:\&quot;85.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1131\&quot;,\&quot;c_id\&quot;:\&quot;CR0001\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u64cd\\u884c\&quot;,\&quot;en\&quot;:\&quot;Conduct\&quot;},\&quot;c_cred\&quot;:0,\&quot;l_cred\&quot;:0,\&quot;score\&quot;:\&quot;85.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1132\&quot;,\&quot;c_id\&quot;:\&quot;CR0001\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u64cd\\u884c\&quot;,\&quot;en\&quot;:\&quot;Conduct\&quot;},\&quot;c_cred\&quot;:0,\&quot;l_cred\&quot;:0,\&quot;score\&quot;:\&quot;85.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1141\&quot;,\&quot;c_id\&quot;:\&quot;CR0001\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u64cd\\u884c\&quot;,\&quot;en\&quot;:\&quot;Conduct\&quot;},\&quot;c_cred\&quot;:0,\&quot;l_cred\&quot;:0,\&quot;score\&quot;:\&quot;86.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}}]}},\&quot;18200\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u9ad4\\u80b2\&quot;,\&quot;isPass\&quot;:\&quot;T\&quot;,\&quot;creditCred\&quot;:0,\&quot;creditCourse\&quot;:5,\&quot;lowCredits\&quot;:\&quot;0\&quot;,\&quot;lowCourses\&quot;:\&quot;5\&quot;,\&quot;memo\&quot;:\&quot;\&quot;,\&quot;18201\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u5927\\u4e00\\u9ad4\\u80b2\&quot;,\&quot;isPass\&quot;:\&quot;T\&quot;,\&quot;creditCred\&quot;:0,\&quot;creditCourse\&quot;:2,\&quot;lowCredits\&quot;:\&quot;0\&quot;,\&quot;lowCourses\&quot;:\&quot;2\&quot;,\&quot;memo\&quot;:\&quot;\&quot;,\&quot;course\&quot;:[{\&quot;semester\&quot;:\&quot;1121\&quot;,\&quot;c_id\&quot;:\&quot;PE1011\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u5927\\u4e00\\u9ad4\\u80b2\&quot;,\&quot;en\&quot;:\&quot;Freshman PE I\&quot;},\&quot;c_cred\&quot;:\&quot;0\&quot;,\&quot;l_cred\&quot;:\&quot;0\&quot;,\&quot;score\&quot;:\&quot;91.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1122\&quot;,\&quot;c_id\&quot;:\&quot;PE1022\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u5927\\u4e00\\u9ad4\\u80b2\&quot;,\&quot;en\&quot;:\&quot;Freshman PE II\&quot;},\&quot;c_cred\&quot;:\&quot;0\&quot;,\&quot;l_cred\&quot;:\&quot;0\&quot;,\&quot;score\&quot;:\&quot;83.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}}]},\&quot;18202\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u5176\\u5b83\\u5e74\\u7d1a\\u9ad4\\u80b2\&quot;,\&quot;isPass\&quot;:\&quot;T\&quot;,\&quot;creditCred\&quot;:0,\&quot;creditCourse\&quot;:3,\&quot;lowCredits\&quot;:\&quot;0\&quot;,\&quot;lowCourses\&quot;:\&quot;3\&quot;,\&quot;memo\&quot;:\&quot;\&quot;,\&quot;course\&quot;:[{\&quot;semester\&quot;:\&quot;1141\&quot;,\&quot;c_id\&quot;:\&quot;PE2051\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u7c43\\u7403\\u5165\\u9580\&quot;,\&quot;en\&quot;:\&quot;Basketball I\&quot;},\&quot;c_cred\&quot;:\&quot;0\&quot;,\&quot;l_cred\&quot;:\&quot;0\&quot;,\&quot;score\&quot;:\&quot;77.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1132\&quot;,\&quot;c_id\&quot;:\&quot;PE2071\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u6392\\u7403\\u5165\\u9580\&quot;,\&quot;en\&quot;:\&quot;Volleyball I\&quot;},\&quot;c_cred\&quot;:\&quot;0\&quot;,\&quot;l_cred\&quot;:\&quot;0\&quot;,\&quot;score\&quot;:\&quot;82.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1131\&quot;,\&quot;c_id\&quot;:\&quot;PE2301\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u5065\\u8eab\\u904b\\u52d5\&quot;,\&quot;en\&quot;:\&quot;Power Exercise\&quot;},\&quot;c_cred\&quot;:\&quot;0\&quot;,\&quot;l_cred\&quot;:\&quot;0\&quot;,\&quot;score\&quot;:\&quot;84.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}}]}},\&quot;18300\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u8ecd\\u8a13\&quot;,\&quot;isPass\&quot;:\&quot;T\&quot;,\&quot;creditCred\&quot;:0,\&quot;creditCourse\&quot;:0,\&quot;lowCredits\&quot;:\&quot;0\&quot;,\&quot;lowCourses\&quot;:\&quot;0\&quot;,\&quot;memo\&quot;:\&quot;\&quot;,\&quot;18301\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u8ecd\\u8a13\&quot;,\&quot;isPass\&quot;:\&quot;T\&quot;,\&quot;creditCred\&quot;:0,\&quot;creditCourse\&quot;:0,\&quot;lowCredits\&quot;:\&quot;0\&quot;,\&quot;lowCourses\&quot;:\&quot;0\&quot;,\&quot;memo\&quot;:\&quot;\&quot;,\&quot;course\&quot;:null}},\&quot;18400\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u670d\\u52d9\\u5b78\\u7fd2\&quot;,\&quot;isPass\&quot;:\&quot;T\&quot;,\&quot;creditCred\&quot;:0,\&quot;creditCourse\&quot;:2,\&quot;lowCredits\&quot;:\&quot;0\&quot;,\&quot;lowCourses\&quot;:\&quot;2\&quot;,\&quot;memo\&quot;:\&quot;\&quot;,\&quot;18401\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u670d\\u52d9\\u5b78\\u7fd2\&quot;,\&quot;isPass\&quot;:\&quot;T\&quot;,\&quot;creditCred\&quot;:0,\&quot;creditCourse\&quot;:2,\&quot;lowCredits\&quot;:\&quot;0\&quot;,\&quot;lowCourses\&quot;:\&quot;2\&quot;,\&quot;memo\&quot;:\&quot;\&quot;,\&quot;course\&quot;:[{\&quot;semester\&quot;:\&quot;1121\&quot;,\&quot;c_id\&quot;:\&quot;SC0003\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u670d\\u52d9\\u5b78\\u7fd2\\u8ab2\\u7a0b\&quot;,\&quot;en\&quot;:\&quot;Student Service-Learning\&quot;},\&quot;c_cred\&quot;:\&quot;0\&quot;,\&quot;l_cred\&quot;:\&quot;0\&quot;,\&quot;score\&quot;:\&quot;\\u52de\\u52d5\\u670d\\u52d9\\u901a\\u904e(Pass)\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}},{\&quot;semester\&quot;:\&quot;1122\&quot;,\&quot;c_id\&quot;:\&quot;SC0004\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u670d\\u52d9\\u5b78\\u7fd2\\u8ab2\\u7a0b\&quot;,\&quot;en\&quot;:\&quot;Student Service-Learning\&quot;},\&quot;c_cred\&quot;:\&quot;0\&quot;,\&quot;l_cred\&quot;:\&quot;0\&quot;,\&quot;score\&quot;:\&quot;\\u52de\\u52d5\\u670d\\u52d9\\u901a\\u904e(Pass)\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:null,\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;}}]}},\&quot;18500\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u5b78\\u751f\\u5b78\\u7fd2\\u8b77\\u7167\&quot;,\&quot;isPass\&quot;:\&quot;F\&quot;,\&quot;creditCred\&quot;:0,\&quot;creditCourse\&quot;:\&quot;1\&quot;,\&quot;lowCredits\&quot;:\&quot;0\&quot;,\&quot;lowCourses\&quot;:\&quot;1\&quot;,\&quot;memo\&quot;:\&quot;\\u203b\\u7e3d\\u6642\\u6578:90.0(\\u5c1a\\u672a\\u9054\\u5230\\u7562\\u696d\\u57fa\\u790e\\u9580\\u6abb,\\u8a73\\u7d30\\u8cc7\\u6599\\u8acb\\u53c3\\u8003:\\u670d\\u52d9\\u6ac3\\u53f0&gt;\\u8a0a\\u606f\\u8207\\u6d3b\\u52d5&gt;\\u6d3b\\u52d5\\u5831\\u540d&gt;\\u6642\\u6578\\u5100\\u8868\\u677f)\&quot;}}&quot;}">
+								<div class="text-above-bar">
+									<p class="common-credits">其它學分</p>					
+																													<p class="ungone">
+											<img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/exclamation_icon.png">
+											<span>未完成</span>
+										</p>
+																	</div>
+								<div class="text-above-bar">
+									<span class="cred_course">
+										(應修)										0學分, 
+										15門課	
+										/<br />
+										(實修)										0學分,										13門課				
+									</span>
+									<img class="cred_img" src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/right_arrow.png">
+								</div>
+							<div class="bar-wrapper">
+								<div class="bar" style="width: 86.67%;"><p>86.67%</p></div>
+								<p class="percentage-value">86.67%</p>
+							</div>
+							</div> 
+													<div class="text-block" data-credits="{&quot;ruleName&quot;:&quot;\u7279\u6b8a\u6aa2\u6838&quot;,&quot;isPass&quot;:&quot;F&quot;,&quot;creditCred&quot;:0,&quot;creditCourse&quot;:0,&quot;lowCredits&quot;:0,&quot;lowCourses&quot;:0,&quot;percentage&quot;:80,&quot;memo&quot;:&quot;\u203b\u672a\u901a\u904e\u985e\u5225:19230,&quot;,&quot;course&quot;:&quot;{\&quot;19200\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u7279\\u6b8a\\u6aa2\\u6838\\u689d\\u4ef6-\\u901a\\u904e\\u9032\\u4fee\\u82f1\\u6587\\u6216\\u82f1\\u6587\\u80fd\\u529b\\u9451\\u5b9a\\u8003\\u8a66\\u5408\\u683c\&quot;,\&quot;isPass\&quot;:\&quot;T\&quot;,\&quot;creditCred\&quot;:0,\&quot;creditCourse\&quot;:0,\&quot;lowCredits\&quot;:\&quot;4\&quot;,\&quot;lowCourses\&quot;:\&quot;2\&quot;,\&quot;memo\&quot;:\&quot;\\u203b\\u901a\\u904e[GEPT\\u5168\\u6c11\\u82f1\\u6aa2]\&quot;},\&quot;19220\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u9032\\u4fee\\u82f1\\u6587\\u4e0d\\u5217\\u5165\\u7562\\u696d\\u5b78\\u5206\\u6578\&quot;,\&quot;isPass\&quot;:\&quot;T\&quot;,\&quot;creditCred\&quot;:0,\&quot;creditCourse\&quot;:0,\&quot;lowCredits\&quot;:\&quot;0\&quot;,\&quot;lowCourses\&quot;:\&quot;0\&quot;,\&quot;memo\&quot;:\&quot;\&quot;},\&quot;19230\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u7279\\u6b8a\\u6aa2\\u6838-\\u4fee\\u7fd2[\\u672c\\u7cfb\\u9078\\u4fee\\u8207\\u81ea\\u8a02\\u5b83\\u7cfb\\u8ab2\\u7a0b]\\u7e3d\\u5b78\\u5206\\u6578\&quot;,\&quot;isPass\&quot;:\&quot;F\&quot;,\&quot;creditCred\&quot;:27,\&quot;creditCourse\&quot;:9,\&quot;lowCredits\&quot;:\&quot;39\&quot;,\&quot;lowCourses\&quot;:\&quot;13\&quot;,\&quot;memo\&quot;:\&quot;\&quot;},\&quot;19250\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u7279\\u6b8a\\u6aa2\\u6838-\\u7cfb\\u6240\\u81ea\\u8a02\\u4e4b\\u7b49\\u540c\\u8ab2\\u7a0b\\u91cd\\u8907\\u4fee\\u7fd2\\u4e0d\\u5217\\u5165\\u7562\\u696d\\u5b78\\u5206\\u6578(\\u7562\\u696d\\u5b78\\u5206\\u6578\\u8acb\\u81ea\\u884c\\u8a08\\u7b97\\u6263\\u9664)\&quot;,\&quot;isPass\&quot;:\&quot;T\&quot;,\&quot;creditCred\&quot;:0,\&quot;creditCourse\&quot;:0,\&quot;lowCredits\&quot;:\&quot;0\&quot;,\&quot;lowCourses\&quot;:\&quot;0\&quot;,\&quot;memo\&quot;:\&quot;\&quot;},\&quot;19260\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u7279\\u6b8a\\u6aa2\\u6838-\\u7cfb\\u6240\\u81ea\\u8a02\\u9650\\u5236\\u5b78\\u5206\\u4e0a\\u9650\\u7684\\u9078\\u4fee\\u8ab2\\u7a0b\\u7fa4\\u7d44\\u4fee\\u7fd2\\u5b78\\u5206\\u6578\&quot;,\&quot;isPass\&quot;:\&quot;T\&quot;,\&quot;creditCred\&quot;:3,\&quot;creditCourse\&quot;:1,\&quot;lowCredits\&quot;:\&quot;6\&quot;,\&quot;lowCourses\&quot;:\&quot;0\&quot;,\&quot;memo\&quot;:\&quot;\&quot;}}&quot;}">
+								<div class="text-above-bar">
+									<p class="common-credits">特殊檢核</p>					
+																													<p class="ungone">
+											<img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/exclamation_icon.png">
+											<span>未完成</span>
+										</p>
+																	</div>
+								<div class="text-above-bar">
+									<span class="cred_course">
+										(應修)										0學分, 
+										0門課	
+										/<br />
+										(實修)										0學分,										0門課				
+									</span>
+									<img class="cred_img" src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/right_arrow.png">
+								</div>
+							<div class="bar-wrapper">
+								<div class="bar" style="width: 80%;"><p>80%</p></div>
+								<p class="percentage-value">80%</p>
+							</div>
+							</div> 
+											</div>
+				</div>
+				<br />
+												<div id="degree-container">
+					<div id="circle-container">
+						<div class="circle" data-percentage="100">
+							<div class="text-container">
+								<p class="major-text">學分學程</p>
+								<p class="department">113-人工智慧跨域應用(理)</p>
+								<p class="credit">
+																		<span>16</span>學分,
+									<span>6</span>門課
+								</p>
+								<p class="total-credits">應修15學分</p>
+								<p class="graduation-threshold text-primary">及格門檻</p>
+							</div>
+						</div>
+					</div>
+					
+					<div id="text-block-container">
+													<div class="text-block" data-credits="{&quot;ruleName&quot;:&quot;\u5b78\u5206\u5b78\u7a0b-\u7cfb\u5b9a\u5fc5\u4fee\u5b78\u5206&quot;,&quot;isPass&quot;:&quot;T&quot;,&quot;creditCred&quot;:11,&quot;creditCourse&quot;:4,&quot;lowCredits&quot;:&quot;11&quot;,&quot;lowCourses&quot;:&quot;4&quot;,&quot;percentage&quot;:100,&quot;memo&quot;:&quot;&quot;,&quot;course&quot;:&quot;{\&quot;42200\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u5b78\\u5206\\u5b78\\u7a0b-\\u5fc5\\u4feem\\u9078n\\u7fa4\\u7d44\\u4e00\&quot;,\&quot;isPass\&quot;:\&quot;T\&quot;,\&quot;creditCred\&quot;:11,\&quot;creditCourse\&quot;:4,\&quot;lowCredits\&quot;:\&quot;11\&quot;,\&quot;lowCourses\&quot;:\&quot;4\&quot;,\&quot;memo\&quot;:\&quot;\&quot;,\&quot;42201\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u5b78\\u5206\\u5b78\\u7a0b-\\u5fc5\\u4feem\\u9078n\\u7fa4\\u7d44\\u4e00A\\u985e\&quot;,\&quot;isPass\&quot;:\&quot;T\&quot;,\&quot;creditCred\&quot;:3,\&quot;creditCourse\&quot;:1,\&quot;lowCredits\&quot;:\&quot;3\&quot;,\&quot;lowCourses\&quot;:\&quot;1\&quot;,\&quot;memo\&quot;:\&quot;\&quot;,\&quot;course\&quot;:[{\&quot;semester\&quot;:\&quot;1132\&quot;,\&quot;c_id\&quot;:\&quot;GS4719\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u7a0b\\u5f0f\\u8a2d\\u8a08-Python\&quot;,\&quot;en\&quot;:\&quot;Programming-Python\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;99.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:{\&quot;c_id\&quot;:\&quot;GS4719\&quot;,\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;attr_no\&quot;:\&quot;002\&quot;},\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\\u203b\\u514d\\u4fee[GS4719],\&quot;,\&quot;en\&quot;:\&quot;\\u203bWaiver[GS4719],\&quot;}}]},\&quot;42202\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u5b78\\u5206\\u5b78\\u7a0b-\\u5fc5\\u4feem\\u9078n\\u7fa4\\u7d44\\u4e00B\\u985e\&quot;,\&quot;isPass\&quot;:\&quot;T\&quot;,\&quot;creditCred\&quot;:5,\&quot;creditCourse\&quot;:2,\&quot;lowCredits\&quot;:\&quot;5\&quot;,\&quot;lowCourses\&quot;:\&quot;2\&quot;,\&quot;memo\&quot;:\&quot;\&quot;,\&quot;course\&quot;:[{\&quot;semester\&quot;:\&quot;1131\&quot;,\&quot;c_id\&quot;:\&quot;GS3073\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;AI\\u4eba\\u5de5\\u667a\\u6167\\u5c0e\\u8ad6\&quot;,\&quot;en\&quot;:\&quot;Introduction to Artificial Intelligence\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;99.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:{\&quot;c_id\&quot;:\&quot;GS3073\&quot;,\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;attr_no\&quot;:\&quot;002\&quot;},\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\\u203b\\u514d\\u4fee[GS3073],\&quot;,\&quot;en\&quot;:\&quot;\\u203bWaiver[GS3073],\&quot;}},{\&quot;semester\&quot;:\&quot;1131\&quot;,\&quot;c_id\&quot;:\&quot;GS4519\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u6a5f\\u5668\\u5b78\\u7fd2\\u6982\\u8ad6\&quot;,\&quot;en\&quot;:\&quot;Introduction to machine learning\&quot;},\&quot;c_cred\&quot;:\&quot;2\&quot;,\&quot;l_cred\&quot;:\&quot;2\&quot;,\&quot;score\&quot;:\&quot;87.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:{\&quot;c_id\&quot;:\&quot;GS4519\&quot;,\&quot;c_cred\&quot;:\&quot;2\&quot;,\&quot;attr_no\&quot;:\&quot;002\&quot;},\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\\u203b\\u514d\\u4fee[GS4519],\&quot;,\&quot;en\&quot;:\&quot;\\u203bWaiver[GS4519],\&quot;}}]},\&quot;42203\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u5b78\\u5206\\u5b78\\u7a0b-\\u5fc5\\u4feem\\u9078n\\u7fa4\\u7d44\\u4e00C\\u985e\&quot;,\&quot;isPass\&quot;:\&quot;T\&quot;,\&quot;creditCred\&quot;:3,\&quot;creditCourse\&quot;:1,\&quot;lowCredits\&quot;:\&quot;3\&quot;,\&quot;lowCourses\&quot;:\&quot;1\&quot;,\&quot;memo\&quot;:\&quot;\&quot;,\&quot;course\&quot;:[{\&quot;semester\&quot;:\&quot;1141\&quot;,\&quot;c_id\&quot;:\&quot;GS4524\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u4eba\\u5de5\\u667a\\u6167\\u8de8\\u57df\\u61c9\\u7528\\u5c08\\u984c\&quot;,\&quot;en\&quot;:\&quot;Special topic for interdisciplinary artificial intelligence\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;98.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:{\&quot;c_id\&quot;:\&quot;GS4524\&quot;,\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;attr_no\&quot;:\&quot;002\&quot;},\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\\u203b\\u514d\\u4fee[GS4524],\&quot;,\&quot;en\&quot;:\&quot;\\u203bWaiver[GS4524],\&quot;}}]}}}&quot;}">
+								<div class="text-above-bar">
+									<p class="common-credits">學分學程-系定必修學分</p>					
+																													<p class="gone">
+											<img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">
+											<span>完成</span>
+										</p>
+																	</div>
+								<div class="text-above-bar">
+									<span class="cred_course">
+										(應修)										11學分, 
+										4門課	
+										/<br />
+										(實修)										11學分,										4門課				
+									</span>
+									<img class="cred_img" src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/right_arrow.png">
+								</div>
+							<div class="bar-wrapper">
+								<div class="bar" style="width: 100%;"><p>100%</p></div>
+								<p class="percentage-value">100%</p>
+							</div>
+							</div> 
+													<div class="text-block" data-credits="{&quot;ruleName&quot;:&quot;\u5b78\u5206\u5b78\u7a0b-\u7cfb\u8a02\u5fc5\u9078\u5b78\u5206&quot;,&quot;isPass&quot;:&quot;T&quot;,&quot;creditCred&quot;:5,&quot;creditCourse&quot;:2,&quot;lowCredits&quot;:&quot;4&quot;,&quot;lowCourses&quot;:&quot;2&quot;,&quot;percentage&quot;:100,&quot;memo&quot;:&quot;&quot;,&quot;course&quot;:&quot;{\&quot;43200\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u5b78\\u5206\\u5b78\\u7a0b-\\u7cfb\\u958b\\u9078\\u4feem\\u9078n\\u5b78\\u5206\&quot;,\&quot;isPass\&quot;:\&quot;T\&quot;,\&quot;creditCred\&quot;:5,\&quot;creditCourse\&quot;:2,\&quot;lowCredits\&quot;:\&quot;4\&quot;,\&quot;lowCourses\&quot;:\&quot;2\&quot;,\&quot;memo\&quot;:\&quot;\&quot;,\&quot;43201\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u5b78\\u5206\\u5b78\\u7a0b-\\u7cfb\\u958b\\u9078\\u4feem\\u9078n\\u5b78\\u5206A\\u985e\&quot;,\&quot;isPass\&quot;:\&quot;T\&quot;,\&quot;creditCred\&quot;:3,\&quot;creditCourse\&quot;:1,\&quot;lowCredits\&quot;:\&quot;2\&quot;,\&quot;lowCourses\&quot;:\&quot;1\&quot;,\&quot;memo\&quot;:\&quot;\&quot;,\&quot;course\&quot;:[{\&quot;semester\&quot;:\&quot;1131\&quot;,\&quot;c_id\&quot;:\&quot;GS4518\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u81ea\\u7136\\u8a9e\\u8a00\\u8655\\u7406\&quot;,\&quot;en\&quot;:\&quot;Natural language processing\&quot;},\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;l_cred\&quot;:\&quot;3\&quot;,\&quot;score\&quot;:\&quot;76.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:{\&quot;c_id\&quot;:\&quot;GS4518\&quot;,\&quot;c_cred\&quot;:\&quot;3\&quot;,\&quot;attr_no\&quot;:\&quot;002\&quot;},\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\\u203b\\u514d\\u4fee[GS4518],\&quot;,\&quot;en\&quot;:\&quot;\\u203bWaiver[GS4518],\&quot;}}]},\&quot;43202\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u5b78\\u5206\\u5b78\\u7a0b-\\u7cfb\\u958b\\u9078\\u4feem\\u9078n\\u5b78\\u5206B\\u985e\&quot;,\&quot;isPass\&quot;:\&quot;T\&quot;,\&quot;creditCred\&quot;:2,\&quot;creditCourse\&quot;:1,\&quot;lowCredits\&quot;:\&quot;2\&quot;,\&quot;lowCourses\&quot;:\&quot;1\&quot;,\&quot;memo\&quot;:\&quot;\&quot;,\&quot;course\&quot;:[{\&quot;semester\&quot;:\&quot;1141\&quot;,\&quot;c_id\&quot;:\&quot;GS4530\&quot;,\&quot;crs_name\&quot;:{\&quot;tw\&quot;:\&quot;\\u4eba\\u5de5\\u667a\\u6167\\u502b\\u7406\\u5c0e\\u8ad6\&quot;,\&quot;en\&quot;:\&quot;Introduction to Artificial Intelligence Intelligence Ethics\&quot;},\&quot;c_cred\&quot;:\&quot;2\&quot;,\&quot;l_cred\&quot;:\&quot;2\&quot;,\&quot;score\&quot;:\&quot;87.00\&quot;,\&quot;qualified\&quot;:\&quot;1\&quot;,\&quot;replace\&quot;:{\&quot;c_id\&quot;:\&quot;GS4530\&quot;,\&quot;c_cred\&quot;:\&quot;2\&quot;,\&quot;attr_no\&quot;:\&quot;002\&quot;},\&quot;memo\&quot;:{\&quot;tw\&quot;:\&quot;\\u203b\\u514d\\u4fee[GS4530],\&quot;,\&quot;en\&quot;:\&quot;\\u203bWaiver[GS4530],\&quot;}}]}}}&quot;}">
+								<div class="text-above-bar">
+									<p class="common-credits">學分學程-系訂必選學分</p>					
+																													<p class="gone">
+											<img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">
+											<span>完成</span>
+										</p>
+																	</div>
+								<div class="text-above-bar">
+									<span class="cred_course">
+										(應修)										4學分, 
+										2門課	
+										/<br />
+										(實修)										5學分,										2門課				
+									</span>
+									<img class="cred_img" src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/right_arrow.png">
+								</div>
+							<div class="bar-wrapper">
+								<div class="bar" style="width: 100%;"><p>100%</p></div>
+								<p class="percentage-value">100%</p>
+							</div>
+							</div> 
+													<div class="text-block" data-credits="{&quot;ruleName&quot;:&quot;\u5b78\u5206\u5b78\u7a0b-\u7279\u6b8a\u6aa2\u6838\u689d\u4ef6&quot;,&quot;isPass&quot;:&quot;T&quot;,&quot;creditCred&quot;:0,&quot;creditCourse&quot;:0,&quot;lowCredits&quot;:0,&quot;lowCourses&quot;:0,&quot;percentage&quot;:100,&quot;memo&quot;:&quot;&quot;,&quot;course&quot;:&quot;{\&quot;49190\&quot;:{\&quot;ruleName\&quot;:\&quot;\\u5b78\\u5206\\u5b78\\u7a0b-\\u4e0d\\u542b\\u514d\\u4fee\\u79d1\\u76ee\\u4e4b\\u6700\\u4f4e\\u9650\\u4fee\\u5b78\\u5206\&quot;,\&quot;isPass\&quot;:\&quot;T\&quot;,\&quot;creditCred\&quot;:0,\&quot;creditCourse\&quot;:0,\&quot;lowCredits\&quot;:\&quot;0\&quot;,\&quot;lowCourses\&quot;:\&quot;0\&quot;,\&quot;memo\&quot;:\&quot;\&quot;}}&quot;}">
+								<div class="text-above-bar">
+									<p class="common-credits">學分學程-特殊檢核條件</p>					
+																													<p class="gone">
+											<img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">
+											<span>完成</span>
+										</p>
+																	</div>
+								<div class="text-above-bar">
+									<span class="cred_course">
+										(應修)										0學分, 
+										0門課	
+										/<br />
+										(實修)										0學分,										0門課				
+									</span>
+									<img class="cred_img" src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/right_arrow.png">
+								</div>
+							<div class="bar-wrapper">
+								<div class="bar" style="width: 100%;"><p>100%</p></div>
+								<p class="percentage-value">100%</p>
+							</div>
+							</div> 
+											</div>
+				</div>
+				<br />
+						</div>
+	
+
+
+			<div class="main-content degreeKindTable table_1" style="display:none;">
+			<h2 style="font-size:28px; color:blue; text-align:center;" class="fw-bold">112-1-5001-0-電機工程學系</h2>
+			<h5 class="container-fluid col-md-6 col-md-offset-3 shadow-none bg-light rounded fw-bold p-2 mb-3" style="text-align:center;"><label>10000 - 主系</label><br /><label><span>115</span>學分，<span>58</span>門課，<span>應修132學分</span></label><br /><label class="text-danger">尚未通過及格門檻</label><br /><label class="text-danger">備註：※學分數或課程數不足.※未通過子規則:11000,12000,13000,18000,19000,</label></h5>
+	
+	<div class="container-fluid col-md-10 col-md-offset-1">
+											<h4 class="fw-bold" style="text-align:center;">11000 - 共同必修學分</h4>
+			
+			<table class="table">
+				<tr nobr="true" class="tr-b layer">
+					<th style="width:12%;">
+													<label class="ungone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/exclamation_icon.png">&nbsp;未完成</label>
+											</th>
+					<th style="width:88%;">
+												<span>(應修) 25學分，10門課 / (實修) 29學分，12門課</span><br />
+						<span>備註：※未通過類別:11320,</span>
+					</th>
+				</tr>
+			</table>
+												<table class="table">
+						<tr nobr="true" class="tr-c layer">
+							<th style="width:12%;">
+																	<label class="gone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">&nbsp;完成</label>
+															</th>
+							<th style="width:88%;">
+																<span>11200 - 共同必修-外文，應修學分：6、應修科目：2；實修學分：6、實修科目：2</span><br />
+								<span>備註：無</span>
+							</th>
+						</tr>
+						<tr nobr="true">
+							<td colspan="2" class="w-100">																																																																																																																																																 
+																				<table class="table m-0">
+											<tr nobr="true" class="tr-d layer">
+												<th colspan="1" style="width:12%;">
+																											<label class="gone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">&nbsp;完成</label>
+																									</th>
+												<th colspan="6" style="width:88%;">
+													<span>11201 - 外文-大一英文，應修學分：0、應修科目：0；實修學分：6、實修科目：2</span><br />
+													<span>備註：無</span>
+												</th>
+											</tr>
+										</table>
+										<table class="rwd-table table">
+																							<tr nobr="true" class="tr-course">
+													<th style="width:12%;">學年學期</th>
+													<th style="width:11%;">課號</th>
+													<th style="width:32%;">課程名稱</th>
+													<th style="width:10%;">學分數</th>
+													<th style="width:12%;">成績</th>
+													<th style="width:10%;">判定</th>
+													<th style="width:13%;">備註</th>
+												</tr>
+																																						<tr nobr="true" class="">
+														<td>1121</td>
+														<td class="text-center">LN1001</td>
+														<td>大一英文:工程課群</td>
+														<td>3</td>
+														<td>94.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1122</td>
+														<td class="text-center">LN1002</td>
+														<td>大一英文:工程課群</td>
+														<td>3</td>
+														<td>88.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																	</table>
+																										 
+																				<table class="table m-0">
+											<tr nobr="true" class="tr-d layer">
+												<th colspan="1" style="width:12%;">
+																											<label class="gone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">&nbsp;完成</label>
+																									</th>
+												<th colspan="6" style="width:88%;">
+													<span>11204 - 外文-英文系課程，應修學分：0、應修科目：0；實修學分：0、實修科目：0</span><br />
+													<span>備註：無</span>
+												</th>
+											</tr>
+										</table>
+										<table class="rwd-table table">
+																							<tr nobr="true" class="tr-course">
+													<td colspan="7" class="fw-bold alert alert-warning" style="text-align:center;">無修課資料</td>
+												</tr>
+																					</table>
+																	
+															</td>
+						</tr>
+					</table>
+									<table class="table">
+						<tr nobr="true" class="tr-c layer">
+							<th style="width:12%;">
+																	<label class="ungone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/exclamation_icon.png">&nbsp;未完成</label>
+															</th>
+							<th style="width:88%;">
+																<span>11320 - 核心通識課程，應修學分：14、應修科目：0；實修學分：18、實修科目：8</span><br />
+								<span>備註：※所修學分未跨滿1個類別.</span>
+							</th>
+						</tr>
+						<tr nobr="true">
+							<td colspan="2" class="w-100">																																																																																																																																																 
+																				<table class="table m-0">
+											<tr nobr="true" class="tr-d layer">
+												<th colspan="1" style="width:12%;">
+																											<label class="gone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">&nbsp;完成</label>
+																									</th>
+												<th colspan="6" style="width:88%;">
+													<span>11321 - 核心通識-人文與思想，應修學分：0、應修科目：0；實修學分：0、實修科目：0</span><br />
+													<span>備註：無</span>
+												</th>
+											</tr>
+										</table>
+										<table class="rwd-table table">
+																							<tr nobr="true" class="tr-course">
+													<td colspan="7" class="fw-bold alert alert-warning" style="text-align:center;">無修課資料</td>
+												</tr>
+																					</table>
+																										 
+																				<table class="table m-0">
+											<tr nobr="true" class="tr-d layer">
+												<th colspan="1" style="width:12%;">
+																											<label class="gone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">&nbsp;完成</label>
+																									</th>
+												<th colspan="6" style="width:88%;">
+													<span>11322 - 核心通識-自然科學，應修學分：0、應修科目：0；實修學分：0、實修科目：0</span><br />
+													<span>備註：無</span>
+												</th>
+											</tr>
+										</table>
+										<table class="rwd-table table">
+																							<tr nobr="true" class="tr-course">
+													<td colspan="7" class="fw-bold alert alert-warning" style="text-align:center;">無修課資料</td>
+												</tr>
+																					</table>
+																										 
+																				<table class="table m-0">
+											<tr nobr="true" class="tr-d layer">
+												<th colspan="1" style="width:12%;">
+																											<label class="gone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">&nbsp;完成</label>
+																									</th>
+												<th colspan="6" style="width:88%;">
+													<span>11323 - 核心通識-應用科學，應修學分：0、應修科目：0；實修學分：0、實修科目：0</span><br />
+													<span>備註：無</span>
+												</th>
+											</tr>
+										</table>
+										<table class="rwd-table table">
+																							<tr nobr="true" class="tr-course">
+													<td colspan="7" class="fw-bold alert alert-warning" style="text-align:center;">無修課資料</td>
+												</tr>
+																					</table>
+																										 
+																				<table class="table m-0">
+											<tr nobr="true" class="tr-d layer">
+												<th colspan="1" style="width:12%;">
+																											<label class="gone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">&nbsp;完成</label>
+																									</th>
+												<th colspan="6" style="width:88%;">
+													<span>11324 - 核心通識-社會思潮與現象，應修學分：0、應修科目：0；實修學分：0、實修科目：0</span><br />
+													<span>備註：無</span>
+												</th>
+											</tr>
+										</table>
+										<table class="rwd-table table">
+																							<tr nobr="true" class="tr-course">
+													<td colspan="7" class="fw-bold alert alert-warning" style="text-align:center;">無修課資料</td>
+												</tr>
+																					</table>
+																										 
+																				<table class="table m-0">
+											<tr nobr="true" class="tr-d layer">
+												<th colspan="1" style="width:12%;">
+																											<label class="gone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">&nbsp;完成</label>
+																									</th>
+												<th colspan="6" style="width:88%;">
+													<span>11325 - 核心通識-其它通識課程，應修學分：0、應修科目：0；實修學分：18、實修科目：8</span><br />
+													<span>備註：無</span>
+												</th>
+											</tr>
+										</table>
+										<table class="rwd-table table">
+																							<tr nobr="true" class="tr-course">
+													<th style="width:12%;">學年學期</th>
+													<th style="width:11%;">課號</th>
+													<th style="width:32%;">課程名稱</th>
+													<th style="width:10%;">學分數</th>
+													<th style="width:12%;">成績</th>
+													<th style="width:10%;">判定</th>
+													<th style="width:13%;">備註</th>
+												</tr>
+																																						<tr nobr="true" class="">
+														<td>1141</td>
+														<td class="text-center">GS0076</td>
+														<td>自主學習微學分(一)</td>
+														<td>1</td>
+														<td>一般課程通過(Pass)</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1121</td>
+														<td class="text-center">GS0077</td>
+														<td>自主學習微學分(二)</td>
+														<td>1</td>
+														<td>一般課程通過(Pass)</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1131</td>
+														<td class="text-center">GS3073</td>
+														<td>AI人工智慧導論</td>
+														<td>3</td>
+														<td>99.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1131</td>
+														<td class="text-center">GS4518</td>
+														<td>自然語言處理</td>
+														<td>3</td>
+														<td>76.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1131</td>
+														<td class="text-center">GS4519</td>
+														<td>機器學習概論</td>
+														<td>2</td>
+														<td>87.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1141</td>
+														<td class="text-center">GS4524</td>
+														<td>人工智慧跨域應用專題</td>
+														<td>3</td>
+														<td>98.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1141</td>
+														<td class="text-center">GS4530</td>
+														<td>人工智慧倫理導論</td>
+														<td>2</td>
+														<td>87.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1132</td>
+														<td class="text-center">GS4719</td>
+														<td>程式設計-Python</td>
+														<td>3</td>
+														<td>99.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																	</table>
+																	
+															</td>
+						</tr>
+					</table>
+									<table class="table">
+						<tr nobr="true" class="tr-c layer">
+							<th style="width:12%;">
+																	<label class="gone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">&nbsp;完成</label>
+															</th>
+							<th style="width:88%;">
+																<span>11400 - 基礎課程-大一國文，應修學分：5、應修科目：2；實修學分：5、實修科目：2</span><br />
+								<span>備註：無</span>
+							</th>
+						</tr>
+						<tr nobr="true">
+							<td colspan="2" class="w-100">																																																																																																																																																 
+																				<table class="table m-0">
+											<tr nobr="true" class="tr-d layer">
+												<th colspan="1" style="width:12%;">
+																											<label class="gone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">&nbsp;完成</label>
+																									</th>
+												<th colspan="6" style="width:88%;">
+													<span>11401 - 大一國文A類，應修學分：5、應修科目：2；實修學分：5、實修科目：2</span><br />
+													<span>備註：無</span>
+												</th>
+											</tr>
+										</table>
+										<table class="rwd-table table">
+																							<tr nobr="true" class="tr-course">
+													<th style="width:12%;">學年學期</th>
+													<th style="width:11%;">課號</th>
+													<th style="width:32%;">課程名稱</th>
+													<th style="width:10%;">學分數</th>
+													<th style="width:12%;">成績</th>
+													<th style="width:10%;">判定</th>
+													<th style="width:13%;">備註</th>
+												</tr>
+																																						<tr nobr="true" class="">
+														<td>1122</td>
+														<td class="text-center">CL0135</td>
+														<td>國文（A）經典閱讀：傳統文化名篇選讀</td>
+														<td>3</td>
+														<td>82.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1121</td>
+														<td class="text-center">CL0201</td>
+														<td>國文（B）：中文寫作</td>
+														<td>2</td>
+														<td>90.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																	</table>
+																	
+															</td>
+						</tr>
+					</table>
+				
+									<hr />
+																<h4 class="fw-bold" style="text-align:center;">12000 - 系訂必修學分</h4>
+			
+			<table class="table">
+				<tr nobr="true" class="tr-b layer">
+					<th style="width:12%;">
+													<label class="ungone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/exclamation_icon.png">&nbsp;未完成</label>
+											</th>
+					<th style="width:88%;">
+												<span>(應修) 58學分，24門課 / (實修) 52學分，22門課</span><br />
+						<span>備註：※學分數或課程數不足.※未通過類別:12100,12200,</span>
+					</th>
+				</tr>
+			</table>
+												<table class="table">
+						<tr nobr="true" class="tr-c layer">
+							<th style="width:12%;">
+																	<label class="ungone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/exclamation_icon.png">&nbsp;未完成</label>
+															</th>
+							<th style="width:88%;">
+																<span>12100 - 一般系訂必修學分，應修學分：55、應修科目：23；實修學分：52、實修科目：22</span><br />
+								<span>備註：※未通過類別:12101,</span>
+							</th>
+						</tr>
+						<tr nobr="true">
+							<td colspan="2" class="w-100">																																																																																																																																																 
+																				<table class="table m-0">
+											<tr nobr="true" class="tr-d layer">
+												<th colspan="1" style="width:12%;">
+																											<label class="ungone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/exclamation_icon.png">&nbsp;未完成</label>
+																									</th>
+												<th colspan="6" style="width:88%;">
+													<span>12101 - 一般系訂必修學分-A類，應修學分：55、應修科目：23；實修學分：52、實修科目：22</span><br />
+													<span>備註：無</span>
+												</th>
+											</tr>
+										</table>
+										<table class="rwd-table table">
+																							<tr nobr="true" class="tr-course">
+													<th style="width:12%;">學年學期</th>
+													<th style="width:11%;">課號</th>
+													<th style="width:32%;">課程名稱</th>
+													<th style="width:10%;">學分數</th>
+													<th style="width:12%;">成績</th>
+													<th style="width:10%;">判定</th>
+													<th style="width:13%;">備註</th>
+												</tr>
+																																						<tr nobr="true" class="">
+														<td>1121</td>
+														<td class="text-center">EE1003</td>
+														<td>計算機概論 I</td>
+														<td>3</td>
+														<td>96.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1122</td>
+														<td class="text-center">EE1006</td>
+														<td>數位邏輯實驗</td>
+														<td>1</td>
+														<td>84.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1121</td>
+														<td class="text-center">EE1007</td>
+														<td>計算機概論實習</td>
+														<td>1</td>
+														<td>98.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1121</td>
+														<td class="text-center">EE1009</td>
+														<td>工程數學-線性代數</td>
+														<td>3</td>
+														<td>70.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1122</td>
+														<td class="text-center">EE1010</td>
+														<td>工程數學-微分方程</td>
+														<td>3</td>
+														<td>76.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1131</td>
+														<td class="text-center">EE2001</td>
+														<td>電子學  Ｉ</td>
+														<td>3</td>
+														<td>68.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1122</td>
+														<td class="text-center">EE2002</td>
+														<td>電路學  Ｉ</td>
+														<td>3</td>
+														<td>86.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1131</td>
+														<td class="text-center">EE2004</td>
+														<td>電磁學  Ｉ</td>
+														<td>3</td>
+														<td>76.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1132</td>
+														<td class="text-center">EE2009</td>
+														<td>電子學  Ⅱ</td>
+														<td>3</td>
+														<td>86.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1131</td>
+														<td class="text-center">EE2011</td>
+														<td>電路學  Ⅱ</td>
+														<td>3</td>
+														<td>81.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1132</td>
+														<td class="text-center">EE2015</td>
+														<td>電磁學  Ⅱ</td>
+														<td>3</td>
+														<td>96.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1121</td>
+														<td class="text-center">EE2016</td>
+														<td>數位系統導論</td>
+														<td>3</td>
+														<td>93.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1131</td>
+														<td class="text-center">EE2027</td>
+														<td>電子電路實驗Ⅰ</td>
+														<td>1</td>
+														<td>92.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1132</td>
+														<td class="text-center">EE2028</td>
+														<td>電子電路實驗Ⅱ</td>
+														<td>1</td>
+														<td>94.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1131</td>
+														<td class="text-center">EE2030</td>
+														<td>工程數學-複變</td>
+														<td>3</td>
+														<td>94.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1132</td>
+														<td class="text-center">EE3009</td>
+														<td>信號與系統</td>
+														<td>3</td>
+														<td>85.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1141</td>
+														<td class="text-center">EE3047</td>
+														<td>電子電路實驗Ⅲ</td>
+														<td>1</td>
+														<td>83.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1121</td>
+														<td class="text-center">MA1003</td>
+														<td>微積分</td>
+														<td>3</td>
+														<td>72.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1122</td>
+														<td class="text-center">MA1004</td>
+														<td>微積分</td>
+														<td>3</td>
+														<td>74.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1121</td>
+														<td class="text-center">PH1003</td>
+														<td>普通物理實驗</td>
+														<td>1</td>
+														<td>90.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1122</td>
+														<td class="text-center">PH1004</td>
+														<td>普通物理實驗</td>
+														<td>1</td>
+														<td>91.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="alert alert-danger">
+														<td>1121</td>
+														<td class="text-center">PH1031</td>
+														<td>普通物理A</td>
+														<td>3</td>
+														<td>55.00</td>
+														<td><span class="text-danger">未通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="alert alert-warning">
+														<td>1142</td>
+														<td class="text-center">PH1031</td>
+														<td>普通物理A</td>
+														<td>3</td>
+														<td>未到(Not Entered)</td>
+														<td><span class="text-danger">未通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1122</td>
+														<td class="text-center">PH1032</td>
+														<td>普通物理A</td>
+														<td>3</td>
+														<td>88.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																	</table>
+																	
+															</td>
+						</tr>
+					</table>
+									<table class="table">
+						<tr nobr="true" class="tr-c layer">
+							<th style="width:12%;">
+																	<label class="ungone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/exclamation_icon.png">&nbsp;未完成</label>
+															</th>
+							<th style="width:88%;">
+																<span>12200 - 必修-課程m選n，應修學分：3、應修科目：1；實修學分：0、實修科目：0</span><br />
+								<span>備註：※未通過類別:12201,</span>
+							</th>
+						</tr>
+						<tr nobr="true">
+							<td colspan="2" class="w-100">																																																																																																																																																 
+																				<table class="table m-0">
+											<tr nobr="true" class="tr-d layer">
+												<th colspan="1" style="width:12%;">
+																											<label class="ungone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/exclamation_icon.png">&nbsp;未完成</label>
+																									</th>
+												<th colspan="6" style="width:88%;">
+													<span>12201 - 必修-課程m選n一A類，應修學分：3、應修科目：1；實修學分：0、實修科目：0</span><br />
+													<span>備註：無</span>
+												</th>
+											</tr>
+										</table>
+										<table class="rwd-table table">
+																							<tr nobr="true" class="tr-course">
+													<th style="width:12%;">學年學期</th>
+													<th style="width:11%;">課號</th>
+													<th style="width:32%;">課程名稱</th>
+													<th style="width:10%;">學分數</th>
+													<th style="width:12%;">成績</th>
+													<th style="width:10%;">判定</th>
+													<th style="width:13%;">備註</th>
+												</tr>
+																																						<tr nobr="true" class="alert alert-warning">
+														<td>1142</td>
+														<td class="text-center">EE3049</td>
+														<td>積體電路設計專題</td>
+														<td>3</td>
+														<td>未到(Not Entered)</td>
+														<td><span class="text-danger">未通過</span></td>
+														<td></td>
+													</tr>
+																																	</table>
+																	
+															</td>
+						</tr>
+					</table>
+				
+									<hr />
+																<h4 class="fw-bold" style="text-align:center;">13000 - 系訂必選學分</h4>
+			
+			<table class="table">
+				<tr nobr="true" class="tr-b layer">
+					<th style="width:12%;">
+													<label class="ungone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/exclamation_icon.png">&nbsp;未完成</label>
+											</th>
+					<th style="width:88%;">
+												<span>(應修) 27學分，9門課 / (實修) 18學分，6門課</span><br />
+						<span>備註：※學分數或課程數不足.※未通過類別:13200,13300,※未通過子規則:13200,13300,</span>
+					</th>
+				</tr>
+			</table>
+												<table class="table">
+						<tr nobr="true" class="tr-c layer">
+							<th style="width:12%;">
+																	<label class="ungone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/exclamation_icon.png">&nbsp;未完成</label>
+															</th>
+							<th style="width:88%;">
+																<span>13200 - 系訂必選m選n，應修學分：18、應修科目：6；實修學分：12、實修科目：4</span><br />
+								<span>備註：※學分數或課程數不足.</span>
+							</th>
+						</tr>
+						<tr nobr="true">
+							<td colspan="2" class="w-100">																																																																																																																																																 
+																				<table class="table m-0">
+											<tr nobr="true" class="tr-d layer">
+												<th colspan="1" style="width:12%;">
+																											<label class="gone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">&nbsp;完成</label>
+																									</th>
+												<th colspan="6" style="width:88%;">
+													<span>13201 - 系訂必選m選n-A類，應修學分：0、應修科目：1；實修學分：6、實修科目：2</span><br />
+													<span>備註：無</span>
+												</th>
+											</tr>
+										</table>
+										<table class="rwd-table table">
+																							<tr nobr="true" class="tr-course">
+													<th style="width:12%;">學年學期</th>
+													<th style="width:11%;">課號</th>
+													<th style="width:32%;">課程名稱</th>
+													<th style="width:10%;">學分數</th>
+													<th style="width:12%;">成績</th>
+													<th style="width:10%;">判定</th>
+													<th style="width:13%;">備註</th>
+												</tr>
+																																						<tr nobr="true" class="">
+														<td>1141</td>
+														<td class="text-center">EE3001</td>
+														<td>電子學  Ⅲ</td>
+														<td>3</td>
+														<td>72.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1141</td>
+														<td class="text-center">EE3032</td>
+														<td>超大型積體電路導論</td>
+														<td>3</td>
+														<td>80.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="alert alert-warning">
+														<td>1142</td>
+														<td class="text-center">EE4032</td>
+														<td>類比積體電路導論</td>
+														<td>3</td>
+														<td>未到(Not Entered)</td>
+														<td><span class="text-danger">未通過</span></td>
+														<td></td>
+													</tr>
+																																	</table>
+																										 
+																				<table class="table m-0">
+											<tr nobr="true" class="tr-d layer">
+												<th colspan="1" style="width:12%;">
+																											<label class="gone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">&nbsp;完成</label>
+																									</th>
+												<th colspan="6" style="width:88%;">
+													<span>13202 - 系訂必選m選n-B類，應修學分：0、應修科目：1；實修學分：3、實修科目：1</span><br />
+													<span>備註：無</span>
+												</th>
+											</tr>
+										</table>
+										<table class="rwd-table table">
+																							<tr nobr="true" class="tr-course">
+													<th style="width:12%;">學年學期</th>
+													<th style="width:11%;">課號</th>
+													<th style="width:32%;">課程名稱</th>
+													<th style="width:10%;">學分數</th>
+													<th style="width:12%;">成績</th>
+													<th style="width:10%;">判定</th>
+													<th style="width:13%;">備註</th>
+												</tr>
+																																						<tr nobr="true" class="">
+														<td>1132</td>
+														<td class="text-center">EE2023</td>
+														<td>近代物理</td>
+														<td>3</td>
+														<td>69.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																	</table>
+																										 
+																				<table class="table m-0">
+											<tr nobr="true" class="tr-d layer">
+												<th colspan="1" style="width:12%;">
+																											<label class="gone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">&nbsp;完成</label>
+																									</th>
+												<th colspan="6" style="width:88%;">
+													<span>13203 - 系訂必選m選n-C類，應修學分：0、應修科目：1；實修學分：3、實修科目：1</span><br />
+													<span>備註：無</span>
+												</th>
+											</tr>
+										</table>
+										<table class="rwd-table table">
+																							<tr nobr="true" class="tr-course">
+													<th style="width:12%;">學年學期</th>
+													<th style="width:11%;">課號</th>
+													<th style="width:32%;">課程名稱</th>
+													<th style="width:10%;">學分數</th>
+													<th style="width:12%;">成績</th>
+													<th style="width:10%;">判定</th>
+													<th style="width:13%;">備註</th>
+												</tr>
+																																						<tr nobr="true" class="">
+														<td>1141</td>
+														<td class="text-center">EE3003</td>
+														<td>控制系統</td>
+														<td>3</td>
+														<td>93.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																	</table>
+																										 
+																				<table class="table m-0">
+											<tr nobr="true" class="tr-d layer">
+												<th colspan="1" style="width:12%;">
+																											<label class="ungone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/exclamation_icon.png">&nbsp;未完成</label>
+																									</th>
+												<th colspan="6" style="width:88%;">
+													<span>13204 - 系訂必選m選n-D類，應修學分：0、應修科目：1；實修學分：0、實修科目：0</span><br />
+													<span>備註：無</span>
+												</th>
+											</tr>
+										</table>
+										<table class="rwd-table table">
+																							<tr nobr="true" class="tr-course">
+													<td colspan="7" class="fw-bold alert alert-warning" style="text-align:center;">無修課資料</td>
+												</tr>
+																					</table>
+																										 
+																				<table class="table m-0">
+											<tr nobr="true" class="tr-d layer">
+												<th colspan="1" style="width:12%;">
+																											<label class="ungone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/exclamation_icon.png">&nbsp;未完成</label>
+																									</th>
+												<th colspan="6" style="width:88%;">
+													<span>13205 - 系訂必選m選n-E類，應修學分：0、應修科目：1；實修學分：0、實修科目：0</span><br />
+													<span>備註：無</span>
+												</th>
+											</tr>
+										</table>
+										<table class="rwd-table table">
+																							<tr nobr="true" class="tr-course">
+													<td colspan="7" class="fw-bold alert alert-warning" style="text-align:center;">無修課資料</td>
+												</tr>
+																					</table>
+																										 
+																				<table class="table m-0">
+											<tr nobr="true" class="tr-d layer">
+												<th colspan="1" style="width:12%;">
+																											<label class="ungone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/exclamation_icon.png">&nbsp;未完成</label>
+																									</th>
+												<th colspan="6" style="width:88%;">
+													<span>13206 - 系訂必選m選n-F類，應修學分：0、應修科目：1；實修學分：0、實修科目：0</span><br />
+													<span>備註：無</span>
+												</th>
+											</tr>
+										</table>
+										<table class="rwd-table table">
+																							<tr nobr="true" class="tr-course">
+													<th style="width:12%;">學年學期</th>
+													<th style="width:11%;">課號</th>
+													<th style="width:32%;">課程名稱</th>
+													<th style="width:10%;">學分數</th>
+													<th style="width:12%;">成績</th>
+													<th style="width:10%;">判定</th>
+													<th style="width:13%;">備註</th>
+												</tr>
+																																						<tr nobr="true" class="alert alert-warning">
+														<td>1142</td>
+														<td class="text-center">CO3005</td>
+														<td>網路概論</td>
+														<td>3</td>
+														<td>未到(Not Entered)</td>
+														<td><span class="text-danger">未通過</span></td>
+														<td></td>
+													</tr>
+																																	</table>
+																	
+															</td>
+						</tr>
+					</table>
+									<table class="table">
+						<tr nobr="true" class="tr-c layer">
+							<th style="width:12%;">
+																	<label class="ungone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/exclamation_icon.png">&nbsp;未完成</label>
+															</th>
+							<th style="width:88%;">
+																<span>13300 - 系訂必選-電機系跨組選修，應修學分：9、應修科目：3；實修學分：6、實修科目：2</span><br />
+								<span>備註：※所修學分未跨滿3個類別.</span>
+							</th>
+						</tr>
+						<tr nobr="true">
+							<td colspan="2" class="w-100">																																																																																																																																																 
+																				<table class="table m-0">
+											<tr nobr="true" class="tr-d layer">
+												<th colspan="1" style="width:12%;">
+																											<label class="gone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">&nbsp;完成</label>
+																									</th>
+												<th colspan="6" style="width:88%;">
+													<span>13301 - 系訂必選-電機系跨組選修電子類別，應修學分：0、應修科目：1；實修學分：3、實修科目：1</span><br />
+													<span>備註：無</span>
+												</th>
+											</tr>
+										</table>
+										<table class="rwd-table table">
+																							<tr nobr="true" class="tr-course">
+													<th style="width:12%;">學年學期</th>
+													<th style="width:11%;">課號</th>
+													<th style="width:32%;">課程名稱</th>
+													<th style="width:10%;">學分數</th>
+													<th style="width:12%;">成績</th>
+													<th style="width:10%;">判定</th>
+													<th style="width:13%;">備註</th>
+												</tr>
+																																						<tr nobr="true" class="">
+														<td>1141</td>
+														<td class="text-center">EE3053</td>
+														<td>電子專題</td>
+														<td>3</td>
+														<td>98.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																	</table>
+																										 
+																				<table class="table m-0">
+											<tr nobr="true" class="tr-d layer">
+												<th colspan="1" style="width:12%;">
+																											<label class="ungone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/exclamation_icon.png">&nbsp;未完成</label>
+																									</th>
+												<th colspan="6" style="width:88%;">
+													<span>13302 - 系訂必選-電機系跨組選修固態類別，應修學分：0、應修科目：1；實修學分：0、實修科目：0</span><br />
+													<span>備註：無</span>
+												</th>
+											</tr>
+										</table>
+										<table class="rwd-table table">
+																							<tr nobr="true" class="tr-course">
+													<td colspan="7" class="fw-bold alert alert-warning" style="text-align:center;">無修課資料</td>
+												</tr>
+																					</table>
+																										 
+																				<table class="table m-0">
+											<tr nobr="true" class="tr-d layer">
+												<th colspan="1" style="width:12%;">
+																											<label class="ungone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/exclamation_icon.png">&nbsp;未完成</label>
+																									</th>
+												<th colspan="6" style="width:88%;">
+													<span>13304 - 系訂必選-電機系跨組選修通訊類別，應修學分：0、應修科目：1；實修學分：0、實修科目：0</span><br />
+													<span>備註：無</span>
+												</th>
+											</tr>
+										</table>
+										<table class="rwd-table table">
+																							<tr nobr="true" class="tr-course">
+													<td colspan="7" class="fw-bold alert alert-warning" style="text-align:center;">無修課資料</td>
+												</tr>
+																					</table>
+																										 
+																				<table class="table m-0">
+											<tr nobr="true" class="tr-d layer">
+												<th colspan="1" style="width:12%;">
+																											<label class="ungone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/exclamation_icon.png">&nbsp;未完成</label>
+																									</th>
+												<th colspan="6" style="width:88%;">
+													<span>13306 - 系訂必選-電機系跨組選修電波類別，應修學分：0、應修科目：1；實修學分：0、實修科目：0</span><br />
+													<span>備註：無</span>
+												</th>
+											</tr>
+										</table>
+										<table class="rwd-table table">
+																							<tr nobr="true" class="tr-course">
+													<th style="width:12%;">學年學期</th>
+													<th style="width:11%;">課號</th>
+													<th style="width:32%;">課程名稱</th>
+													<th style="width:10%;">學分數</th>
+													<th style="width:12%;">成績</th>
+													<th style="width:10%;">判定</th>
+													<th style="width:13%;">備註</th>
+												</tr>
+																																						<tr nobr="true" class="alert alert-warning">
+														<td>1142</td>
+														<td class="text-center">EE4036</td>
+														<td>電磁波實驗</td>
+														<td>3</td>
+														<td>未到(Not Entered)</td>
+														<td><span class="text-danger">未通過</span></td>
+														<td></td>
+													</tr>
+																																	</table>
+																										 
+																				<table class="table m-0">
+											<tr nobr="true" class="tr-d layer">
+												<th colspan="1" style="width:12%;">
+																											<label class="gone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">&nbsp;完成</label>
+																									</th>
+												<th colspan="6" style="width:88%;">
+													<span>13307 - 系訂必選-電機系跨組選修系統與生醫類別，應修學分：0、應修科目：1；實修學分：3、實修科目：1</span><br />
+													<span>備註：無</span>
+												</th>
+											</tr>
+										</table>
+										<table class="rwd-table table">
+																							<tr nobr="true" class="tr-course">
+													<th style="width:12%;">學年學期</th>
+													<th style="width:11%;">課號</th>
+													<th style="width:32%;">課程名稱</th>
+													<th style="width:10%;">學分數</th>
+													<th style="width:12%;">成績</th>
+													<th style="width:10%;">判定</th>
+													<th style="width:13%;">備註</th>
+												</tr>
+																																						<tr nobr="true" class="">
+														<td>1132</td>
+														<td class="text-center">EE3046</td>
+														<td>微算機原理與實作</td>
+														<td>3</td>
+														<td>91.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																	</table>
+																										 
+																				<table class="table m-0">
+											<tr nobr="true" class="tr-d layer">
+												<th colspan="1" style="width:12%;">
+																											<label class="ungone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/exclamation_icon.png">&nbsp;未完成</label>
+																									</th>
+												<th colspan="6" style="width:88%;">
+													<span>13308 - 系訂必選-電機系跨組選修資通訊類別，應修學分：0、應修科目：1；實修學分：0、實修科目：0</span><br />
+													<span>備註：無</span>
+												</th>
+											</tr>
+										</table>
+										<table class="rwd-table table">
+																							<tr nobr="true" class="tr-course">
+													<td colspan="7" class="fw-bold alert alert-warning" style="text-align:center;">無修課資料</td>
+												</tr>
+																					</table>
+																	
+															</td>
+						</tr>
+					</table>
+				
+									<hr />
+																<h4 class="fw-bold" style="text-align:center;">14000 - 一般選修</h4>
+			
+			<table class="table">
+				<tr nobr="true" class="tr-b layer">
+					<th style="width:12%;">
+													<label class="gone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">&nbsp;完成</label>
+											</th>
+					<th style="width:88%;">
+												<span>(應修) 0學分，0門課 / (實修) 16學分，6門課</span><br />
+						<span>備註：無</span>
+					</th>
+				</tr>
+			</table>
+												<table class="table">
+						<tr nobr="true" class="tr-c layer">
+							<th style="width:12%;">
+																	<label class="gone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">&nbsp;完成</label>
+															</th>
+							<th style="width:88%;">
+																<span>14100 - 一般選修，應修學分：0、應修科目：0；實修學分：16、實修科目：6</span><br />
+								<span>備註：無</span>
+							</th>
+						</tr>
+						<tr nobr="true">
+							<td colspan="2" class="w-100">																																																																																																																																																 
+																				<table class="table m-0">
+											<tr nobr="true" class="tr-d layer">
+												<th colspan="1" style="width:12%;">
+																											<label class="gone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">&nbsp;完成</label>
+																									</th>
+												<th colspan="6" style="width:88%;">
+													<span>14101 - 一般選修，應修學分：0、應修科目：0；實修學分：16、實修科目：6</span><br />
+													<span>備註：無</span>
+												</th>
+											</tr>
+										</table>
+										<table class="rwd-table table">
+																							<tr nobr="true" class="tr-course">
+													<th style="width:12%;">學年學期</th>
+													<th style="width:11%;">課號</th>
+													<th style="width:32%;">課程名稱</th>
+													<th style="width:10%;">學分數</th>
+													<th style="width:12%;">成績</th>
+													<th style="width:10%;">判定</th>
+													<th style="width:13%;">備註</th>
+												</tr>
+																																						<tr nobr="true" class="">
+														<td>1132</td>
+														<td class="text-center">EE3058</td>
+														<td>人工智慧晶片設計導論</td>
+														<td>3</td>
+														<td>93.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1132</td>
+														<td class="text-center">EE4004</td>
+														<td>專題實作</td>
+														<td>3</td>
+														<td>96.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="alert alert-warning">
+														<td>1142</td>
+														<td class="text-center">EE6094</td>
+														<td>電腦輔助超大型積體電路設計</td>
+														<td>3</td>
+														<td>未到(Not Entered)</td>
+														<td><span class="text-danger">未通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="alert alert-warning">
+														<td>1142</td>
+														<td class="text-center">EE8061</td>
+														<td>半導體製程實務</td>
+														<td>3</td>
+														<td>未到(Not Entered)</td>
+														<td><span class="text-danger">未通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1141</td>
+														<td class="text-center">EE8094</td>
+														<td>深度學習系統設計與應用</td>
+														<td>3</td>
+														<td>81.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1141</td>
+														<td class="text-center">LN0025</td>
+														<td>日文(一)A</td>
+														<td>3</td>
+														<td>95.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1141</td>
+														<td class="text-center">LN1202</td>
+														<td>科技英文寫作溝通與口語表達</td>
+														<td>2</td>
+														<td>88.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1132</td>
+														<td class="text-center">LN2920</td>
+														<td>英文寫作一</td>
+														<td>2</td>
+														<td>92.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																	</table>
+																	
+															</td>
+						</tr>
+					</table>
+				
+									<hr />
+																<h4 class="fw-bold" style="text-align:center;">18000 - 其它學分</h4>
+			
+			<table class="table">
+				<tr nobr="true" class="tr-b layer">
+					<th style="width:12%;">
+													<label class="ungone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/exclamation_icon.png">&nbsp;未完成</label>
+											</th>
+					<th style="width:88%;">
+												<span>(應修) 0學分，15門課 / (實修) 0學分，13門課</span><br />
+						<span>備註：※已包含18500之修習課程數: 1 .※學分數或課程數不足.※未通過類別:18100,18500,</span>
+					</th>
+				</tr>
+			</table>
+												<table class="table">
+						<tr nobr="true" class="tr-c layer">
+							<th style="width:12%;">
+																	<label class="ungone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/exclamation_icon.png">&nbsp;未完成</label>
+															</th>
+							<th style="width:88%;">
+																<span>18100 - 操行，應修學分：0、應修科目：8；實修學分：0、實修科目：5</span><br />
+								<span>備註：※未通過類別:18101,</span>
+							</th>
+						</tr>
+						<tr nobr="true">
+							<td colspan="2" class="w-100">																																																																																																																																																 
+																				<table class="table m-0">
+											<tr nobr="true" class="tr-d layer">
+												<th colspan="1" style="width:12%;">
+																											<label class="ungone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/exclamation_icon.png">&nbsp;未完成</label>
+																									</th>
+												<th colspan="6" style="width:88%;">
+													<span>18101 - 操行，應修學分：0、應修科目：8；實修學分：0、實修科目：5</span><br />
+													<span>備註：無</span>
+												</th>
+											</tr>
+										</table>
+										<table class="rwd-table table">
+																							<tr nobr="true" class="tr-course">
+													<th style="width:12%;">學年學期</th>
+													<th style="width:11%;">課號</th>
+													<th style="width:32%;">課程名稱</th>
+													<th style="width:10%;">學分數</th>
+													<th style="width:12%;">成績</th>
+													<th style="width:10%;">判定</th>
+													<th style="width:13%;">備註</th>
+												</tr>
+																																						<tr nobr="true" class="">
+														<td>1121</td>
+														<td class="text-center">CR0001</td>
+														<td>操行</td>
+														<td>0</td>
+														<td>85.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1122</td>
+														<td class="text-center">CR0001</td>
+														<td>操行</td>
+														<td>0</td>
+														<td>85.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1131</td>
+														<td class="text-center">CR0001</td>
+														<td>操行</td>
+														<td>0</td>
+														<td>85.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1132</td>
+														<td class="text-center">CR0001</td>
+														<td>操行</td>
+														<td>0</td>
+														<td>85.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1141</td>
+														<td class="text-center">CR0001</td>
+														<td>操行</td>
+														<td>0</td>
+														<td>86.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																	</table>
+																	
+															</td>
+						</tr>
+					</table>
+									<table class="table">
+						<tr nobr="true" class="tr-c layer">
+							<th style="width:12%;">
+																	<label class="gone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">&nbsp;完成</label>
+															</th>
+							<th style="width:88%;">
+																<span>18200 - 體育，應修學分：0、應修科目：5；實修學分：0、實修科目：5</span><br />
+								<span>備註：無</span>
+							</th>
+						</tr>
+						<tr nobr="true">
+							<td colspan="2" class="w-100">																																																																																																																																																 
+																				<table class="table m-0">
+											<tr nobr="true" class="tr-d layer">
+												<th colspan="1" style="width:12%;">
+																											<label class="gone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">&nbsp;完成</label>
+																									</th>
+												<th colspan="6" style="width:88%;">
+													<span>18201 - 大一體育，應修學分：0、應修科目：2；實修學分：0、實修科目：2</span><br />
+													<span>備註：無</span>
+												</th>
+											</tr>
+										</table>
+										<table class="rwd-table table">
+																							<tr nobr="true" class="tr-course">
+													<th style="width:12%;">學年學期</th>
+													<th style="width:11%;">課號</th>
+													<th style="width:32%;">課程名稱</th>
+													<th style="width:10%;">學分數</th>
+													<th style="width:12%;">成績</th>
+													<th style="width:10%;">判定</th>
+													<th style="width:13%;">備註</th>
+												</tr>
+																																						<tr nobr="true" class="">
+														<td>1121</td>
+														<td class="text-center">PE1011</td>
+														<td>大一體育</td>
+														<td>0</td>
+														<td>91.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1122</td>
+														<td class="text-center">PE1022</td>
+														<td>大一體育</td>
+														<td>0</td>
+														<td>83.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																	</table>
+																										 
+																				<table class="table m-0">
+											<tr nobr="true" class="tr-d layer">
+												<th colspan="1" style="width:12%;">
+																											<label class="gone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">&nbsp;完成</label>
+																									</th>
+												<th colspan="6" style="width:88%;">
+													<span>18202 - 其它年級體育，應修學分：0、應修科目：3；實修學分：0、實修科目：3</span><br />
+													<span>備註：無</span>
+												</th>
+											</tr>
+										</table>
+										<table class="rwd-table table">
+																							<tr nobr="true" class="tr-course">
+													<th style="width:12%;">學年學期</th>
+													<th style="width:11%;">課號</th>
+													<th style="width:32%;">課程名稱</th>
+													<th style="width:10%;">學分數</th>
+													<th style="width:12%;">成績</th>
+													<th style="width:10%;">判定</th>
+													<th style="width:13%;">備註</th>
+												</tr>
+																																						<tr nobr="true" class="">
+														<td>1141</td>
+														<td class="text-center">PE2051</td>
+														<td>籃球入門</td>
+														<td>0</td>
+														<td>77.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1132</td>
+														<td class="text-center">PE2071</td>
+														<td>排球入門</td>
+														<td>0</td>
+														<td>82.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1131</td>
+														<td class="text-center">PE2301</td>
+														<td>健身運動</td>
+														<td>0</td>
+														<td>84.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																	</table>
+																	
+															</td>
+						</tr>
+					</table>
+									<table class="table">
+						<tr nobr="true" class="tr-c layer">
+							<th style="width:12%;">
+																	<label class="gone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">&nbsp;完成</label>
+															</th>
+							<th style="width:88%;">
+																<span>18300 - 軍訓，應修學分：0、應修科目：0；實修學分：0、實修科目：0</span><br />
+								<span>備註：無</span>
+							</th>
+						</tr>
+						<tr nobr="true">
+							<td colspan="2" class="w-100">																																																																																																																																																 
+																				<table class="table m-0">
+											<tr nobr="true" class="tr-d layer">
+												<th colspan="1" style="width:12%;">
+																											<label class="gone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">&nbsp;完成</label>
+																									</th>
+												<th colspan="6" style="width:88%;">
+													<span>18301 - 軍訓，應修學分：0、應修科目：0；實修學分：0、實修科目：0</span><br />
+													<span>備註：無</span>
+												</th>
+											</tr>
+										</table>
+										<table class="rwd-table table">
+																							<tr nobr="true" class="tr-course">
+													<td colspan="7" class="fw-bold alert alert-warning" style="text-align:center;">無修課資料</td>
+												</tr>
+																					</table>
+																	
+															</td>
+						</tr>
+					</table>
+									<table class="table">
+						<tr nobr="true" class="tr-c layer">
+							<th style="width:12%;">
+																	<label class="gone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">&nbsp;完成</label>
+															</th>
+							<th style="width:88%;">
+																<span>18400 - 服務學習，應修學分：0、應修科目：2；實修學分：0、實修科目：2</span><br />
+								<span>備註：無</span>
+							</th>
+						</tr>
+						<tr nobr="true">
+							<td colspan="2" class="w-100">																																																																																																																																																 
+																				<table class="table m-0">
+											<tr nobr="true" class="tr-d layer">
+												<th colspan="1" style="width:12%;">
+																											<label class="gone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">&nbsp;完成</label>
+																									</th>
+												<th colspan="6" style="width:88%;">
+													<span>18401 - 服務學習，應修學分：0、應修科目：2；實修學分：0、實修科目：2</span><br />
+													<span>備註：無</span>
+												</th>
+											</tr>
+										</table>
+										<table class="rwd-table table">
+																							<tr nobr="true" class="tr-course">
+													<th style="width:12%;">學年學期</th>
+													<th style="width:11%;">課號</th>
+													<th style="width:32%;">課程名稱</th>
+													<th style="width:10%;">學分數</th>
+													<th style="width:12%;">成績</th>
+													<th style="width:10%;">判定</th>
+													<th style="width:13%;">備註</th>
+												</tr>
+																																						<tr nobr="true" class="">
+														<td>1121</td>
+														<td class="text-center">SC0003</td>
+														<td>服務學習課程</td>
+														<td>0</td>
+														<td>勞動服務通過(Pass)</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1122</td>
+														<td class="text-center">SC0004</td>
+														<td>服務學習課程</td>
+														<td>0</td>
+														<td>勞動服務通過(Pass)</td>
+														<td><span class="text-primary">通過</span></td>
+														<td></td>
+													</tr>
+																																	</table>
+																	
+															</td>
+						</tr>
+					</table>
+									<table class="table">
+						<tr nobr="true" class="tr-c layer">
+							<th style="width:12%;">
+																	<label class="ungone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/exclamation_icon.png">&nbsp;未完成</label>
+															</th>
+							<th style="width:88%;">
+																<span>18500 - 學生學習護照，應修學分：0、應修科目：1；實修學分：0、實修科目：1</span><br />
+								<span>備註：※總時數:90.0(尚未達到畢業基礎門檻,詳細資料請參考:服務櫃台&gt;訊息與活動&gt;活動報名&gt;時數儀表板)</span>
+							</th>
+						</tr>
+						<tr nobr="true">
+							<td colspan="2" class="w-100">																																																																																																																																							
+																	<label class="fw-bold alert alert-warning w-100" style="text-align:center;">無修課資料</label>
+															</td>
+						</tr>
+					</table>
+				
+									<hr />
+																<h4 class="fw-bold" style="text-align:center;">19000 - 特殊檢核</h4>
+			
+			<table class="table">
+				<tr nobr="true" class="tr-b layer">
+					<th style="width:12%;">
+													<label class="ungone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/exclamation_icon.png">&nbsp;未完成</label>
+											</th>
+					<th style="width:88%;">
+												<span>(應修) 0學分，0門課 / (實修) 0學分，0門課</span><br />
+						<span>備註：※未通過類別:19230,</span>
+					</th>
+				</tr>
+			</table>
+												<table class="table">
+						<tr nobr="true" class="tr-c layer">
+							<th style="width:12%;">
+																	<label class="gone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">&nbsp;完成</label>
+															</th>
+							<th style="width:88%;">
+																<span>19200 - 特殊檢核條件-通過進修英文或英文能力鑑定考試合格，應修學分：4、應修科目：2；實修學分：0、實修科目：0</span><br />
+								<span>備註：※通過[GEPT全民英檢]</span>
+							</th>
+						</tr>
+						<tr nobr="true">
+							<td colspan="2" class="w-100">																																																																																																																																							
+																	<label class="fw-bold alert alert-warning w-100" style="text-align:center;">無修課資料</label>
+															</td>
+						</tr>
+					</table>
+									<table class="table">
+						<tr nobr="true" class="tr-c layer">
+							<th style="width:12%;">
+																	<label class="gone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">&nbsp;完成</label>
+															</th>
+							<th style="width:88%;">
+																<span>19220 - 進修英文不列入畢業學分數，應修學分：0、應修科目：0；實修學分：0、實修科目：0</span><br />
+								<span>備註：無</span>
+							</th>
+						</tr>
+						<tr nobr="true">
+							<td colspan="2" class="w-100">																																																																																																																																							
+																	<label class="fw-bold alert alert-warning w-100" style="text-align:center;">無修課資料</label>
+															</td>
+						</tr>
+					</table>
+									<table class="table">
+						<tr nobr="true" class="tr-c layer">
+							<th style="width:12%;">
+																	<label class="ungone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/exclamation_icon.png">&nbsp;未完成</label>
+															</th>
+							<th style="width:88%;">
+																<span>19230 - 特殊檢核-修習[本系選修與自訂它系課程]總學分數，應修學分：39、應修科目：13；實修學分：27、實修科目：9</span><br />
+								<span>備註：無</span>
+							</th>
+						</tr>
+						<tr nobr="true">
+							<td colspan="2" class="w-100">																																																																																																																																							
+																	<label class="fw-bold alert alert-warning w-100" style="text-align:center;">無修課資料</label>
+															</td>
+						</tr>
+					</table>
+									<table class="table">
+						<tr nobr="true" class="tr-c layer">
+							<th style="width:12%;">
+																	<label class="gone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">&nbsp;完成</label>
+															</th>
+							<th style="width:88%;">
+																<span>19250 - 特殊檢核-系所自訂之等同課程重複修習不列入畢業學分數(畢業學分數請自行計算扣除)，應修學分：0、應修科目：0；實修學分：0、實修科目：0</span><br />
+								<span>備註：無</span>
+							</th>
+						</tr>
+						<tr nobr="true">
+							<td colspan="2" class="w-100">																																																																																																																																							
+																	<label class="fw-bold alert alert-warning w-100" style="text-align:center;">無修課資料</label>
+															</td>
+						</tr>
+					</table>
+									<table class="table">
+						<tr nobr="true" class="tr-c layer">
+							<th style="width:12%;">
+																	<label class="gone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">&nbsp;完成</label>
+															</th>
+							<th style="width:88%;">
+																<span>19260 - 特殊檢核-系所自訂限制學分上限的選修課程群組修習學分數，應修學分：6、應修科目：0；實修學分：3、實修科目：1</span><br />
+								<span>備註：無</span>
+							</th>
+						</tr>
+						<tr nobr="true">
+							<td colspan="2" class="w-100">																																																																																																																																							
+																	<label class="fw-bold alert alert-warning w-100" style="text-align:center;">無修課資料</label>
+															</td>
+						</tr>
+					</table>
+				
+									<hr />
+										</div>
+		</div>
+			<div class="main-content degreeKindTable table_4" style="display:none;">
+			<h2 style="font-size:28px; color:blue; text-align:center;" class="fw-bold">113-4-0058-0-人工智慧跨域應用(理)</h2>
+			<h5 class="container-fluid col-md-6 col-md-offset-3 shadow-none bg-light rounded fw-bold p-2 mb-3" style="text-align:center;"><label>40000 - 學分學程</label><br /><label><span>16</span>學分，<span>6</span>門課，<span>應修15學分</span></label><br /><label class="text-primary">及格門檻</label></h5>
+	
+	<div class="container-fluid col-md-10 col-md-offset-1">
+											<h4 class="fw-bold" style="text-align:center;">42000 - 學分學程-系定必修學分</h4>
+			
+			<table class="table">
+				<tr nobr="true" class="tr-b layer">
+					<th style="width:12%;">
+													<label class="gone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">&nbsp;完成</label>
+											</th>
+					<th style="width:88%;">
+												<span>(應修) 11學分，4門課 / (實修) 11學分，4門課</span><br />
+						<span>備註：無</span>
+					</th>
+				</tr>
+			</table>
+												<table class="table">
+						<tr nobr="true" class="tr-c layer">
+							<th style="width:12%;">
+																	<label class="gone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">&nbsp;完成</label>
+															</th>
+							<th style="width:88%;">
+																<span>42200 - 學分學程-必修m選n群組一，應修學分：11、應修科目：4；實修學分：11、實修科目：4</span><br />
+								<span>備註：無</span>
+							</th>
+						</tr>
+						<tr nobr="true">
+							<td colspan="2" class="w-100">																																																																																																																																																 
+																				<table class="table m-0">
+											<tr nobr="true" class="tr-d layer">
+												<th colspan="1" style="width:12%;">
+																											<label class="gone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">&nbsp;完成</label>
+																									</th>
+												<th colspan="6" style="width:88%;">
+													<span>42201 - 學分學程-必修m選n群組一A類，應修學分：3、應修科目：1；實修學分：3、實修科目：1</span><br />
+													<span>備註：無</span>
+												</th>
+											</tr>
+										</table>
+										<table class="rwd-table table">
+																							<tr nobr="true" class="tr-course">
+													<th style="width:12%;">學年學期</th>
+													<th style="width:11%;">課號</th>
+													<th style="width:32%;">課程名稱</th>
+													<th style="width:10%;">學分數</th>
+													<th style="width:12%;">成績</th>
+													<th style="width:10%;">判定</th>
+													<th style="width:13%;">備註</th>
+												</tr>
+																																						<tr nobr="true" class="">
+														<td>1132</td>
+														<td class="text-center">GS4719</td>
+														<td>程式設計-Python</td>
+														<td>3</td>
+														<td>99.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td>※免修[GS4719],</td>
+													</tr>
+																																	</table>
+																										 
+																				<table class="table m-0">
+											<tr nobr="true" class="tr-d layer">
+												<th colspan="1" style="width:12%;">
+																											<label class="gone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">&nbsp;完成</label>
+																									</th>
+												<th colspan="6" style="width:88%;">
+													<span>42202 - 學分學程-必修m選n群組一B類，應修學分：5、應修科目：2；實修學分：5、實修科目：2</span><br />
+													<span>備註：無</span>
+												</th>
+											</tr>
+										</table>
+										<table class="rwd-table table">
+																							<tr nobr="true" class="tr-course">
+													<th style="width:12%;">學年學期</th>
+													<th style="width:11%;">課號</th>
+													<th style="width:32%;">課程名稱</th>
+													<th style="width:10%;">學分數</th>
+													<th style="width:12%;">成績</th>
+													<th style="width:10%;">判定</th>
+													<th style="width:13%;">備註</th>
+												</tr>
+																																						<tr nobr="true" class="">
+														<td>1131</td>
+														<td class="text-center">GS3073</td>
+														<td>AI人工智慧導論</td>
+														<td>3</td>
+														<td>99.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td>※免修[GS3073],</td>
+													</tr>
+																																						<tr nobr="true" class="">
+														<td>1131</td>
+														<td class="text-center">GS4519</td>
+														<td>機器學習概論</td>
+														<td>2</td>
+														<td>87.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td>※免修[GS4519],</td>
+													</tr>
+																																	</table>
+																										 
+																				<table class="table m-0">
+											<tr nobr="true" class="tr-d layer">
+												<th colspan="1" style="width:12%;">
+																											<label class="gone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">&nbsp;完成</label>
+																									</th>
+												<th colspan="6" style="width:88%;">
+													<span>42203 - 學分學程-必修m選n群組一C類，應修學分：3、應修科目：1；實修學分：3、實修科目：1</span><br />
+													<span>備註：無</span>
+												</th>
+											</tr>
+										</table>
+										<table class="rwd-table table">
+																							<tr nobr="true" class="tr-course">
+													<th style="width:12%;">學年學期</th>
+													<th style="width:11%;">課號</th>
+													<th style="width:32%;">課程名稱</th>
+													<th style="width:10%;">學分數</th>
+													<th style="width:12%;">成績</th>
+													<th style="width:10%;">判定</th>
+													<th style="width:13%;">備註</th>
+												</tr>
+																																						<tr nobr="true" class="">
+														<td>1141</td>
+														<td class="text-center">GS4524</td>
+														<td>人工智慧跨域應用專題</td>
+														<td>3</td>
+														<td>98.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td>※免修[GS4524],</td>
+													</tr>
+																																	</table>
+																	
+															</td>
+						</tr>
+					</table>
+				
+									<hr />
+																<h4 class="fw-bold" style="text-align:center;">43000 - 學分學程-系訂必選學分</h4>
+			
+			<table class="table">
+				<tr nobr="true" class="tr-b layer">
+					<th style="width:12%;">
+													<label class="gone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">&nbsp;完成</label>
+											</th>
+					<th style="width:88%;">
+												<span>(應修) 4學分，2門課 / (實修) 5學分，2門課</span><br />
+						<span>備註：無</span>
+					</th>
+				</tr>
+			</table>
+												<table class="table">
+						<tr nobr="true" class="tr-c layer">
+							<th style="width:12%;">
+																	<label class="gone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">&nbsp;完成</label>
+															</th>
+							<th style="width:88%;">
+																<span>43200 - 學分學程-系開選修m選n學分，應修學分：4、應修科目：2；實修學分：5、實修科目：2</span><br />
+								<span>備註：無</span>
+							</th>
+						</tr>
+						<tr nobr="true">
+							<td colspan="2" class="w-100">																																																																																																																																																 
+																				<table class="table m-0">
+											<tr nobr="true" class="tr-d layer">
+												<th colspan="1" style="width:12%;">
+																											<label class="gone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">&nbsp;完成</label>
+																									</th>
+												<th colspan="6" style="width:88%;">
+													<span>43201 - 學分學程-系開選修m選n學分A類，應修學分：2、應修科目：1；實修學分：3、實修科目：1</span><br />
+													<span>備註：無</span>
+												</th>
+											</tr>
+										</table>
+										<table class="rwd-table table">
+																							<tr nobr="true" class="tr-course">
+													<th style="width:12%;">學年學期</th>
+													<th style="width:11%;">課號</th>
+													<th style="width:32%;">課程名稱</th>
+													<th style="width:10%;">學分數</th>
+													<th style="width:12%;">成績</th>
+													<th style="width:10%;">判定</th>
+													<th style="width:13%;">備註</th>
+												</tr>
+																																						<tr nobr="true" class="">
+														<td>1131</td>
+														<td class="text-center">GS4518</td>
+														<td>自然語言處理</td>
+														<td>3</td>
+														<td>76.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td>※免修[GS4518],</td>
+													</tr>
+																																	</table>
+																										 
+																				<table class="table m-0">
+											<tr nobr="true" class="tr-d layer">
+												<th colspan="1" style="width:12%;">
+																											<label class="gone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">&nbsp;完成</label>
+																									</th>
+												<th colspan="6" style="width:88%;">
+													<span>43202 - 學分學程-系開選修m選n學分B類，應修學分：2、應修科目：1；實修學分：2、實修科目：1</span><br />
+													<span>備註：無</span>
+												</th>
+											</tr>
+										</table>
+										<table class="rwd-table table">
+																							<tr nobr="true" class="tr-course">
+													<th style="width:12%;">學年學期</th>
+													<th style="width:11%;">課號</th>
+													<th style="width:32%;">課程名稱</th>
+													<th style="width:10%;">學分數</th>
+													<th style="width:12%;">成績</th>
+													<th style="width:10%;">判定</th>
+													<th style="width:13%;">備註</th>
+												</tr>
+																																						<tr nobr="true" class="">
+														<td>1141</td>
+														<td class="text-center">GS4530</td>
+														<td>人工智慧倫理導論</td>
+														<td>2</td>
+														<td>87.00</td>
+														<td><span class="text-primary">通過</span></td>
+														<td>※免修[GS4530],</td>
+													</tr>
+																																	</table>
+																	
+															</td>
+						</tr>
+					</table>
+				
+									<hr />
+																<h4 class="fw-bold" style="text-align:center;">49000 - 學分學程-特殊檢核條件</h4>
+			
+			<table class="table">
+				<tr nobr="true" class="tr-b layer">
+					<th style="width:12%;">
+													<label class="gone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">&nbsp;完成</label>
+											</th>
+					<th style="width:88%;">
+												<span>(應修) 0學分，0門課 / (實修) 0學分，0門課</span><br />
+						<span>備註：無</span>
+					</th>
+				</tr>
+			</table>
+												<table class="table">
+						<tr nobr="true" class="tr-c layer">
+							<th style="width:12%;">
+																	<label class="gone" style="text-align:center;"><img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">&nbsp;完成</label>
+															</th>
+							<th style="width:88%;">
+																<span>49190 - 學分學程-不含免修科目之最低限修學分，應修學分：0、應修科目：0；實修學分：0、實修科目：0</span><br />
+								<span>備註：無</span>
+							</th>
+						</tr>
+						<tr nobr="true">
+							<td colspan="2" class="w-100">																																																																																																																																							
+																	<label class="fw-bold alert alert-warning w-100" style="text-align:center;">無修課資料</label>
+															</td>
+						</tr>
+					</table>
+				
+									<hr />
+										</div>
+		</div>
+	
+	<!-- 新增彈跳出視窗 -->
+	<div class="popup" id="popup-window">
+	<h2 id="popup-title" class="fw-bold"></h2>
+		<p id="popup-content"></p>
+	</div>
+
+	<!-- 新增半透明黑背景圖 -->
+	<div class="overlay" id="overlay"></div>
+	
+<script>
+//彈跳出視窗可隨畫面彈性縮放
+$(window).resize(function() {		
+	adjustPopupSize();
+});
+
+$(document).ready(function() {          
+	$(".circle").each(function() {
+		let circle = $(this);
+		let percentage = circle.data("percentage");
+		updateCirclePercentage(percentage, circle) 
+	});
+
+	$(window).on("resize", function () {
+		refreshAllCircles();
+	});
+	// 頁面載入時，按鈕設定為預設選中狀態
+	$("#dashboard").click();
+
+	adjustPopupSize();
+});
+
+/*為處理circle縮小到375時寬度可以變化成10 End*/
+$(".text-block").click(function(e) {
+	if (!$(e.target).closest(".popup").length) {
+		let locale = "tw",
+			title = $(this).find(".common-credits").text(),
+			credits = $(this).data("credits"),
+			content = "",
+						ungoneHtml =
+			`<span class="ungone" style="padding:5px 15px 5px 15px; border-radius: 30px;">
+				<img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/exclamation_icon.png">
+				<span>未完成</span>
+			</span>`,
+						goneHtml =
+			`<span class="gone" style="padding:5px 15px 5px 15px; border-radius: 30px;">
+				<img src="https://cis.ncu.edu.tw/iNCU/images/graduateReport/check_icon.png">
+				<span>完成</span>
+			</span>`,
+			credCourse = (credits.isPass == "T" ? goneHtml : ungoneHtml) 
+					+ `&nbsp;<span class="fw-bold">` + $(this).find('.cred_course').text() + `</span><br />`
+					+ `<div class="fw-bold mt-2">備註：${(credits.memo != '' ? credits.memo : '無')}</div>`;
+		$.each(jQuery.parseJSON(credits.course), function(rowC, layerC) {
+			var tTitleD = "";
+			$.each(layerC ,function(rowD, layerD) {
+				var tCourseBody =
+					`<tr class="tr-course">
+						<th style="width:14%;">學年學期</th>
+						<th style="width:11%;">課號</th>
+						<th>課程名稱</th>
+						<th style="width:10%;">學分數</th>
+						<th style="width:10%;">成績</th>
+						<th style="width:10%;">判定</th>
+						<th style="width:13%;">備註</th>
+					</tr>`;
+
+				if (typeof layerD == "object") {
+					if (Array.isArray(layerD.course)) {
+						$.each(layerD.course ,function(index, crsData) {
+							tCourseBody += 
+							`<tr class="${crsData.qualified == "2" ? 'alert alert-warning' : (crsData.qualified == "0" ? 'alert alert-danger' : '')}">
+								<td>${crsData.semester}</td>
+								<td>${crsData.c_id}</td>
+								<td>${locale == "en" ? crsData.crs_name.en : crsData.crs_name.tw}</td>
+								<td>${crsData.c_cred}</td>
+								<td>${crsData.score}</td>
+								<td>${crsData.qualified == "1" ? `<span class="text-primary">通過</span>` : `<span class="text-danger">未通過</span>`}</td>
+								<td>${locale == "en" ? crsData.memo.en : crsData.memo.tw}</td>
+							 </tr>`;
+						});
+					} else {
+						tCourseBody = 
+						`<tr nobr="true" class="tr-course">
+							<td colspan="7" class="text-center fw-bold alert alert-warning">無修課資料</td>
+						 </tr>`;
+					}
+					
+					tTitleD +=
+					`<table class="m-0" style="font-size:16px;">
+						<tr class="tr-d layer">
+							<th colspan="7" style="width:100%;">
+								<span style="margin-right: 10px;">${layerD.isPass == "T" ? goneHtml : ungoneHtml}</span>
+																<span>
+									${rowD + " - " + layerD.ruleName}，
+									應修學分：${layerD.lowCredits}、
+									應修科目：${layerD.lowCourses}；
+									實修學分：${layerD.creditCred}、 
+									實修科目：${layerD.creditCourse}
+								</span>
+								<br />
+								<span>備註：${(layerD.memo != '' ? layerD.memo : '無')}</span>
+							</th>
+						</tr>
+					</table>
+					<table class="rwd-table" style="font-size:16px;">${tCourseBody}</table>`;
+				}
+				
+			});
+			content += 
+			`<table style="font-size:16px;">
+				<tr class="tr-c layer">
+					<th colspan="2" style="width:100%;"><span style="margin-right: 10px;">${layerC.isPass == "T" ? goneHtml : ungoneHtml}</span>
+												<span>${rowC} - ${layerC.ruleName}，
+							應修學分：${layerC.lowCredits}、
+							應修科目：${layerC.lowCourses}；
+							實修學分：${layerC.creditCred}、 
+							實修科目：${layerC.creditCourse}</span><br />
+						<span>備註：${(layerC.memo != '' ? layerC.memo : '無')}</span>
+					</th>
+				</tr>
+				<tr>
+					<td colspan="2">${tTitleD != "" ? tTitleD : `<p class="text-center fw-bold alert alert-warning">無修課資料</p>`}</td>
+				</tr>
+			</table>`;
+		});
+		$("#popup-title").text(title);
+		$("#popup-content").html(credCourse + content);
+		$("#popup-window").fadeIn();
+		$("#overlay").fadeIn();
+		dressCSS();
+		getRWDTable();
+	}
+});
+
+// Event handler for closing the popup window
+$(document).click(function(e) {
+	if (!$(e.target).closest(".popup").length && !$(e.target).closest(".text-block").length) {
+		$("#popup-window").fadeOut();
+		$("#overlay").fadeOut();
+	}
+});
+
+$(".tab-button").click(function() {
+	$(".tab-button").removeClass("selected");
+	$(this).addClass("selected");
+	let key = $(this).data("key");
+	// 先將所有容器隱藏
+	$(".dashboardContent").hide();
+	$(".degreeKindTable").hide();
+	if (key == '0') {
+		$(".dashboardContent").show();		
+	} else {
+		$(".table_" + key).show();
+	}		
+});
+
+function updateCirclePercentage(percentage, circle) {
+	let windowWidth = $(window).width();
+	let fgWidth = 15;
+	let bgWidth = 15;
+
+	if (windowWidth < 755) {
+		fgWidth = 10;
+		bgWidth = 10;
+	}
+
+	circle.attr("data-percent", percentage);
+	circle.circliful({
+		animation: 1,
+		animationStep: 5,
+		foregroundBorderWidth: fgWidth,
+		backgroundBorderWidth: bgWidth,
+		percent: percentage,
+		replacePercentageByText: "",
+		percentageTextSize: 8,
+		//textAdditionalCss: 'margin-top: 0px;'
+	});
+}
+
+/*為處理circle縮小到375時寬度可以變化成10 Start*/		
+function refreshAllCircles() {
+	$(".circle").each(function () {
+		const circle = $(this);
+		const percentage = circle.data("percentage");
+
+		const textContainer = circle.find(".text-container").detach(); 
+		circle.empty();
+		updateCirclePercentage(percentage, circle); 
+		circle.append(textContainer);
+	});
+}
+
+//匯PDF按鈕
+function exportPdfBtn() {
+	//開新視窗
+	window.open("https://cis.ncu.edu.tw/iNCU/academic/graduate/graduateReport?action=generateDPF");
+}
+
+function adjustPopupSize() {
+	var $popup = $('#popup-window');
+	if ($popup.is(':visible')) {
+		$popup.css({
+			'left': '50%',
+			'top': '50%',
+			'transform': 'translate(-50%, -50%)',
+			'width': '90%',
+			'max-width': 'none',
+			'padding': '10px'
+		});
+		if ($(window).width() > 768) {
+			$popup.css({
+				'width': '80%',
+				'max-width': '1200px',
+				'padding': '20px'
+			});
+		}
+	}
+}
+</script>
+ 	
+					  	<div class="gotop" title="回頂端">
+			   <i class="bi bi-caret-up-fill"></i>		  
+			</div>
+			
+			<div style="clear:both;"></div>
+		</div>
+	</div>
+	
+		<footer class="bg-light mt-4">
+		<div class="container">
+	<div class="copyright">
+		<p>
+			版號：4658d80c，建議瀏覽器：Chrome、Firefox等瀏覽器，或Edge以上。<br />
+			Copyright &copy; 2016 NCU.CC. All Rights Reserved
+					</p>
+	</div>
+</div>	</footer>	
+	
+	<script>
+		//===document.ready===(start)
+		$(document).ready(function() {
+			dressCSS(); //穿上全局CSS樣式	
+			getBlockUI(); //穿上blockUI自訂樣式
+			//@todo:FIXME 若要增加JS可加在tools.js或blankTools.js
+	    });
+		//===document.ready===(end)		
+		
+		//GoTop 按鈕事件
+		$(function() {
+		    /* 按下 GoTop 按鈕時的事件 */
+		    $('.gotop').click(function() {
+		        $('html,body').animate({ scrollTop: 0 }, 400); /* 返回到最頂上 */
+		        
+				return false;
+		    });
+		    /* 偵測卷軸滑動時，往下滑超過200px就讓GoTop按鈕出現 */
+		    $(window).scroll(function() {
+		        if ( $(this).scrollTop() >= 200){
+		            $('.gotop').show(10).animate({bottom:"30px"}, 10);
+		        } else {
+		            $('.gotop').animate({bottom:"-50px"}, 10);	
+		        }	              
+		    });
+		});
+		//H1標題超過長度字體變小
+		let fitHeight = parseInt($("h1").css("min-height"))/2,
+			titleHeight = $(".font_fit")[0].offsetHeight;		
+		if (titleHeight > fitHeight) {
+			$(".font_fit").addClass("font_auto_fit");
+		} else {
+			$(".font_fit").removeClass("font_auto_fit");
+		}
+	</script>
+</body>
+</html>
