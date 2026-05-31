@@ -7,6 +7,78 @@ function escapeHtml(input) {
     .replace(/'/g, "&#39;");
 }
 
+function openCreditDetailWindow(segment) {
+  const detailWindow = window.open("", "_blank", "width=720,height=760");
+  if (!detailWindow) {
+    return;
+  }
+
+  const rows = segment.courses.length
+    ? segment.courses
+        .map(
+          (course) => `
+            <tr>
+              <td>${escapeHtml(course.courseId)}</td>
+              <td>${escapeHtml(course.courseName)}</td>
+              <td>${escapeHtml(course.credits)}</td>
+              <td>${escapeHtml(course.semester)}</td>
+            </tr>
+          `
+        )
+        .join("")
+    : `<tr><td colspan="4">No courses.</td></tr>`;
+
+  detailWindow.document.write(`
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <title>${escapeHtml(segment.label)} details</title>
+      <style>
+        body { font-family: "Segoe UI", "Noto Sans TC", sans-serif; margin: 24px; color: #20160f; background: #f8f2e7; }
+        h1 { margin: 0 0 10px; font-size: 1.6rem; }
+        p { margin: 0 0 18px; color: #6f5b4b; }
+        table { width: 100%; border-collapse: collapse; background: #fffaf0; border-radius: 12px; overflow: hidden; }
+        th, td { padding: 12px 14px; border-bottom: 1px solid rgba(32, 22, 15, 0.12); text-align: left; }
+        th { font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; color: #6f5b4b; }
+      </style>
+    </head>
+    <body>
+      <h1>${escapeHtml(segment.label)}</h1>
+      <p>${escapeHtml(segment.credits)} credits</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Course</th>
+            <th>Name</th>
+            <th>Credits</th>
+            <th>Semester</th>
+          </tr>
+        </thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </body>
+    </html>
+  `);
+  detailWindow.document.close();
+}
+
+function attachCreditBarInteractions(root, creditBreakdown) {
+  const buttons = root.querySelectorAll("[data-credit-segment-index]");
+
+  for (const button of buttons) {
+    button.addEventListener("click", () => {
+      const index = Number(button.getAttribute("data-credit-segment-index"));
+      const segment = creditBreakdown.segments[index];
+      if (!segment) {
+        return;
+      }
+
+      openCreditDetailWindow(segment);
+    });
+  }
+}
+
 function splitInlineList(text) {
   return String(text ?? "")
     .split(" | ")
@@ -280,6 +352,56 @@ function renderRequirementGroup(group) {
   `;
 }
 
+function renderCreditBreakdown(creditBreakdown) {
+  const scaleMax = Math.max(creditBreakdown.graduationCredits, creditBreakdown.countedCredits);
+  const tooltipText = (segment) =>
+    [segment.label, `${segment.credits} credits`, ...segment.courses.map((course) => `${course.courseId} ${course.courseName}`)].join("\n");
+  const remainingWidth = (creditBreakdown.remainingCredits / scaleMax) * 100;
+
+  return `
+    <section class="panel">
+      <div class="section-head">
+        <p class="eyebrow">Credits</p>
+        <h2>132-credit allocation</h2>
+      </div>
+      <p class="meta-row">Counted ${escapeHtml(creditBreakdown.countedCredits)} / ${escapeHtml(creditBreakdown.graduationCredits)} credits. Credits not assigned to a requirement bucket are shown as Free credit.</p>
+      <div class="credit-bar">
+        ${creditBreakdown.segments
+          .map((segment, index) => {
+            const width = (segment.credits / scaleMax) * 100;
+            return `
+              <button
+                type="button"
+                class="credit-segment"
+                data-credit-segment-index="${index}"
+                style="width:${width}%; --segment-color:${segment.color};"
+                title="${escapeHtml(tooltipText(segment))}"
+              >
+                <span>${escapeHtml(segment.label)}</span>
+                <strong>${escapeHtml(segment.credits)}</strong>
+              </button>
+            `;
+          })
+          .join("")}
+        ${remainingWidth > 0 ? `<div class="credit-remaining" style="width:${remainingWidth}%;">Remaining ${escapeHtml(creditBreakdown.remainingCredits)}</div>` : ""}
+      </div>
+      <div class="credit-legend">
+        ${creditBreakdown.segments
+          .map(
+            (segment, index) => `
+              <button type="button" class="credit-legend-item" data-credit-segment-index="${index}">
+                <span class="credit-legend-swatch" style="background:${segment.color};"></span>
+                <span>${escapeHtml(segment.label)}</span>
+                <strong>${escapeHtml(segment.credits)} cr</strong>
+              </button>
+            `
+          )
+          .join("")}
+      </div>
+    </section>
+  `;
+}
+
 function renderDiscrepancy(discrepancy) {
   return `
     <article class="discrepancy-card">
@@ -332,6 +454,7 @@ function renderSemesterTable(semester) {
 export function renderReport(root, snapshot) {
   const { evaluation, transcript, graduateReport, student } = snapshot;
   const progressSummary = summarizeTranscriptProgress(transcript);
+  const creditBreakdownSection = renderCreditBreakdown(evaluation.creditBreakdown);
   const requirementSections = evaluation.requirementGroups.map(renderRequirementGroup).join("");
   const discrepancySection = evaluation.discrepancies.length
     ? `
@@ -383,6 +506,8 @@ export function renderReport(root, snapshot) {
         </div>
       </section>
 
+      ${creditBreakdownSection}
+
       ${requirementSections}
 
       ${discrepancySection}
@@ -399,6 +524,7 @@ export function renderReport(root, snapshot) {
     </main>
   `;
   attachAnimatedAccordions(root);
+  attachCreditBarInteractions(root, evaluation.creditBreakdown);
 }
 
 export function renderMessage(root, title, body, tone = "neutral", diagnostics = []) {

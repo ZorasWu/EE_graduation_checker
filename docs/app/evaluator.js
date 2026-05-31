@@ -157,6 +157,10 @@ function buildRequirementGroups(derivedChecks, portalOnlyChecks) {
     .sort((left, right) => left.order - right.order);
 }
 
+function uniqueCourses(courses) {
+  return uniqueBy(courses.filter(Boolean), (course) => course.courseId);
+}
+
 function formatPortalCourseLabel(course) {
   const status =
     course.passStatus === "not_entered" ? "未輸入" : course.passStatus === "in_progress" ? "修課中" : null;
@@ -374,7 +378,83 @@ function evaluateDepartmentCollegeElective(indexes, excludedCourseIds) {
     requiredValue: `${EE112_CONFIG.departmentCollegeElective.minCredits} credits`,
     details: EE112_CONFIG.departmentCollegeElective.description,
     detailLines: completedCourses.map(formatCourseLabel),
-    pendingItems: pendingCourses.map((course) => formatPendingCourseLabel(course, course.passStatus))
+    pendingItems: pendingCourses.map((course) => formatPendingCourseLabel(course, course.passStatus)),
+    countedCourses: completedCourses
+  };
+}
+
+function buildCreditBreakdown(snapshot, indexes, checks) {
+  const allPassedCourses = uniqueCourses([...indexes.completedByCode.values()]).filter((course) => course.credits > 0);
+  const allocatedCourseIds = new Set();
+  const byId = new Map(allPassedCourses.map((course) => [course.courseId, course]));
+
+  function takeCourses(label, courses, color) {
+    const unique = uniqueCourses(courses)
+      .filter((course) => course.credits > 0)
+      .filter((course) => !allocatedCourseIds.has(course.courseId));
+    for (const course of unique) {
+      allocatedCourseIds.add(course.courseId);
+    }
+
+    return {
+      key: label,
+      label,
+      color,
+      credits: unique.reduce((sum, course) => sum + course.credits, 0),
+      courses: unique.map((course) => ({
+        courseId: course.courseId,
+        courseName: course.courseName,
+        credits: course.credits,
+        semester: course.semester
+      }))
+    };
+  }
+
+  const chineseCourses = uniqueCourses(snapshot.graduateReport.rulesById["11401"]?.matchedCourses ?? [])
+    .map((course) => byId.get(course.courseId))
+    .filter(Boolean);
+  const generalEducationCourses = allPassedCourses.filter((course) => course.courseAttribute === "通識");
+  const requiredCoursesCheck = checks.find((check) => check.id === "required-course-set-a");
+  const freshmanEnglishCheck = checks.find((check) => check.id === "freshman-english");
+  const starElectiveCheck = checks.find((check) => check.id === "star-elective");
+  const labElectiveCheck = checks.find((check) => check.id === "lab-elective");
+  const departmentElectiveCheck = checks.find((check) => check.id === "department-college-elective");
+  const coreRequiredCourses = EE112_CONFIG.requiredCourseSetA
+    .map((requirement) => indexes.completedByCode.get(requirement.courseId))
+    .filter(Boolean);
+  const freshmanEnglishCourses = EE112_CONFIG.freshmanEnglishCourseIds
+    .map((courseId) => indexes.completedByCode.get(courseId))
+    .filter(Boolean);
+  const starElectiveCourses = (starElectiveCheck?.countedCourseIds ?? []).map((courseId) => byId.get(courseId)).filter(Boolean);
+  const labElectiveCourses = (labElectiveCheck?.countedCourseIds ?? []).map((courseId) => byId.get(courseId)).filter(Boolean);
+  const departmentElectiveCourses = departmentElectiveCheck?.countedCourses ?? [];
+
+  const segments = [
+    takeCourses("Core required", coreRequiredCourses, "var(--accent)"),
+    takeCourses("Freshman English", freshmanEnglishCourses, "var(--accent-soft-strong)"),
+    takeCourses("Chinese", chineseCourses, "var(--gold)"),
+    takeCourses("General Education", generalEducationCourses, "var(--ok)"),
+    takeCourses("Star elective", starElectiveCourses, "var(--star)"),
+    takeCourses("Lab elective", labElectiveCourses, "var(--lab)"),
+    takeCourses("Dept/College elective", departmentElectiveCourses, "var(--info)")
+  ].filter((segment) => segment.credits > 0);
+
+  const freeCreditCourses = allPassedCourses.filter((course) => !allocatedCourseIds.has(course.courseId));
+  const freeCredit = takeCourses("Free credit", freeCreditCourses, "var(--free)");
+  if (freeCredit.credits > 0) {
+    segments.push(freeCredit);
+  }
+
+  const totalCredits = snapshot.transcript.totals.cumulativeCredits;
+  const countedCredits = segments.reduce((sum, segment) => sum + segment.credits, 0);
+  const remainingCredits = Math.max(0, EE112_CONFIG.graduationCredits - countedCredits);
+
+  return {
+    totalCredits,
+    graduationCredits: EE112_CONFIG.graduationCredits,
+    countedCredits,
+    remainingCredits,
+    segments
   };
 }
 
@@ -539,6 +619,7 @@ export function evaluateEe112(snapshot) {
     derivedChecks,
     portalOnlyChecks,
     requirementGroups: buildRequirementGroups(derivedChecks, portalOnlyChecks),
+    creditBreakdown: buildCreditBreakdown(snapshot, indexes, derivedChecks),
     discrepancies
   };
 }
